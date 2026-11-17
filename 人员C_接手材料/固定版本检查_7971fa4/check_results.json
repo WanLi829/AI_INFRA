@@ -1,0 +1,136 @@
+{
+  "python": "3.13.5 | packaged by Anaconda, Inc. | (main, Jun 12 2025, 16:37:03) [MSC v.1929 64 bit (AMD64)]",
+  "revisions": {
+    "implementation": "4f4c600367b02b82b389689b9a7ece2b2af4c4b9",
+    "kairos": "7971fa40323f16e8e4ce8f12dfd5db9755a98cf1"
+  },
+  "checks": [
+    {
+      "name": "implementation_ttl",
+      "command": [
+        "C:\\Users\\USER\\anaconda3\\python.exe",
+        "-B",
+        "-X",
+        "utf8",
+        "tasks/continuum/test_ttl.py"
+      ],
+      "cwd": "C:\\Users\\USER\\AppData\\Local\\Temp\\continuum-review-20261031",
+      "exit_code": 0
+    },
+    {
+      "name": "simulation_smoke",
+      "command": [
+        "C:\\Users\\USER\\anaconda3\\python.exe",
+        "-B",
+        "-X",
+        "utf8",
+        "tasks/continuum/run.py",
+        "--load",
+        "mixed",
+        "--n",
+        "4",
+        "--policy",
+        "all",
+        "--seed",
+        "0",
+        "--out",
+        "C:\\Users\\USER\\Desktop\\学习\\大三上\\大模型网络\\人员C_接手材料\\固定版本检查_7971fa4\\simulation.json"
+      ],
+      "cwd": "C:\\Users\\USER\\AppData\\Local\\Temp\\continuum-review-20261031",
+      "exit_code": 0
+    },
+    {
+      "name": "kairos_verify",
+      "command": [
+        "C:\\Users\\USER\\anaconda3\\python.exe",
+        "-B",
+        "-X",
+        "utf8",
+        "-m",
+        "kairos.verify"
+      ],
+      "cwd": "C:\\Users\\USER\\AppData\\Local\\Temp\\kairos-review-20261031-lf",
+      "exit_code": 0
+    },
+    {
+      "name": "kairos_ttl_regression",
+      "command": [
+        "C:\\Users\\USER\\anaconda3\\python.exe",
+        "-B",
+        "-X",
+        "utf8",
+        "C:\\Users\\USER\\AppData\\Local\\Temp\\continuum-review-20261031\\tasks\\continuum\\test_ttl_policy_kairos.py"
+      ],
+      "cwd": "C:\\Users\\USER\\AppData\\Local\\Temp\\kairos-review-20261031-lf",
+      "exit_code": 0
+    },
+    {
+      "name": "continuum_dry_run",
+      "command": [
+        "C:\\Users\\USER\\anaconda3\\python.exe",
+        "-B",
+        "-X",
+        "utf8",
+        "-m",
+        "kairos.run",
+        "--method",
+        "continuum",
+        "--model",
+        "/MODEL_PATH_NOT_VERIFIED",
+        "--output",
+        "C:\\Users\\USER\\Desktop\\学习\\大三上\\大模型网络\\人员C_接手材料\\固定版本检查_7971fa4\\not_executed",
+        "--dry-run"
+      ],
+      "cwd": "C:\\Users\\USER\\AppData\\Local\\Temp\\kairos-review-20261031-lf",
+      "exit_code": 0
+    }
+  ],
+  "sample": {
+    "program": "django__django-12308",
+    "turns": 9,
+    "prompt_lengths": [
+      1218,
+      2160,
+      2284,
+      2720,
+      3113,
+      5415,
+      5684,
+      5941,
+      6209
+    ],
+    "program_keys": [
+      "id",
+      "source_instance_id",
+      "append_generated_outputs",
+      "arrival_s",
+      "turns",
+      "production_metadata",
+      "session_id",
+      "synthetic_user",
+      "source_turn_id",
+      "source_turn_index",
+      "cohort",
+      "human_gap_original_s",
+      "human_gap_replay_s",
+      "predecessor",
+      "cache_salt"
+    ],
+    "turn_keys": [
+      "keep_prefix_tokens",
+      "added_token_ids",
+      "output_tokens",
+      "gap_after_s",
+      "tool",
+      "original_round",
+      "prompt_tokens",
+      "original_assistant_timestamp",
+      "feedback_messages",
+      "source_gap_s",
+      "source_cached_tokens",
+      "source_tool_failures"
+    ],
+    "signature_check": "passed; no tokenizer/model execution",
+    "status": "interface example only; not a standalone runnable release"
+  }
+}

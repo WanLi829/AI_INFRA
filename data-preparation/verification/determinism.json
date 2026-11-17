@@ -1,0 +1,6 @@
+{
+  "all_reexports_byte_identical": true,
+  "arrival_manifests_identical": true,
+  "bundle_files": 42,
+  "scope": "Repeated full bundle exports and arrival generation; independent tokenizer validation recorded separately"
+}

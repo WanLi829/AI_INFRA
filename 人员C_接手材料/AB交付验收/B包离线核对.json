@@ -1,0 +1,99 @@
+[
+  {
+    "model": "Qwen3-8B",
+    "subset": "pilot_1",
+    "programs": 1,
+    "calls": 10,
+    "manifest_hashes_match": true,
+    "method": "kairos",
+    "run_status": "complete",
+    "strict_complete": true,
+    "records_checked": 10,
+    "actual_output_tokens": 2437,
+    "arrival_verified": true,
+    "sampled_gpu_mib": 22662,
+    "sampled_cgroup_gib": 13.741,
+    "ownership_verified": false
+  },
+  {
+    "model": "Qwen3-8B",
+    "subset": "pilot_4",
+    "programs": 4,
+    "calls": 44,
+    "manifest_hashes_match": true,
+    "method": "kairos",
+    "run_status": "complete",
+    "strict_complete": true,
+    "records_checked": 44,
+    "actual_output_tokens": 7311,
+    "arrival_verified": true,
+    "sampled_gpu_mib": 22666,
+    "sampled_cgroup_gib": 13.782,
+    "ownership_verified": false
+  },
+  {
+    "model": "Qwen3-8B",
+    "subset": "pilot_14",
+    "programs": 14,
+    "calls": 161,
+    "manifest_hashes_match": true,
+    "method": "kairos",
+    "run_status": "complete",
+    "strict_complete": true,
+    "records_checked": 161,
+    "actual_output_tokens": 24182,
+    "arrival_verified": true,
+    "sampled_gpu_mib": 22666,
+    "sampled_cgroup_gib": 14.007,
+    "ownership_verified": false
+  },
+  {
+    "model": "Qwen3-8B",
+    "subset": "heldout_candidates",
+    "programs": 36,
+    "calls": 401,
+    "manifest_hashes_match": true
+  },
+  {
+    "model": "Qwen3-8B",
+    "subset": "all_eligible",
+    "programs": 207,
+    "calls": 2668,
+    "manifest_hashes_match": true
+  },
+  {
+    "model": "Qwen3-4B",
+    "subset": "pilot_1",
+    "programs": 1,
+    "calls": 10,
+    "manifest_hashes_match": true
+  },
+  {
+    "model": "Qwen3-4B",
+    "subset": "pilot_4",
+    "programs": 4,
+    "calls": 44,
+    "manifest_hashes_match": true
+  },
+  {
+    "model": "Qwen3-4B",
+    "subset": "pilot_14",
+    "programs": 14,
+    "calls": 161,
+    "manifest_hashes_match": true
+  },
+  {
+    "model": "Qwen3-4B",
+    "subset": "heldout_candidates",
+    "programs": 36,
+    "calls": 401,
+    "manifest_hashes_match": true
+  },
+  {
+    "model": "Qwen3-4B",
+    "subset": "all_eligible",
+    "programs": 207,
+    "calls": 2668,
+    "manifest_hashes_match": true
+  }
+]

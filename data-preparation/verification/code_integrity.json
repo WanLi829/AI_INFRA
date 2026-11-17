@@ -1,0 +1,14 @@
+{
+  "adapter_files": {
+    "b_replay/cli.py": "d4b4e56f58679a811984bab53e851fc6564f89bc68c7da61de401951b8f41f2a",
+    "b_replay/client.py": "5892c1b73ff133bdbb53534976b7a28c116b551225d3106c9acb061008ad9d0d",
+    "b_replay/common.py": "0d1995d1258a19e4b20a8b65f7c5f6a750ad45e4c504020b0b88ca94558b27c8",
+    "b_replay/low_memory.py": "4b017149d0334ba8705ad3d1d0eef64b1eec42efc7c1e35f5c7e423fabebe5c2",
+    "b_replay/resources.py": "aec0632e35259f438b4837c5d4ebac2972d38a5a8fa5dea85bbea9bc8e236112",
+    "b_replay/server.py": "063941b6c1553158e5c9f54f6e74749d2c33958025e909f1958284ff15b841c0",
+    "scripts/gpu_python.py": "7efb4dba86cb7fe8d3a1a4f976ab9e82ed76747ea74560e050b8117404390881"
+  },
+  "frozen_runtime_files": 179,
+  "original_archived_calls": 178,
+  "verified": true
+}

@@ -1,0 +1,115 @@
+{
+  "arrivals": {
+    "arrivals": [
+      {
+        "arrival_s": 7.88165448125548,
+        "program_id": "astropy__astropy-13977"
+      },
+      {
+        "arrival_s": 16.09691203698974,
+        "program_id": "django__django-11734"
+      },
+      {
+        "arrival_s": 36.15902991915837,
+        "program_id": "django__django-12039"
+      },
+      {
+        "arrival_s": 36.5400003301002,
+        "program_id": "django__django-12308"
+      },
+      {
+        "arrival_s": 52.302730071119946,
+        "program_id": "django__django-13012"
+      },
+      {
+        "arrival_s": 61.246758623696174,
+        "program_id": "django__django-13512"
+      },
+      {
+        "arrival_s": 64.28423301338088,
+        "program_id": "django__django-14672"
+      },
+      {
+        "arrival_s": 67.4319300510968,
+        "program_id": "matplotlib__matplotlib-23412"
+      },
+      {
+        "arrival_s": 71.5764256570582,
+        "program_id": "pytest-dev__pytest-7521"
+      },
+      {
+        "arrival_s": 76.8957163411258,
+        "program_id": "scikit-learn__scikit-learn-14983"
+      },
+      {
+        "arrival_s": 115.79886374368763,
+        "program_id": "sympy__sympy-13974"
+      },
+      {
+        "arrival_s": 117.40160781828956,
+        "program_id": "sympy__sympy-17318"
+      },
+      {
+        "arrival_s": 118.26788622506395,
+        "program_id": "sympy__sympy-18763"
+      },
+      {
+        "arrival_s": 121.61124875980106,
+        "program_id": "sympy__sympy-23824"
+      }
+    ],
+    "first_arrival_rule": "Includes the first exponential inter-arrival from clock zero",
+    "jps": 0.1,
+    "program_order": "Bundle program_ids order",
+    "schema_version": "b-replay-arrivals/1.0",
+    "seed": 20261030,
+    "trace_sha256": "221ebc1362970db76363a6ef8c2f84f13f7188c7f35caf417574babd6b814d70"
+  },
+  "b_runtime_sha256": {
+    "cli.py": "d4b4e56f58679a811984bab53e851fc6564f89bc68c7da61de401951b8f41f2a",
+    "client.py": "5892c1b73ff133bdbb53534976b7a28c116b551225d3106c9acb061008ad9d0d",
+    "common.py": "0d1995d1258a19e4b20a8b65f7c5f6a750ad45e4c504020b0b88ca94558b27c8",
+    "low_memory.py": "4b017149d0334ba8705ad3d1d0eef64b1eec42efc7c1e35f5c7e423fabebe5c2",
+    "resources.py": "aec0632e35259f438b4837c5d4ebac2972d38a5a8fa5dea85bbea9bc8e236112",
+    "scripts/gpu_python.py": "7efb4dba86cb7fe8d3a1a4f976ab9e82ed76747ea74560e050b8117404390881",
+    "server.py": "063941b6c1553158e5c9f54f6e74749d2c33958025e909f1958284ff15b841c0"
+  },
+  "gpu_input_smoke_validated": true,
+  "manifest": {
+    "calls": 161,
+    "coverage": "recorded_assistant_calls_only",
+    "files": {
+      "trace.json": "221ebc1362970db76363a6ef8c2f84f13f7188c7f35caf417574babd6b814d70",
+      "visible_messages.json": "4f2b1465e46d09bddbd4311bc0a0942bf24c215444658492940c52b97183bfff",
+      "visible_protocol.json": "be84eef6cb03712890ed3e0f2b988f959df056465335d58fea435ecbadbaf2de"
+    },
+    "gpu_validated": false,
+    "intended_use": "Pilot/development",
+    "model": "Qwen3-8B",
+    "model_revision": "b968826d9c46dd6066d109eabc6255188de91218",
+    "program_ids": [
+      "astropy__astropy-13977",
+      "django__django-11734",
+      "django__django-12039",
+      "django__django-12308",
+      "django__django-13012",
+      "django__django-13512",
+      "django__django-14672",
+      "matplotlib__matplotlib-23412",
+      "pytest-dev__pytest-7521",
+      "scikit-learn__scikit-learn-14983",
+      "sympy__sympy-13974",
+      "sympy__sympy-17318",
+      "sympy__sympy-18763",
+      "sympy__sympy-23824"
+    ],
+    "programs": 14,
+    "schema_version": "b-replay-bundle/1.0",
+    "subset": "pilot_14",
+    "total_output_tokens": 24182,
+    "unrecorded_api_attempts": 14
+  },
+  "performance_claim_supported": false,
+  "runtime_commit": "7971fa40323f16e8e4ce8f12dfd5db9755a98cf1",
+  "server_profile": "ram30"
+}

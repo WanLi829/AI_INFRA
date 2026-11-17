@@ -1,0 +1,14 @@
+{
+  "arrivals": [
+    {
+      "arrival_s": 7.88165448125548,
+      "program_id": "astropy__astropy-13977"
+    }
+  ],
+  "first_arrival_rule": "Includes the first exponential inter-arrival from clock zero",
+  "jps": 0.1,
+  "program_order": "Bundle program_ids order",
+  "schema_version": "b-replay-arrivals/1.0",
+  "seed": 20261030,
+  "trace_sha256": "a12da4529318e1c915f2f3237630710bf4615034a3039eaa27538638d0898abe"
+}

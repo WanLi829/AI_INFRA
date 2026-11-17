@@ -1,0 +1,13 @@
+[
+  {
+    "actual_arrival_s": 7.89030696451664,
+    "arrival_lag_s": 0.008652483261159638,
+    "completed_calls": 10,
+    "end_s": 54.43761622160673,
+    "jct_s": 46.54730925709009,
+    "planned_arrival_s": 7.88165448125548,
+    "program_id": "astropy__astropy-13977",
+    "success": true,
+    "tool_dependency_s": 0.6452445983886719
+  }
+]

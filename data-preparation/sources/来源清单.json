@@ -1,0 +1,22 @@
+{
+  "bfcl": {
+    "commit": "6ea57973c7a6097fd7c5915698c54c17c5b1b6c8",
+    "repository": "https://github.com/ShishirPatil/gorilla"
+  },
+  "dataset": {
+    "license_declared_by_dataset_card": "MIT",
+    "repository": "tarsur385/qwen3-30b-a3b-instruct-2507-swebench-verified-mini-swe-agent",
+    "revision": "58389eb5426db5a3ae6159faa37498072b4735ff"
+  },
+  "kairos": {
+    "interface_commit": "4ddff8786254c8c5ed8ac18deb22486e7a0594fa",
+    "note": "接口提交仅更改README；冻结执行代码使用通过原始发布清单校验的父提交。",
+    "repository": "https://github.com/MaxizYB/Kairos",
+    "runtime_commit": "7971fa40323f16e8e4ce8f12dfd5db9755a98cf1"
+  },
+  "license_note": "原始来源及tokenizer许可声明按上游保留；不为第三方材料统一重新授权。",
+  "tokenizers": {
+    "Qwen3-4B": "1cfa9a7208912126459214e8b04321603b3df60c",
+    "Qwen3-8B": "b968826d9c46dd6066d109eabc6255188de91218"
+  }
+}

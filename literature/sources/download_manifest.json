@@ -1,0 +1,110 @@
+[
+  {
+    "url": "https://raw.githubusercontent.com/MaxizYB/Kairos/4ddff8786254c8c5ed8ac18deb22486e7a0594fa/README.md",
+    "path": "A_文献调研与负载选型/sources/Kairos/README.md",
+    "bytes": 3378,
+    "sha256": "0dd2f52d721025a144ef0891801b3c7b6398d5967ec42a95118cc38240c9c9e6"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/MaxizYB/Kairos/4ddff8786254c8c5ed8ac18deb22486e7a0594fa/THIRD_PARTY.md",
+    "path": "A_文献调研与负载选型/sources/Kairos/THIRD_PARTY.md",
+    "bytes": 3304,
+    "sha256": "af391f1c3abef28349bd668567b0bdd65c8b1283c7a63b4065ed3b93db4a373c"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/MaxizYB/Kairos/4ddff8786254c8c5ed8ac18deb22486e7a0594fa/docs/EXPERIMENTS.md",
+    "path": "A_文献调研与负载选型/sources/Kairos/docs/EXPERIMENTS.md",
+    "bytes": 10688,
+    "sha256": "be9f5bce016fb1f5cbf36408017de7c76774469a10592f3f7e8ba431d9c00bf1"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/MaxizYB/Kairos/4ddff8786254c8c5ed8ac18deb22486e7a0594fa/docs/REPRODUCE.md",
+    "path": "A_文献调研与负载选型/sources/Kairos/docs/REPRODUCE.md",
+    "bytes": 11051,
+    "sha256": "6437fa1d7943e079e2a8e7d1cf50c0ebe6c63078ba2f22bddf99a278d039e5fc"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/MaxizYB/Kairos/4ddff8786254c8c5ed8ac18deb22486e7a0594fa/docs/ARCHITECTURE.md",
+    "path": "A_文献调研与负载选型/sources/Kairos/docs/ARCHITECTURE.md",
+    "bytes": 6250,
+    "sha256": "95edfbb891deb55c01c0bf1c9f94a92c716153a4d6196509050955099d555b53"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/MaxizYB/Kairos/4ddff8786254c8c5ed8ac18deb22486e7a0594fa/configs/kairos.json",
+    "path": "A_文献调研与负载选型/sources/Kairos/configs/kairos.json",
+    "bytes": 3672,
+    "sha256": "89c111b8aa842b3005c84627be5575c22e20d6e4e8c59043f141ca09c6953983"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/MaxizYB/Kairos/4ddff8786254c8c5ed8ac18deb22486e7a0594fa/configs/continuum.json",
+    "path": "A_文献调研与负载选型/sources/Kairos/configs/continuum.json",
+    "bytes": 3594,
+    "sha256": "f15663b67537d5cc167bc9de051afb00944bc23c549797435e1191999cb16746"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/MaxizYB/Kairos/4ddff8786254c8c5ed8ac18deb22486e7a0594fa/data/workload/trace.json",
+    "path": "A_文献调研与负载选型/sources/Kairos/data/workload/trace.json",
+    "bytes": 2352957,
+    "sha256": "4c896b93b14eff39bcc6e2fd0700ba59a1bfcfd785bd15e645d5e1a2ffeee2e8"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/MaxizYB/Kairos/4ddff8786254c8c5ed8ac18deb22486e7a0594fa/data/workload/visible_messages.json",
+    "path": "A_文献调研与负载选型/sources/Kairos/data/workload/visible_messages.json",
+    "bytes": 3880488,
+    "sha256": "59deb05bfffb29825ee474f17376e4b6c9a23056b473cec061fc3b7123e81a1a"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/MaxizYB/Kairos/4ddff8786254c8c5ed8ac18deb22486e7a0594fa/data/workload/visible_protocol.json",
+    "path": "A_文献调研与负载选型/sources/Kairos/data/workload/visible_protocol.json",
+    "bytes": 36301,
+    "sha256": "22470611302f9e4d4cbf486c636a94cc6709a2e482507db7666ac36f86f48a27"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/MaxizYB/Kairos/4ddff8786254c8c5ed8ac18deb22486e7a0594fa/kairos/_runtime/replay.py",
+    "path": "A_文献调研与负载选型/sources/Kairos/kairos/_runtime/replay.py",
+    "bytes": 7355,
+    "sha256": "99d0dcef5ae8131ededf28b01ad1928e7877d385ba6d738a16bcdd72d0847ddd"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/MaxizYB/Kairos/4ddff8786254c8c5ed8ac18deb22486e7a0594fa/kairos/arrival.py",
+    "path": "A_文献调研与负载选型/sources/Kairos/kairos/arrival.py",
+    "bytes": 2692,
+    "sha256": "4fe0ebe82a0de07c6de9586b98569b010364ca4dde6751983ce7b5e171b15488"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/MaxizYB/Kairos/4ddff8786254c8c5ed8ac18deb22486e7a0594fa/kairos/messages.py",
+    "path": "A_文献调研与负载选型/sources/Kairos/kairos/messages.py",
+    "bytes": 3669,
+    "sha256": "5411c630e91fb67141d937fba87d1578ac3e77f6b5e4c68af8b5959cdb556406"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/MaxizYB/Kairos/4ddff8786254c8c5ed8ac18deb22486e7a0594fa/results/environment.json",
+    "path": "A_文献调研与负载选型/sources/Kairos/results/environment.json",
+    "bytes": 3095,
+    "sha256": "cf6cc3d32a55b70768bff38f8da3c6e3abae6715ef99c5be3d0dbff03267626c"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/MaxizYB/Kairos/4ddff8786254c8c5ed8ac18deb22486e7a0594fa/provenance/export_manifest.json",
+    "path": "A_文献调研与负载选型/sources/Kairos/provenance/export_manifest.json",
+    "bytes": 48904,
+    "sha256": "98e437c85314946e34de62b3a07a95f55141c9340d48720c345e0ded8f42c262"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/Hanchenli/vllm-continuum/316a58794a6ff86b216e579b74fd56ed0c5a911f/README.md",
+    "path": "A_文献调研与负载选型/sources/vllm-continuum/README.md",
+    "bytes": 4802,
+    "sha256": "580711553689db98f6a5a2bfa9ee97cb3ab98b87c1fef4fd5f0c159e2f90fbe6"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/Hanchenli/vllm-continuum/316a58794a6ff86b216e579b74fd56ed0c5a911f/mini-swe-agent/src/minisweagent/run/extra/swebench.py",
+    "path": "A_文献调研与负载选型/sources/vllm-continuum/mini-swe-agent/src/minisweagent/run/extra/swebench.py",
+    "bytes": 14863,
+    "sha256": "3fc02521cb0c39f1465a9678c3d0685c2be9466a9a0a1f7f5ede91e58138cfb0"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/Hanchenli/vllm-continuum/316a58794a6ff86b216e579b74fd56ed0c5a911f/mini-swe-agent/src/minisweagent/models/vllm_model.py",
+    "path": "A_文献调研与负载选型/sources/vllm-continuum/mini-swe-agent/src/minisweagent/models/vllm_model.py",
+    "bytes": 7821,
+    "sha256": "7a96812e2ccd04fd04c56705005fa5356fdb68222c9c574f092b2bdaac4aa560"
+  }
+]

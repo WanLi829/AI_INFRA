@@ -1,0 +1,134 @@
+[
+  {
+    "path": "A_文献调研与负载选型/sources/teacher_samples/django__django-12308.traj.json",
+    "url": "https://huggingface.co/datasets/tarsur385/qwen3-30b-a3b-instruct-2507-swebench-verified-mini-swe-agent/resolve/58389eb5426db5a3ae6159faa37498072b4735ff/trajectories/django__django-12308.traj.json",
+    "bytes": 87466,
+    "sha256": "4c5d6160f53ed1e38f696bffe5d1e2460847f46d73da536619d8eafe5e2eb361"
+  },
+  {
+    "path": "A_文献调研与负载选型/sources/teacher_samples/sympy__sympy-17318.traj.json",
+    "url": "https://huggingface.co/datasets/tarsur385/qwen3-30b-a3b-instruct-2507-swebench-verified-mini-swe-agent/resolve/58389eb5426db5a3ae6159faa37498072b4735ff/trajectories/sympy__sympy-17318.traj.json",
+    "bytes": 66017,
+    "sha256": "084384489e37f6b942d5575f6fa7ddcd415592319e06eaf7e0a07adfb6fc39c7"
+  },
+  {
+    "path": "A_文献调研与负载选型/sources/teacher_samples/django__django-12039.traj.json",
+    "url": "https://huggingface.co/datasets/tarsur385/qwen3-30b-a3b-instruct-2507-swebench-verified-mini-swe-agent/resolve/58389eb5426db5a3ae6159faa37498072b4735ff/trajectories/django__django-12039.traj.json",
+    "bytes": 126468,
+    "sha256": "fdb5b75afac8e40267e8b87895200973ba7c1b90df3bb901e326c5a8c999a4ed"
+  },
+  {
+    "path": "A_文献调研与负载选型/sources/teacher_samples/sympy__sympy-13974.traj.json",
+    "url": "https://huggingface.co/datasets/tarsur385/qwen3-30b-a3b-instruct-2507-swebench-verified-mini-swe-agent/resolve/58389eb5426db5a3ae6159faa37498072b4735ff/trajectories/sympy__sympy-13974.traj.json",
+    "bytes": 114077,
+    "sha256": "f92ac198f7df321bdd08a5a0e988b1a984e6a76a21e61f5a698d763dcf4863bb"
+  },
+  {
+    "path": "A_文献调研与负载选型/sources/teacher_samples/django__django-11734.traj.json",
+    "url": "https://huggingface.co/datasets/tarsur385/qwen3-30b-a3b-instruct-2507-swebench-verified-mini-swe-agent/resolve/58389eb5426db5a3ae6159faa37498072b4735ff/trajectories/django__django-11734.traj.json",
+    "bytes": 95628,
+    "sha256": "df62356507bd793450a3d3bf3f720aa247679c100ba0392822d51e29572f0e63"
+  },
+  {
+    "path": "A_文献调研与负载选型/sources/teacher_samples/matplotlib__matplotlib-23412.traj.json",
+    "url": "https://huggingface.co/datasets/tarsur385/qwen3-30b-a3b-instruct-2507-swebench-verified-mini-swe-agent/resolve/58389eb5426db5a3ae6159faa37498072b4735ff/trajectories/matplotlib__matplotlib-23412.traj.json",
+    "bytes": 110637,
+    "sha256": "c467a7b35b6c7050960a586a5a9da750515bd6f5ff550a763922b0a2ac5ca796"
+  },
+  {
+    "path": "A_文献调研与负载选型/sources/teacher_samples/sympy__sympy-23824.traj.json",
+    "url": "https://huggingface.co/datasets/tarsur385/qwen3-30b-a3b-instruct-2507-swebench-verified-mini-swe-agent/resolve/58389eb5426db5a3ae6159faa37498072b4735ff/trajectories/sympy__sympy-23824.traj.json",
+    "bytes": 96147,
+    "sha256": "0b21c96a94e82a76dd378dcfb099da18328fe7cae48fe2825d6939815ab66379"
+  },
+  {
+    "path": "A_文献调研与负载选型/sources/teacher_samples/astropy__astropy-13453.traj.json",
+    "url": "https://huggingface.co/datasets/tarsur385/qwen3-30b-a3b-instruct-2507-swebench-verified-mini-swe-agent/resolve/58389eb5426db5a3ae6159faa37498072b4735ff/trajectories/astropy__astropy-13453.traj.json",
+    "bytes": 156264,
+    "sha256": "1b2c6cfe64c2146c16fb6461106604df9b27e20934e1a9e1e90df55c30498192"
+  },
+  {
+    "path": "A_文献调研与负载选型/sources/teacher_samples/django__django-16256.traj.json",
+    "url": "https://huggingface.co/datasets/tarsur385/qwen3-30b-a3b-instruct-2507-swebench-verified-mini-swe-agent/resolve/58389eb5426db5a3ae6159faa37498072b4735ff/trajectories/django__django-16256.traj.json",
+    "bytes": 166672,
+    "sha256": "f93e182276b4bce327fa601745c81ab37eb5918e093cefcd59c04cfb5ad5052f"
+  },
+  {
+    "path": "A_文献调研与负载选型/sources/teacher_samples/scikit-learn__scikit-learn-14983.traj.json",
+    "url": "https://huggingface.co/datasets/tarsur385/qwen3-30b-a3b-instruct-2507-swebench-verified-mini-swe-agent/resolve/58389eb5426db5a3ae6159faa37498072b4735ff/trajectories/scikit-learn__scikit-learn-14983.traj.json",
+    "bytes": 94050,
+    "sha256": "bd571ae76885f59ed0958604b2d5c061f5266b9dc2e3aea9c058d27a86f9cccc"
+  },
+  {
+    "path": "A_文献调研与负载选型/sources/teacher_samples/django__django-13512.traj.json",
+    "url": "https://huggingface.co/datasets/tarsur385/qwen3-30b-a3b-instruct-2507-swebench-verified-mini-swe-agent/resolve/58389eb5426db5a3ae6159faa37498072b4735ff/trajectories/django__django-13512.traj.json",
+    "bytes": 108765,
+    "sha256": "9e3f0d547806eba35185b47a0fd8aaa3c8f9c585e64354232c6cabbc4704fb25"
+  },
+  {
+    "path": "A_文献调研与负载选型/sources/teacher_samples/django__django-14672.traj.json",
+    "url": "https://huggingface.co/datasets/tarsur385/qwen3-30b-a3b-instruct-2507-swebench-verified-mini-swe-agent/resolve/58389eb5426db5a3ae6159faa37498072b4735ff/trajectories/django__django-14672.traj.json",
+    "bytes": 70730,
+    "sha256": "efd8936bc66a63aff59a28bc68d9ac7763744c4078ed9e038e35d14546f6c6c0"
+  },
+  {
+    "path": "A_文献调研与负载选型/sources/teacher_samples/sympy__sympy-18763.traj.json",
+    "url": "https://huggingface.co/datasets/tarsur385/qwen3-30b-a3b-instruct-2507-swebench-verified-mini-swe-agent/resolve/58389eb5426db5a3ae6159faa37498072b4735ff/trajectories/sympy__sympy-18763.traj.json",
+    "bytes": 93114,
+    "sha256": "2c632e9297e30ddb15d0703f31e9b454ee1a1ef5d5dc3b8b146e97f5b62f868f"
+  },
+  {
+    "path": "A_文献调研与负载选型/sources/teacher_samples/pytest-dev__pytest-7521.traj.json",
+    "url": "https://huggingface.co/datasets/tarsur385/qwen3-30b-a3b-instruct-2507-swebench-verified-mini-swe-agent/resolve/58389eb5426db5a3ae6159faa37498072b4735ff/trajectories/pytest-dev__pytest-7521.traj.json",
+    "bytes": 82854,
+    "sha256": "d6904db92170d144ec8052d7e81b2e30a509c0b4145b2a6e7bd4b917254ff164"
+  },
+  {
+    "path": "A_文献调研与负载选型/sources/teacher_samples/astropy__astropy-13977.traj.json",
+    "url": "https://huggingface.co/datasets/tarsur385/qwen3-30b-a3b-instruct-2507-swebench-verified-mini-swe-agent/resolve/58389eb5426db5a3ae6159faa37498072b4735ff/trajectories/astropy__astropy-13977.traj.json",
+    "bytes": 92683,
+    "sha256": "4177798c2d508a7a6bdfcc1b10c3890c5bd3e75e13def637d345667ff802af20"
+  },
+  {
+    "path": "A_文献调研与负载选型/sources/teacher_samples/django__django-13012.traj.json",
+    "url": "https://huggingface.co/datasets/tarsur385/qwen3-30b-a3b-instruct-2507-swebench-verified-mini-swe-agent/resolve/58389eb5426db5a3ae6159faa37498072b4735ff/trajectories/django__django-13012.traj.json",
+    "bytes": 364797,
+    "sha256": "6fe543cf6ed23c2973a7bf88366adb84e2d53a0faabbbf2b98e0b8b79ca061fb"
+  },
+  {
+    "path": "A_文献调研与负载选型/sources/Qwen3-4B_config.json",
+    "url": "https://huggingface.co/Qwen/Qwen3-4B/resolve/1cfa9a7208912126459214e8b04321603b3df60c/config.json",
+    "bytes": 726,
+    "sha256": "8ba006f74fecfaaeb392872a60f4a480e7ec9860153d2e1b769ec81f9a147f8a"
+  },
+  {
+    "path": "A_文献调研与负载选型/sources/Qwen3-8B_config.json",
+    "url": "https://huggingface.co/Qwen/Qwen3-8B/resolve/b968826d9c46dd6066d109eabc6255188de91218/config.json",
+    "bytes": 728,
+    "sha256": "f7c4eadfbbf522470667b797a3c89be2524832d2d599797248dc304fff447c30"
+  },
+  {
+    "path": "A_文献调研与负载选型/sources/gorilla/berkeley-function-call-leaderboard/bfcl_eval/data/BFCL_v4_multi_turn_base.json",
+    "url": "https://raw.githubusercontent.com/ShishirPatil/gorilla/6ea57973c7a6097fd7c5915698c54c17c5b1b6c8/berkeley-function-call-leaderboard/bfcl_eval/data/BFCL_v4_multi_turn_base.json",
+    "bytes": 390425,
+    "sha256": "1a21a995d06fd6f20ba55de7bced30ef953ec35e998f502ec2ecf4d66ef1c43a"
+  },
+  {
+    "path": "A_文献调研与负载选型/sources/gorilla/berkeley-function-call-leaderboard/bfcl_eval/data/BFCL_v4_web_search.json",
+    "url": "https://raw.githubusercontent.com/ShishirPatil/gorilla/6ea57973c7a6097fd7c5915698c54c17c5b1b6c8/berkeley-function-call-leaderboard/bfcl_eval/data/BFCL_v4_web_search.json",
+    "bytes": 36984,
+    "sha256": "6fc41d96d003dc849028966a782923560d2fc127ed2088aa967f06daaafa4268"
+  },
+  {
+    "path": "A_文献调研与负载选型/sources/gorilla/berkeley-function-call-leaderboard/bfcl_eval/data/README.md",
+    "url": "https://raw.githubusercontent.com/ShishirPatil/gorilla/6ea57973c7a6097fd7c5915698c54c17c5b1b6c8/berkeley-function-call-leaderboard/bfcl_eval/data/README.md",
+    "bytes": 20277,
+    "sha256": "93119d83df28fee0a9f3ea41b0c6a947aad9f7ba4334ae89fef41c74b67b208d"
+  },
+  {
+    "path": "A_文献调研与负载选型/sources/gorilla/berkeley-function-call-leaderboard/bfcl_eval/data/multi_turn_func_doc/web_search.json",
+    "url": "https://raw.githubusercontent.com/ShishirPatil/gorilla/6ea57973c7a6097fd7c5915698c54c17c5b1b6c8/berkeley-function-call-leaderboard/bfcl_eval/data/multi_turn_func_doc/web_search.json",
+    "bytes": 2252,
+    "sha256": "61fcee411e35f7ff67415e18cd67276615cf06e1c8841a683d2d997dbb46eac5"
+  }
+]

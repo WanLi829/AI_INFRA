@@ -1,0 +1,45 @@
+{
+  "api_attempts": 17401,
+  "attempt_delta_matches_format_errors": true,
+  "exit_status_counts": {
+    "LimitsExceeded": 276,
+    "Submitted": 223
+  },
+  "format_error_feedbacks": 3517,
+  "grain": "One program is one source trajectory; one stored call is one assistant message",
+  "missing_api_attempt_counts": 0,
+  "missing_usage_rounds": 0,
+  "notes": [
+    "Submitted is termination status, not correctness",
+    "Feedback intervals include sandbox/client overhead",
+    "All 499 source hashes are checked against the pinned Kairos metadata",
+    "Existing blind split has already been used for offline evaluation"
+  ],
+  "observed_api_attempt_mismatches": 479,
+  "quarantined": 0,
+  "raw_feedback_gaps_s": {
+    "max": 60.20937132835388,
+    "mean": 0.3778993608882991,
+    "min": 0.010526180267333984,
+    "n": 13385,
+    "p50": 0.19751667976379395,
+    "p95": 0.7294585227966306
+  },
+  "rounds": {
+    "max": 50,
+    "mean": 27.82364729458918,
+    "min": 3,
+    "n": 499,
+    "p50": 22.0,
+    "p95": 49.0
+  },
+  "source_programs": 499,
+  "split_counts": {
+    "blind": 77,
+    "development": 16,
+    "train": 406
+  },
+  "stored_calls": 13884,
+  "structurally_valid": 499,
+  "unrecorded_api_attempts": 3517
+}

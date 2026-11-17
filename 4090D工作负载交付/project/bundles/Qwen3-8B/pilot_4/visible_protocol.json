@@ -1,0 +1,316 @@
+{
+  "current_assistant_included": false,
+  "future_outcomes_included": false,
+  "request_signatures": [
+    {
+      "output_tokens": 73,
+      "program_id": "astropy__astropy-13977",
+      "prompt_sha256": "054212d69fe85ed001777d50c8af78ec3c6a4bf753398dcd257f0129f50f45d1",
+      "prompt_tokens": 2028,
+      "turn_id": 0
+    },
+    {
+      "output_tokens": 85,
+      "program_id": "astropy__astropy-13977",
+      "prompt_sha256": "b6411f599431a6f933824d7482c9b226ed9f4efb47d49eb105b9b19edc7bb101",
+      "prompt_tokens": 3163,
+      "turn_id": 1
+    },
+    {
+      "output_tokens": 104,
+      "program_id": "astropy__astropy-13977",
+      "prompt_sha256": "8dcef7b62d19eba8d5430c340851f4c6390c3072e5483fdfdea9689ae221fec6",
+      "prompt_tokens": 3977,
+      "turn_id": 2
+    },
+    {
+      "output_tokens": 132,
+      "program_id": "astropy__astropy-13977",
+      "prompt_sha256": "220375a0eaf672a9a1e84cc6a46f17c3258b937cae09ed1d3f7934deeabc088d",
+      "prompt_tokens": 4192,
+      "turn_id": 3
+    },
+    {
+      "output_tokens": 96,
+      "program_id": "astropy__astropy-13977",
+      "prompt_sha256": "da35779fd61637d2168e6ecbb9d0b1fb2d40dfc27c980ab9196102248eb654a9",
+      "prompt_tokens": 4701,
+      "turn_id": 4
+    },
+    {
+      "output_tokens": 491,
+      "program_id": "astropy__astropy-13977",
+      "prompt_sha256": "5ae365953f6f972254007816771dde03ee947f97a3fa1d0ea6b2b8200b692920",
+      "prompt_tokens": 5356,
+      "turn_id": 5
+    },
+    {
+      "output_tokens": 699,
+      "program_id": "astropy__astropy-13977",
+      "prompt_sha256": "5ebacf1506d2266429f9f6d7472141e6001b06492d88fd379c7790373c799898",
+      "prompt_tokens": 5873,
+      "turn_id": 6
+    },
+    {
+      "output_tokens": 603,
+      "program_id": "astropy__astropy-13977",
+      "prompt_sha256": "28e815cebbce8fe67ddafdb95d880e5c05ae6f005697c4e6b0a4e6b11577d832",
+      "prompt_tokens": 6610,
+      "turn_id": 7
+    },
+    {
+      "output_tokens": 39,
+      "program_id": "astropy__astropy-13977",
+      "prompt_sha256": "08d7548c0b86dfb80f29a5d3c4f0921550d2413638422b2f1b7a1b48373e1bc0",
+      "prompt_tokens": 7239,
+      "turn_id": 8
+    },
+    {
+      "output_tokens": 115,
+      "program_id": "astropy__astropy-13977",
+      "prompt_sha256": "0be7dace7205e441dc3a557ac94742113644b6f7ad1c0800f92e0f636ccd1ed9",
+      "prompt_tokens": 7754,
+      "turn_id": 9
+    },
+    {
+      "output_tokens": 62,
+      "program_id": "django__django-11734",
+      "prompt_sha256": "3ed7e81e24e2d8a10e43b531012869b48c69cd9ad3e7a59197906cf63638943b",
+      "prompt_tokens": 1341,
+      "turn_id": 0
+    },
+    {
+      "output_tokens": 72,
+      "program_id": "django__django-11734",
+      "prompt_sha256": "ccc4090ff67e525bb19116668f94fdce104db5ddfd93892acee56850c689545b",
+      "prompt_tokens": 2287,
+      "turn_id": 1
+    },
+    {
+      "output_tokens": 92,
+      "program_id": "django__django-11734",
+      "prompt_sha256": "3277ac5d9481f5dd4d0f91ae39b4b71deebb69a38f28d69ac6fd25db4c6c6845",
+      "prompt_tokens": 2719,
+      "turn_id": 2
+    },
+    {
+      "output_tokens": 58,
+      "program_id": "django__django-11734",
+      "prompt_sha256": "a91739b7717f45a562bb0dc895f333e56620cf5f38bf9a937be11fc0d82e54b6",
+      "prompt_tokens": 2837,
+      "turn_id": 3
+    },
+    {
+      "output_tokens": 100,
+      "program_id": "django__django-11734",
+      "prompt_sha256": "0cfb2fd3de66782b014d29719a23279145002b67144636bc4d7881e294ebfe7b",
+      "prompt_tokens": 2921,
+      "turn_id": 4
+    },
+    {
+      "output_tokens": 91,
+      "program_id": "django__django-11734",
+      "prompt_sha256": "d1ee5d6f0d500bb88d8e9006f6362a1026dc56904691ac02b784ba2f81016704",
+      "prompt_tokens": 3047,
+      "turn_id": 5
+    },
+    {
+      "output_tokens": 97,
+      "program_id": "django__django-11734",
+      "prompt_sha256": "79581b4fdc33c4ceac63691430424a607722a326fa935dafbc42f78aed97d416",
+      "prompt_tokens": 3164,
+      "turn_id": 6
+    },
+    {
+      "output_tokens": 107,
+      "program_id": "django__django-11734",
+      "prompt_sha256": "2890aaeefea14ab2a518c6be9f36bf67fc1e2c0a0d9b2a24eb613e13a920af43",
+      "prompt_tokens": 3294,
+      "turn_id": 7
+    },
+    {
+      "output_tokens": 238,
+      "program_id": "django__django-11734",
+      "prompt_sha256": "b163775481ee3b07398f13ba9df9998dc87fd358f99d69244141a5ad56325014",
+      "prompt_tokens": 5008,
+      "turn_id": 8
+    },
+    {
+      "output_tokens": 237,
+      "program_id": "django__django-11734",
+      "prompt_sha256": "1e5459c7179bc1cb04bfda315fbef2ccad822ee6c7657ee181724ec154276e5e",
+      "prompt_tokens": 6321,
+      "turn_id": 9
+    },
+    {
+      "output_tokens": 396,
+      "program_id": "django__django-11734",
+      "prompt_sha256": "1932e72fad71f6da902a6cc041d1f3a628c2db5dfcb1f958350eb71c2837006a",
+      "prompt_tokens": 6584,
+      "turn_id": 10
+    },
+    {
+      "output_tokens": 160,
+      "program_id": "django__django-11734",
+      "prompt_sha256": "4e5d66931d90ebb85c7564906db98c01629986d62c928caea7e9774e54afbbaf",
+      "prompt_tokens": 7006,
+      "turn_id": 11
+    },
+    {
+      "output_tokens": 161,
+      "program_id": "django__django-11734",
+      "prompt_sha256": "517fc794a01234da8b18bf948909c2ab69022d75421bc01d32253f4f7ac7863a",
+      "prompt_tokens": 7323,
+      "turn_id": 12
+    },
+    {
+      "output_tokens": 63,
+      "program_id": "django__django-12039",
+      "prompt_sha256": "d2511cdae0f7e5d99852d18c1fe90b68ada7f090a474ebf1d9990579bf3341c8",
+      "prompt_tokens": 1415,
+      "turn_id": 0
+    },
+    {
+      "output_tokens": 121,
+      "program_id": "django__django-12039",
+      "prompt_sha256": "508d3b7a0d2e3a09390982f6033a6d49acb78611a5667a7e920fbd22409d218d",
+      "prompt_tokens": 2362,
+      "turn_id": 1
+    },
+    {
+      "output_tokens": 206,
+      "program_id": "django__django-12039",
+      "prompt_sha256": "fed813ad3e03ee8e8dd5c15ce567b9322cf71c37a6489d460ced3d6ccf6269ee",
+      "prompt_tokens": 3830,
+      "turn_id": 2
+    },
+    {
+      "output_tokens": 75,
+      "program_id": "django__django-12039",
+      "prompt_sha256": "df9b3f3b5a2f644d61d3816a9757d711c05d8030b99b67ffbc8391624e6a68f1",
+      "prompt_tokens": 4140,
+      "turn_id": 3
+    },
+    {
+      "output_tokens": 292,
+      "program_id": "django__django-12039",
+      "prompt_sha256": "f774c6b36f93c37bbc7f0c802f001beae27cb553a5d3ce3695449b81b33d145b",
+      "prompt_tokens": 5416,
+      "turn_id": 4
+    },
+    {
+      "output_tokens": 132,
+      "program_id": "django__django-12039",
+      "prompt_sha256": "0b2394e7356a3bcb549c5365d34182a7fd32de92d02cb039e80f716c59ee84a4",
+      "prompt_tokens": 5746,
+      "turn_id": 5
+    },
+    {
+      "output_tokens": 111,
+      "program_id": "django__django-12039",
+      "prompt_sha256": "0b3e59a86ad0f2a1064e291c24f7032bc8f62598c20f4b4dd90c0f27003e4ae0",
+      "prompt_tokens": 5925,
+      "turn_id": 6
+    },
+    {
+      "output_tokens": 222,
+      "program_id": "django__django-12039",
+      "prompt_sha256": "2dce1c97c5679d05832a85af0fc8ada00ac0afc300b6babccb64333cb1945b96",
+      "prompt_tokens": 6062,
+      "turn_id": 7
+    },
+    {
+      "output_tokens": 53,
+      "program_id": "django__django-12039",
+      "prompt_sha256": "5110e05a66ef0161743de66c0fc8c31b23b26f6aefccfdef0f10cbc02792ed68",
+      "prompt_tokens": 6310,
+      "turn_id": 8
+    },
+    {
+      "output_tokens": 313,
+      "program_id": "django__django-12039",
+      "prompt_sha256": "6d322872f81c8043d9bba70d2b77f57e18a2a1bcd4b42f439bfa579e74061ca8",
+      "prompt_tokens": 6389,
+      "turn_id": 9
+    },
+    {
+      "output_tokens": 55,
+      "program_id": "django__django-12039",
+      "prompt_sha256": "84f165798b71c9064e0e3223c7e356e4c335b9b10cf75e80d09584e2a7595cea",
+      "prompt_tokens": 6728,
+      "turn_id": 10
+    },
+    {
+      "output_tokens": 212,
+      "program_id": "django__django-12039",
+      "prompt_sha256": "dbd564a9640de633da39d9ef466bdeaa4e273b10f04c60420c3b7880422ef20f",
+      "prompt_tokens": 8459,
+      "turn_id": 11
+    },
+    {
+      "output_tokens": 59,
+      "program_id": "django__django-12308",
+      "prompt_sha256": "5df8434ff7c095cd7d7fbfeafb503d9704ff0f58c963d3151f984bba0ee98586",
+      "prompt_tokens": 1218,
+      "turn_id": 0
+    },
+    {
+      "output_tokens": 82,
+      "program_id": "django__django-12308",
+      "prompt_sha256": "85d13007e0fe87b1cd694790dee26f88c7f166f7b878cdb1ae76f567bd6194b2",
+      "prompt_tokens": 2160,
+      "turn_id": 1
+    },
+    {
+      "output_tokens": 95,
+      "program_id": "django__django-12308",
+      "prompt_sha256": "6f4c4bec8a1296e7016748e851cf4adbae6f6047e93e206162e5875c300d0df8",
+      "prompt_tokens": 2284,
+      "turn_id": 2
+    },
+    {
+      "output_tokens": 198,
+      "program_id": "django__django-12308",
+      "prompt_sha256": "94cdde5660a993460950f38be146a463f18ea350d6c6e590130042e918b43f5f",
+      "prompt_tokens": 2720,
+      "turn_id": 3
+    },
+    {
+      "output_tokens": 65,
+      "program_id": "django__django-12308",
+      "prompt_sha256": "c38dcebbd97026c21b4bb06be0788e7fbe60fcd9a40d7246a5bf50fd8d8b35c4",
+      "prompt_tokens": 3113,
+      "turn_id": 4
+    },
+    {
+      "output_tokens": 243,
+      "program_id": "django__django-12308",
+      "prompt_sha256": "6a08cb6dfb8f6fd07617f08ef171a60ef90c94a89fb3158ef940a1a1332c9c03",
+      "prompt_tokens": 5415,
+      "turn_id": 5
+    },
+    {
+      "output_tokens": 231,
+      "program_id": "django__django-12308",
+      "prompt_sha256": "da687e9323c2c92aa9120d01a2bee9dbc3bb3c0f9ddf1fe936412954cbaa27b0",
+      "prompt_tokens": 5684,
+      "turn_id": 6
+    },
+    {
+      "output_tokens": 65,
+      "program_id": "django__django-12308",
+      "prompt_sha256": "8d7e73e2371afdd0b85c5cf87aa2722b2cd38db1e75088ad468e1f8555d3f062",
+      "prompt_tokens": 5941,
+      "turn_id": 7
+    },
+    {
+      "output_tokens": 110,
+      "program_id": "django__django-12308",
+      "prompt_sha256": "1d7adc4b7c990d278f7a4e06a96a73dec326e5d6d78dcedddceda47b2d123e0a",
+      "prompt_tokens": 6209,
+      "turn_id": 8
+    }
+  ],
+  "trace_sha256": "732503cc3f56283f8ab01f49504739a772414367b8ae342a4cf9a7d102dfab2f",
+  "visible_messages_sha256": "73a07e4511dd415547e60f8d2a38b6d9032e71ca00b5d18c518949f34a9d24d0"
+}

@@ -1,0 +1,82 @@
+[
+  {
+    "calls": 2668,
+    "independently_retokenized": true,
+    "model": "Qwen3-8B",
+    "programs": 207,
+    "subset": "all_eligible",
+    "valid": true
+  },
+  {
+    "calls": 401,
+    "independently_retokenized": true,
+    "model": "Qwen3-8B",
+    "programs": 36,
+    "subset": "heldout_candidates",
+    "valid": true
+  },
+  {
+    "calls": 10,
+    "independently_retokenized": true,
+    "model": "Qwen3-8B",
+    "programs": 1,
+    "subset": "pilot_1",
+    "valid": true
+  },
+  {
+    "calls": 161,
+    "independently_retokenized": true,
+    "model": "Qwen3-8B",
+    "programs": 14,
+    "subset": "pilot_14",
+    "valid": true
+  },
+  {
+    "calls": 44,
+    "independently_retokenized": true,
+    "model": "Qwen3-8B",
+    "programs": 4,
+    "subset": "pilot_4",
+    "valid": true
+  },
+  {
+    "calls": 2668,
+    "independently_retokenized": true,
+    "model": "Qwen3-4B",
+    "programs": 207,
+    "subset": "all_eligible",
+    "valid": true
+  },
+  {
+    "calls": 401,
+    "independently_retokenized": true,
+    "model": "Qwen3-4B",
+    "programs": 36,
+    "subset": "heldout_candidates",
+    "valid": true
+  },
+  {
+    "calls": 10,
+    "independently_retokenized": true,
+    "model": "Qwen3-4B",
+    "programs": 1,
+    "subset": "pilot_1",
+    "valid": true
+  },
+  {
+    "calls": 161,
+    "independently_retokenized": true,
+    "model": "Qwen3-4B",
+    "programs": 14,
+    "subset": "pilot_14",
+    "valid": true
+  },
+  {
+    "calls": 44,
+    "independently_retokenized": true,
+    "model": "Qwen3-4B",
+    "programs": 4,
+    "subset": "pilot_4",
+    "valid": true
+  }
+]

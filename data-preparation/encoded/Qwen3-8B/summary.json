@@ -1,0 +1,99 @@
+{
+  "accepted_by_split": {
+    "blind": 36,
+    "development": 14,
+    "train": 157
+  },
+  "accepted_by_split_details": {
+    "blind": {
+      "calls": 401,
+      "programs": 36
+    },
+    "development": {
+      "calls": 161,
+      "programs": 14
+    },
+    "train": {
+      "calls": 2106,
+      "programs": 157
+    }
+  },
+  "accepted_calls": 2668,
+  "accepted_context_growth_tokens": {
+    "max": 9031,
+    "mean": 484.8565623730191,
+    "min": 61,
+    "n": 2461,
+    "p50": 289.0,
+    "p95": 1529.0
+  },
+  "accepted_feedback_gaps_s": {
+    "max": 60.045910596847534,
+    "mean": 0.437235561147641,
+    "min": 0.025362014770507812,
+    "n": 2461,
+    "p50": 0.1895616054534912,
+    "p95": 0.9189977645874023
+  },
+  "accepted_final_context_tokens": {
+    "max": 16070,
+    "mean": 7271.753623188406,
+    "min": 1925,
+    "n": 207,
+    "p50": 6585.0,
+    "p95": 13513.499999999996
+  },
+  "accepted_output_budget_tokens": {
+    "max": 1503,
+    "mean": 149.60044977511245,
+    "min": 34,
+    "n": 2668,
+    "p50": 110.0,
+    "p95": 364.3000000000002
+  },
+  "accepted_programs": 207,
+  "accepted_prompt_tokens": {
+    "max": 16070,
+    "mean": 5344.785232383808,
+    "min": 1047,
+    "n": 2668,
+    "p50": 4643.5,
+    "p95": 11731.800000000001
+  },
+  "accepted_rounds": {
+    "max": 38,
+    "mean": 12.88888888888889,
+    "min": 3,
+    "n": 207,
+    "p50": 11.0,
+    "p95": 26.0
+  },
+  "all_output_budget_tokens": {
+    "max": 1920,
+    "mean": 186.61524056467877,
+    "min": 34,
+    "n": 13884,
+    "p50": 137.0,
+    "p95": 469.0
+  },
+  "all_prompt_tokens": {
+    "max": 112256,
+    "mean": 11714.975511380006,
+    "min": 1047,
+    "n": 13884,
+    "p50": 9320.0,
+    "p95": 29667.249999999993
+  },
+  "converted_calls": 13884,
+  "coverage": "recorded_assistant_calls_only",
+  "declared_prefix_fraction": 0.8937511215902342,
+  "excluded_programs": 292,
+  "exclusion_reasons": {
+    "non_submitted": 276,
+    "overlength": 187
+  },
+  "prefix_metric_note": "Identical input history between teacher prompts; not measured GPU cache hits",
+  "quarantined_programs": 0,
+  "rejected_total": 292,
+  "source_programs": 499
+}

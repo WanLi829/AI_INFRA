@@ -1,0 +1,2 @@
+# For an existing compatible GPU server environment; does not upgrade torch/vLLM/numpy/transformers.
+httpx==0.28.1

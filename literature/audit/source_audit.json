@@ -1,0 +1,96 @@
+{
+  "status": "CPU source audit only; no GPU experiments",
+  "programs": 16,
+  "calls": 178,
+  "raw_tool_intervals": {
+    "n": 162,
+    "mean": 0.3568249190295184,
+    "std_population": 0.7545190737788178,
+    "min": 0.025516033172607422,
+    "p50": 0.1773073673248291,
+    "p95": 1.3160149335861162,
+    "max": 6.476503133773804
+  },
+  "kairos_tool_intervals": {
+    "n": 162,
+    "mean": 0.5626181831373049,
+    "std_population": 1.0189161418275003,
+    "min": 0.025516033172607422,
+    "p50": 0.27621138095855713,
+    "p95": 2.9771522068893432,
+    "max": 6.476503133773804
+  },
+  "changed_intervals": 16,
+  "raw_exit_status_counts": {
+    "LimitsExceeded": 2,
+    "Submitted": 14
+  },
+  "submitted_programs": 14,
+  "submitted_calls": 161,
+  "output_budget_tokens": {
+    "n": 178,
+    "mean": 146.98876404494382,
+    "std_population": 107.88367584673203,
+    "min": 39,
+    "p50": 104.0,
+    "p95": 367.0500000000002,
+    "max": 699
+  },
+  "max_prompt_plus_output": 11717,
+  "prompt_tokens": {
+    "n": 178,
+    "mean": 5144.005617977528,
+    "std_population": 2250.2799239035785,
+    "min": 1218,
+    "p50": 5247.5,
+    "p95": 8621.6,
+    "max": 11455
+  },
+  "final_prompt_tokens": {
+    "n": 16,
+    "mean": 8003.5625,
+    "std_population": 1563.5353357355727,
+    "min": 6056,
+    "p50": 7541.0,
+    "p95": 11202.25,
+    "max": 11455
+  },
+  "final_prompt_plus_output_tokens": {
+    "n": 16,
+    "mean": 8166.0625,
+    "std_population": 1623.4692200943477,
+    "min": 6172,
+    "p50": 7699.5,
+    "p95": 11454.5,
+    "max": 11717
+  },
+  "declared_reusable_prompt_tokens": 786928,
+  "total_prompt_tokens": 915633,
+  "declared_prefix_reuse_fraction": 0.8594360404223089,
+  "bfcl_web_search_questions": 100,
+  "bfcl_first_row_keys": [
+    "id",
+    "question",
+    "involved_classes"
+  ],
+  "bfcl_contains_recorded_tool_timestamps": false,
+  "models": {
+    "Qwen3-4B": {
+      "kv_bf16_bytes_per_token": 147456,
+      "kv_8192_tokens_GiB": 1.125,
+      "kv_16384_tokens_GiB": 2.25
+    },
+    "Qwen3-8B": {
+      "kv_bf16_bytes_per_token": 147456,
+      "kv_8192_tokens_GiB": 1.125,
+      "kv_16384_tokens_GiB": 2.25
+    }
+  },
+  "limitations": [
+    "16 preselected Kairos IDs; not a random sample of 499 source files",
+    "Submitted is completion status, not SWE-bench correctness",
+    "tool gap is observed feedback timestamp minus assistant completion timestamp; includes client/sandbox overhead",
+    "No current-model tokenizer verification was run",
+    "BFCL check covers the downloaded question file, not every upstream result directory"
+  ]
+}

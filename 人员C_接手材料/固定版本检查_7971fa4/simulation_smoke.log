@@ -1,0 +1,9 @@
+load=mixed n=4 jps=0.15 cap=150000 offload=False scale=0.15
+policy        n   JCTmean   JCTp50   JCTp90    avgQ   prefill  pins   hit%   HOL
+baseline      4     30.09    40.48    50.98    0.00       7.4     0   0.0%     0
+prog          4     30.09    40.48    50.98    0.00       7.4     0   0.0%     0
+static        4     29.09    40.46    48.37    0.00       3.4    32  71.9%     0
+full          4     30.09    40.48    50.98    0.00       7.4     0   0.0%     0
+full vs baseline JCT: 30.09 -> 30.09 (1.00x)
+wrote C:\Users\USER\Desktop\学习\大三上\大模型网络\人员C_接手材料\固定版本检查_7971fa4\simulation.json
+

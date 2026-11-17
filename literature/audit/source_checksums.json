@@ -1,0 +1,297 @@
+[
+  {
+    "path": "sources/Kairos/README.md",
+    "bytes": 3378,
+    "sha256": "0dd2f52d721025a144ef0891801b3c7b6398d5967ec42a95118cc38240c9c9e6"
+  },
+  {
+    "path": "sources/Kairos/THIRD_PARTY.md",
+    "bytes": 3304,
+    "sha256": "af391f1c3abef28349bd668567b0bdd65c8b1283c7a63b4065ed3b93db4a373c"
+  },
+  {
+    "path": "sources/Kairos/configs/continuum.json",
+    "bytes": 3594,
+    "sha256": "f15663b67537d5cc167bc9de051afb00944bc23c549797435e1191999cb16746"
+  },
+  {
+    "path": "sources/Kairos/configs/kairos.json",
+    "bytes": 3672,
+    "sha256": "89c111b8aa842b3005c84627be5575c22e20d6e4e8c59043f141ca09c6953983"
+  },
+  {
+    "path": "sources/Kairos/data/workload/trace.json",
+    "bytes": 2352957,
+    "sha256": "4c896b93b14eff39bcc6e2fd0700ba59a1bfcfd785bd15e645d5e1a2ffeee2e8"
+  },
+  {
+    "path": "sources/Kairos/data/workload/visible_messages.json",
+    "bytes": 3880488,
+    "sha256": "59deb05bfffb29825ee474f17376e4b6c9a23056b473cec061fc3b7123e81a1a"
+  },
+  {
+    "path": "sources/Kairos/data/workload/visible_protocol.json",
+    "bytes": 36301,
+    "sha256": "22470611302f9e4d4cbf486c636a94cc6709a2e482507db7666ac36f86f48a27"
+  },
+  {
+    "path": "sources/Kairos/docs/ARCHITECTURE.md",
+    "bytes": 6250,
+    "sha256": "95edfbb891deb55c01c0bf1c9f94a92c716153a4d6196509050955099d555b53"
+  },
+  {
+    "path": "sources/Kairos/docs/EXPERIMENTS.md",
+    "bytes": 10688,
+    "sha256": "be9f5bce016fb1f5cbf36408017de7c76774469a10592f3f7e8ba431d9c00bf1"
+  },
+  {
+    "path": "sources/Kairos/docs/REPRODUCE.md",
+    "bytes": 11051,
+    "sha256": "6437fa1d7943e079e2a8e7d1cf50c0ebe6c63078ba2f22bddf99a278d039e5fc"
+  },
+  {
+    "path": "sources/Kairos/kairos/_runtime/replay.py",
+    "bytes": 7355,
+    "sha256": "99d0dcef5ae8131ededf28b01ad1928e7877d385ba6d738a16bcdd72d0847ddd"
+  },
+  {
+    "path": "sources/Kairos/kairos/arrival.py",
+    "bytes": 2692,
+    "sha256": "4fe0ebe82a0de07c6de9586b98569b010364ca4dde6751983ce7b5e171b15488"
+  },
+  {
+    "path": "sources/Kairos/kairos/messages.py",
+    "bytes": 3669,
+    "sha256": "5411c630e91fb67141d937fba87d1578ac3e77f6b5e4c68af8b5959cdb556406"
+  },
+  {
+    "path": "sources/Kairos/provenance/export_manifest.json",
+    "bytes": 48904,
+    "sha256": "98e437c85314946e34de62b3a07a95f55141c9340d48720c345e0ded8f42c262"
+  },
+  {
+    "path": "sources/Kairos/results/environment.json",
+    "bytes": 3095,
+    "sha256": "cf6cc3d32a55b70768bff38f8da3c6e3abae6715ef99c5be3d0dbff03267626c"
+  },
+  {
+    "path": "sources/Kairos_commit.json",
+    "bytes": 117,
+    "sha256": "3b4b1d36261028260a6626426252bb84da664d4364027f7203568cc47b6ab1f7"
+  },
+  {
+    "path": "sources/Kairos_tree.json",
+    "bytes": 59823,
+    "sha256": "a18f13e4d84db441819cd1df5bca0318d21f4f25cfbd06a6bf065f2a930804b8"
+  },
+  {
+    "path": "sources/Qwen3-4B_config.json",
+    "bytes": 726,
+    "sha256": "8ba006f74fecfaaeb392872a60f4a480e7ec9860153d2e1b769ec81f9a147f8a"
+  },
+  {
+    "path": "sources/Qwen3-4B_meta.json",
+    "bytes": 80,
+    "sha256": "a03ba3cafc6846775d0fc1d0dcfaface30898300e10000d19fec65e1b7f11e1f"
+  },
+  {
+    "path": "sources/Qwen3-8B_config.json",
+    "bytes": 728,
+    "sha256": "f7c4eadfbbf522470667b797a3c89be2524832d2d599797248dc304fff447c30"
+  },
+  {
+    "path": "sources/Qwen3-8B_meta.json",
+    "bytes": 80,
+    "sha256": "28a133265ba5926aef7a9f98e36984eca0b917316004f93fe09e658407f82471"
+  },
+  {
+    "path": "sources/additional_download_manifest.json",
+    "bytes": 9077,
+    "sha256": "f20a9b0ddc9976e8dc5c085de606f7438d5ff35e5fbf5d55e429cb1e41a12029"
+  },
+  {
+    "path": "sources/autellix_v1.html",
+    "bytes": 281657,
+    "sha256": "285ab5aa7bc5ea09449fceced469ccbadb9103215ab45a602774cf45a6af3aa4"
+  },
+  {
+    "path": "sources/autellix_v1.txt",
+    "bytes": 84104,
+    "sha256": "97e83edf38048ef24409c28967c61adecc54a84d8d4867f01d7314ecf4405f7c"
+  },
+  {
+    "path": "sources/continuum_v7.html",
+    "bytes": 351371,
+    "sha256": "2323c1cec20afdfba46ae72d6c157d19990366a2db39e774f8ef103dded59f71"
+  },
+  {
+    "path": "sources/continuum_v7.txt",
+    "bytes": 83751,
+    "sha256": "06181886c499147d01cfa879916f90815f995670bb6912ab7d8608112f68715f"
+  },
+  {
+    "path": "sources/download_manifest.json",
+    "bytes": 5903,
+    "sha256": "7101a6f00b94b680b64942b0eacf5ab3f6a1470a10535637a9956656679874fa"
+  },
+  {
+    "path": "sources/gorilla/berkeley-function-call-leaderboard/bfcl_eval/data/BFCL_v4_multi_turn_base.json",
+    "bytes": 390425,
+    "sha256": "1a21a995d06fd6f20ba55de7bced30ef953ec35e998f502ec2ecf4d66ef1c43a"
+  },
+  {
+    "path": "sources/gorilla/berkeley-function-call-leaderboard/bfcl_eval/data/BFCL_v4_web_search.json",
+    "bytes": 36984,
+    "sha256": "6fc41d96d003dc849028966a782923560d2fc127ed2088aa967f06daaafa4268"
+  },
+  {
+    "path": "sources/gorilla/berkeley-function-call-leaderboard/bfcl_eval/data/README.md",
+    "bytes": 20277,
+    "sha256": "93119d83df28fee0a9f3ea41b0c6a947aad9f7ba4334ae89fef41c74b67b208d"
+  },
+  {
+    "path": "sources/gorilla/berkeley-function-call-leaderboard/bfcl_eval/data/multi_turn_func_doc/web_search.json",
+    "bytes": 2252,
+    "sha256": "61fcee411e35f7ff67415e18cd67276615cf06e1c8841a683d2d997dbb46eac5"
+  },
+  {
+    "path": "sources/gorilla_commit.json",
+    "bytes": 123,
+    "sha256": "52acecadc0cfacf03f03f8e2c1af6d407485bdabd8d8e6059ff94e250cf4c1cb"
+  },
+  {
+    "path": "sources/gorilla_tree.json",
+    "bytes": 205159,
+    "sha256": "e38a18c3f89116b2a5544b6408386859ff2abf3513f027f05be7278eddca1f0e"
+  },
+  {
+    "path": "sources/infercept_v2.html",
+    "bytes": 188130,
+    "sha256": "6be291d2b5f0092609594277b26ecd3eeda0dd8e5d5bfcfa9a0df1cd3f92053a"
+  },
+  {
+    "path": "sources/infercept_v2.txt",
+    "bytes": 70522,
+    "sha256": "1c1de5d2dd360e5fdf68b5b07a4c09a6f93c36ba9457d3b776cb1e7966a7716e"
+  },
+  {
+    "path": "sources/teacher_README.md",
+    "bytes": 4432,
+    "sha256": "bb3519957fef336c0f268654f672b174f24d2613492668d8c34e1ecfcff4d508"
+  },
+  {
+    "path": "sources/teacher_samples/astropy__astropy-13453.traj.json",
+    "bytes": 156264,
+    "sha256": "1b2c6cfe64c2146c16fb6461106604df9b27e20934e1a9e1e90df55c30498192"
+  },
+  {
+    "path": "sources/teacher_samples/astropy__astropy-13977.traj.json",
+    "bytes": 92683,
+    "sha256": "4177798c2d508a7a6bdfcc1b10c3890c5bd3e75e13def637d345667ff802af20"
+  },
+  {
+    "path": "sources/teacher_samples/django__django-11734.traj.json",
+    "bytes": 95628,
+    "sha256": "df62356507bd793450a3d3bf3f720aa247679c100ba0392822d51e29572f0e63"
+  },
+  {
+    "path": "sources/teacher_samples/django__django-12039.traj.json",
+    "bytes": 126468,
+    "sha256": "fdb5b75afac8e40267e8b87895200973ba7c1b90df3bb901e326c5a8c999a4ed"
+  },
+  {
+    "path": "sources/teacher_samples/django__django-12308.traj.json",
+    "bytes": 87466,
+    "sha256": "4c5d6160f53ed1e38f696bffe5d1e2460847f46d73da536619d8eafe5e2eb361"
+  },
+  {
+    "path": "sources/teacher_samples/django__django-13012.traj.json",
+    "bytes": 364797,
+    "sha256": "6fe543cf6ed23c2973a7bf88366adb84e2d53a0faabbbf2b98e0b8b79ca061fb"
+  },
+  {
+    "path": "sources/teacher_samples/django__django-13512.traj.json",
+    "bytes": 108765,
+    "sha256": "9e3f0d547806eba35185b47a0fd8aaa3c8f9c585e64354232c6cabbc4704fb25"
+  },
+  {
+    "path": "sources/teacher_samples/django__django-14672.traj.json",
+    "bytes": 70730,
+    "sha256": "efd8936bc66a63aff59a28bc68d9ac7763744c4078ed9e038e35d14546f6c6c0"
+  },
+  {
+    "path": "sources/teacher_samples/django__django-16256.traj.json",
+    "bytes": 166672,
+    "sha256": "f93e182276b4bce327fa601745c81ab37eb5918e093cefcd59c04cfb5ad5052f"
+  },
+  {
+    "path": "sources/teacher_samples/matplotlib__matplotlib-23412.traj.json",
+    "bytes": 110637,
+    "sha256": "c467a7b35b6c7050960a586a5a9da750515bd6f5ff550a763922b0a2ac5ca796"
+  },
+  {
+    "path": "sources/teacher_samples/pytest-dev__pytest-7521.traj.json",
+    "bytes": 82854,
+    "sha256": "d6904db92170d144ec8052d7e81b2e30a509c0b4145b2a6e7bd4b917254ff164"
+  },
+  {
+    "path": "sources/teacher_samples/scikit-learn__scikit-learn-14983.traj.json",
+    "bytes": 94050,
+    "sha256": "bd571ae76885f59ed0958604b2d5c061f5266b9dc2e3aea9c058d27a86f9cccc"
+  },
+  {
+    "path": "sources/teacher_samples/sympy__sympy-13974.traj.json",
+    "bytes": 114077,
+    "sha256": "f92ac198f7df321bdd08a5a0e988b1a984e6a76a21e61f5a698d763dcf4863bb"
+  },
+  {
+    "path": "sources/teacher_samples/sympy__sympy-17318.traj.json",
+    "bytes": 66017,
+    "sha256": "084384489e37f6b942d5575f6fa7ddcd415592319e06eaf7e0a07adfb6fc39c7"
+  },
+  {
+    "path": "sources/teacher_samples/sympy__sympy-18763.traj.json",
+    "bytes": 93114,
+    "sha256": "2c632e9297e30ddb15d0703f31e9b454ee1a1ef5d5dc3b8b146e97f5b62f868f"
+  },
+  {
+    "path": "sources/teacher_samples/sympy__sympy-23824.traj.json",
+    "bytes": 96147,
+    "sha256": "0b21c96a94e82a76dd378dcfb099da18328fe7cae48fe2825d6939815ab66379"
+  },
+  {
+    "path": "sources/teacher_tree.json",
+    "bytes": 67465,
+    "sha256": "7f69fdd69c125cd70316c0ea94fe47a69ebcc55814edfdec5a0bdb94baece0ff"
+  },
+  {
+    "path": "sources/vllm-continuum/README.md",
+    "bytes": 4802,
+    "sha256": "580711553689db98f6a5a2bfa9ee97cb3ab98b87c1fef4fd5f0c159e2f90fbe6"
+  },
+  {
+    "path": "sources/vllm-continuum/mini-swe-agent/src/minisweagent/models/vllm_model.py",
+    "bytes": 7821,
+    "sha256": "7a96812e2ccd04fd04c56705005fa5356fdb68222c9c574f092b2bdaac4aa560"
+  },
+  {
+    "path": "sources/vllm-continuum/mini-swe-agent/src/minisweagent/run/extra/swebench.py",
+    "bytes": 14863,
+    "sha256": "3fc02521cb0c39f1465a9678c3d0685c2be9466a9a0a1f7f5ede91e58138cfb0"
+  },
+  {
+    "path": "sources/vllm-continuum_commit.json",
+    "bytes": 127,
+    "sha256": "35c795da9d32578cdd5e04bae29922327a44726b703d6a382e6eda0d5f4d538e"
+  },
+  {
+    "path": "sources/vllm-continuum_tree.json",
+    "bytes": 1169095,
+    "sha256": "c0bcae226572161fa0f3e8b5e516c07a39aff6edd3f9ffb5a84481f56975114f"
+  },
+  {
+    "path": "sources/\u5206\u5de5\u8ba1\u5212_\u539f\u59cb\u9644\u4ef6.md",
+    "bytes": 9071,
+    "sha256": "4b6aed25ec821bd870ec4db9ea72131a11e6aef452d3a2a8bdc061f6a3fe242a"
+  }
+]

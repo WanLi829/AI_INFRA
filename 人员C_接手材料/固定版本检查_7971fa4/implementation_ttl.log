@@ -1,0 +1,7 @@
+cold start ok: 1.609 cold
+per-tool ok: tau*=0.60 n=120 B=4.00 val=3.40
+global fallback ok: tau*=1.20
+eta fixed-length ok: 1.000
+prefill/reload ok: prefill=3.64s reload=0.46s @70k
+ALL TTL UNIT CHECKS PASSED
+

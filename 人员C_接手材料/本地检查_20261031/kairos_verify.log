@@ -1,0 +1,13 @@
+
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Users\USER\AppData\Local\Temp\kairos-review-20261031-lf\kairos\verify.py", line 82, in <module>
+    main()
+    ~~~~^^
+  File "C:\Users\USER\AppData\Local\Temp\kairos-review-20261031-lf\kairos\verify.py", line 75, in main
+    result = dict(release_files_verified=verify_checkout(), calls_verified=verify_workload())
+                                         ~~~~~~~~~~~~~~~^^
+  File "C:\Users\USER\AppData\Local\Temp\kairos-review-20261031-lf\kairos\verify.py", line 25, in verify_checkout
+    raise ValueError('Missing or modified release file: ' + row['path'])
+ValueError: Missing or modified release file: README.md

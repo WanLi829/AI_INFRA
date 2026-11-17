@@ -1,0 +1,53 @@
+{
+  "verdict": "部分检查完成（材料不齐）",
+  "exit_code": 3,
+  "errors": 0,
+  "warnings": 3,
+  "inputs": {
+    "trace": {
+      "path": "C:\\Users\\USER\\Desktop\\学习\\大三上\\大模型网络\\人员C_接手材料\\固定版本检查_7971fa4\\interface_example\\trace.sample.json",
+      "sha256": "64da23bb2c98fa3d1a471d8e64b93af6fe40900cdd7c7ccafe807e646ce4c639",
+      "bytes": 121121
+    },
+    "messages": {
+      "path": "C:\\Users\\USER\\Desktop\\学习\\大三上\\大模型网络\\人员C_接手材料\\固定版本检查_7971fa4\\interface_example\\visible_messages.sample.json",
+      "sha256": "d4267198c404e5db821c376c15a129a694fdb0c93ae9f97497bf2948403b67df",
+      "bytes": 164246
+    }
+  },
+  "limits": {
+    "max_context": null,
+    "vocab_size": null
+  },
+  "counts": {
+    "programs": 1,
+    "requests": 9,
+    "reconstructed": 9,
+    "matched_signatures": 0
+  },
+  "limitations": [
+    "未验证 tokenizer/chat template 与消息语义一致性或未来信息泄漏。",
+    "未验证模型、发布清单、资源容量、GPU 执行或性能；通过不代表可直接上机。",
+    "不修复数据、不重签协议；检查依据 Kairos 7971fa4，其他接口需另行适配。"
+  ],
+  "issues": [
+    {
+      "level": "warning",
+      "code": "NOT_PROVIDED",
+      "location": "protocol",
+      "detail": "未提供，相关检查未执行。"
+    },
+    {
+      "level": "warning",
+      "code": "CONTEXT_NOT_CHECKED",
+      "location": "options",
+      "detail": "未提供 --max-context，未检查上下文上限。"
+    },
+    {
+      "level": "warning",
+      "code": "VOCAB_NOT_CHECKED",
+      "location": "options",
+      "detail": "未提供 --vocab-size，仅检查 token 是非负整数。"
+    }
+  ]
+}

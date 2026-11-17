@@ -1,0 +1,23 @@
+{
+  "checked_on": "2026-11-01",
+  "checked_sources": [
+    {
+      "finding": "Pinned full tree inspected; Web Search question, tool definition, possible answer and implementation files; no candidate execution-log file identified.",
+      "url": "https://github.com/ShishirPatil/gorilla/tree/6ea57973c7a6097fd7c5915698c54c17c5b1b6c8"
+    },
+    {
+      "finding": "Pinned full tree inspected; no BFCL/web_search/trace-named execution artifact found.",
+      "url": "https://github.com/Hanchenli/vllm-continuum/tree/316a58794a6ff86b216e579b74fd56ed0c5a911f"
+    },
+    {
+      "finding": "Describes a collection harness; web search requires SerpAPI credentials and network. Documents scripted-model/canned-search testing, not a downloadable real timed BFCL log corpus.",
+      "url": "https://evalsi.dev/docs/guides/agent-runs/#bfcl"
+    }
+  ],
+  "qualification": "This is not proof that no public trace exists anywhere.",
+  "queries": [
+    "\"BFCL\" \"web_search\" \"trajectory\" \"timestamp\"",
+    "\"Continuum\" \"BFCL\" \"trace\" github"
+  ],
+  "result": "No qualifying complete timed execution logs acquired in this bounded search."
+}

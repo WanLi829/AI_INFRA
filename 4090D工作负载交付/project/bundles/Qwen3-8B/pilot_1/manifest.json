@@ -1,0 +1,21 @@
+{
+  "calls": 10,
+  "coverage": "recorded_assistant_calls_only",
+  "files": {
+    "trace.json": "a12da4529318e1c915f2f3237630710bf4615034a3039eaa27538638d0898abe",
+    "visible_messages.json": "3ae07f7c4a507c6ced59b3e4fd5beb106920a6a7c780493a1d7c05df85dc9db9",
+    "visible_protocol.json": "423e2a5ab863f1345328745581c071906434b06e888512338cf2ad76cf2a3e3e"
+  },
+  "gpu_validated": false,
+  "intended_use": "Pilot/development",
+  "model": "Qwen3-8B",
+  "model_revision": "b968826d9c46dd6066d109eabc6255188de91218",
+  "program_ids": [
+    "astropy__astropy-13977"
+  ],
+  "programs": 1,
+  "schema_version": "b-replay-bundle/1.0",
+  "subset": "pilot_1",
+  "total_output_tokens": 2437,
+  "unrecorded_api_attempts": 1
+}

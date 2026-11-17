@@ -1,0 +1,15 @@
+{
+  "kernel": "5.15.0-25-generic",
+  "packages": {
+    "httpx": "0.28.1",
+    "lmcache": "0.5.5rc4",
+    "numpy": "2.2.6",
+    "torch": "2.13.0",
+    "transformers": "5.16.1",
+    "vllm": "0.28.0"
+  },
+  "python": "3.12.4 | packaged by Anaconda, Inc. | (main, Jun 18 2024, 15:12:24) [GCC 11.2.0]",
+  "torch_build": "2.13.0+cu130",
+  "torch_cuda_build": "13.0",
+  "triton_libcuda_path": "/usr/lib/x86_64-linux-gnu"
+}

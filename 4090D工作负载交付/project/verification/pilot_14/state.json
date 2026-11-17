@@ -1,0 +1,134 @@
+{
+  "b_arrival_manifest_sha256": "fb1073321269ec7e00edd03a119a1b080c6b2ff50431afac8de1ee64927cdb62",
+  "b_bundle_manifest_sha256": "dfe8307e352918a259c5bd382af7eaa7ebac1407f8f1d8be539d9db87a39ab54",
+  "b_runtime_sha256": {
+    "cli.py": "d4b4e56f58679a811984bab53e851fc6564f89bc68c7da61de401951b8f41f2a",
+    "client.py": "5892c1b73ff133bdbb53534976b7a28c116b551225d3106c9acb061008ad9d0d",
+    "common.py": "0d1995d1258a19e4b20a8b65f7c5f6a750ad45e4c504020b0b88ca94558b27c8",
+    "low_memory.py": "4b017149d0334ba8705ad3d1d0eef64b1eec42efc7c1e35f5c7e423fabebe5c2",
+    "resources.py": "aec0632e35259f438b4837c5d4ebac2972d38a5a8fa5dea85bbea9bc8e236112",
+    "scripts/gpu_python.py": "7efb4dba86cb7fe8d3a1a4f976ab9e82ed76747ea74560e050b8117404390881",
+    "server.py": "063941b6c1553158e5c9f54f6e74749d2c33958025e909f1958284ff15b841c0"
+  },
+  "correctness_mode": "prefix-only; five layouts",
+  "correctness_results": 5,
+  "expected_model_revision": "b968826d9c46dd6066d109eabc6255188de91218",
+  "gpu": {
+    "index": "0",
+    "name": "NVIDIA GeForce RTX 4090 D",
+    "total": "24564"
+  },
+  "gpu_input_smoke_validated": true,
+  "gpu_ownership_verified": false,
+  "gpu_pid_policy": "record-only",
+  "memory_before_start": {
+    "effective_limit_bytes": 32212254720
+  },
+  "method": "kairos",
+  "packages": {
+    "httpx": "0.28.1",
+    "lmcache": "0.5.5rc4",
+    "torch": "2.13.0",
+    "transformers": "5.16.1",
+    "vllm": "0.28.0"
+  },
+  "performance_claim_supported": false,
+  "resource_profile": {
+    "advertised_ram_bytes": 30000000000,
+    "cpu_kv_gib": 8,
+    "cpu_kv_initial_gib": 1,
+    "cuda_graphs": true,
+    "malloc_arena_max": 2,
+    "max_num_seqs": 8,
+    "name": "ram30",
+    "performance_comparable_to_archive": false,
+    "runtime_available_gib": 1,
+    "safetensors_load_strategy": "lazy",
+    "startup_available_gib": 3
+  },
+  "runtime_commit": "7971fa40323f16e8e4ce8f12dfd5db9755a98cf1",
+  "server_profile": "ram30",
+  "status": "complete",
+  "summary": {
+    "archived_replay_executed": false,
+    "arrival_lag_s": {
+      "max": 0.0020054814449892433,
+      "mean": 0.0008751849261553321,
+      "min": 0.00018879686939499152,
+      "n": 14,
+      "p50": 0.0009030577767816794,
+      "p95": 0.0014563934970534206
+    },
+    "completed_calls": 161,
+    "completed_programs": 14,
+    "evidence": "Serving replay; hardware/engine identity requires C's run record",
+    "expected_calls": 161,
+    "expected_programs": 14,
+    "failed_calls": 0,
+    "failed_programs": 0,
+    "gpu_validated": false,
+    "input_source": "B bundle",
+    "jct_s": {
+      "max": 71.194027364254,
+      "mean": 48.840487972966265,
+      "min": 30.60387358814478,
+      "n": 14,
+      "p50": 50.86743641644716,
+      "p95": 69.7695088941604
+    },
+    "method": "kairos",
+    "metric_notes": [
+      "Program JCT includes tool wait and queueing; starts at actual arrival",
+      "Throughput window includes tool idle and drain, excludes initial pre-arrival idle",
+      "ITL samples use adjacent single-token chunks only; chunk sizes retained",
+      "No cache-hit/transfer metrics are inferred by the client; unavailable values remain absent",
+      "GPU validation requires independent model, engine and hardware evidence"
+    ],
+    "observation_from_first_actual_arrival_s": 176.92012029886246,
+    "output_tokens_per_s": 136.6831537258201,
+    "performance_claim_supported": false,
+    "programs_per_s": 0.07913175718143584,
+    "request_e2e_s": {
+      "max": 15.322469055652618,
+      "mean": 3.922220362778406,
+      "min": 1.1930653154850006,
+      "n": 161,
+      "p50": 2.8884145691990852,
+      "p95": 9.539314225316048
+    },
+    "request_ttft_s": {
+      "max": 2.4183942526578903,
+      "mean": 0.23802932837735052,
+      "min": 0.09637665748596191,
+      "n": 161,
+      "p50": 0.18872077018022537,
+      "p95": 0.4658827558159828
+    },
+    "runtime_commit": "7971fa40323f16e8e4ce8f12dfd5db9755a98cf1",
+    "server_profile": "ram30",
+    "status": "complete",
+    "strict_complete": true,
+    "timed_out": false,
+    "unattempted_calls": 0,
+    "wall_from_clock_zero_s": 184.8029355108738
+  },
+  "trace_sha256": "221ebc1362970db76363a6ef8c2f84f13f7188c7f35caf417574babd6b814d70",
+  "verified_model": {
+    "files_verified": [
+      "config.json",
+      "generation_config.json",
+      "merges.txt",
+      "model-00001-of-00005.safetensors",
+      "model-00002-of-00005.safetensors",
+      "model-00003-of-00005.safetensors",
+      "model-00004-of-00005.safetensors",
+      "model-00005-of-00005.safetensors",
+      "model.safetensors.index.json",
+      "tokenizer.json",
+      "tokenizer_config.json",
+      "vocab.json"
+    ],
+    "revision": "b968826d9c46dd6066d109eabc6255188de91218",
+    "weights_verified": true
+  }
+}

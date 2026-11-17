@@ -1,0 +1,6 @@
+{
+  "checked": 178,
+  "identical": true,
+  "mismatches": [],
+  "note": "Independent re-tokenization versus archived 4B-encoded prompts; no 4B/8B identity assumed"
+}

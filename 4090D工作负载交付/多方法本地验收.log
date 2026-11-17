@@ -1,0 +1,16 @@
+test_all_fifteen_plans (tests.test_comparison.ComparisonTests.test_all_fifteen_plans) ... ok
+test_failure_is_preserved (tests.test_comparison.ComparisonTests.test_failure_is_preserved) ... ok
+native 14 161
+lmcache 14 161
+static_ttl 14 161
+continuum 14 161
+kairos 14 161
+test_five_clients_with_actual_pilot_14 (tests.test_comparison.ComparisonTests.test_five_clients_with_actual_pilot_14) ... ok
+test_fixed_ttl_survives_experiment_switch (tests.test_comparison.ComparisonTests.test_fixed_ttl_survives_experiment_switch) ... ok
+test_ratios_require_matching_baseline_and_repeats (tests.test_comparison.ComparisonTests.test_ratios_require_matching_baseline_and_repeats) ... ok
+test_raw_result_validation (tests.test_comparison.ComparisonTests.test_raw_result_validation) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 72.593s
+
+OK

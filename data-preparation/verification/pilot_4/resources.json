@@ -1,0 +1,3702 @@
+[
+  {
+    "available_ram_bytes": 29564805120,
+    "gpu": {
+      "index": "0",
+      "total": "24564",
+      "used": "0",
+      "util": "0"
+    },
+    "memory": {
+      "cgroups": [
+        {
+          "current_bytes": 2932490240,
+          "events": {
+            "high": 0,
+            "low": 0,
+            "max": 0,
+            "oom": 0,
+            "oom_kill": 0
+          },
+          "path": "container"
+        }
+      ]
+    },
+    "time_s": 0.0
+  },
+  {
+    "available_ram_bytes": 29334097920,
+    "gpu": {
+      "index": "0",
+      "total": "24564",
+      "used": "0",
+      "util": "0"
+    },
+    "memory": {
+      "cgroups": [
+        {
+          "current_bytes": 3163197440,
+          "events": {
+            "high": 0,
+            "low": 0,
+            "max": 0,
+            "oom": 0,
+            "oom_kill": 0
+          },
+          "path": "container"
+        }
+      ]
+    },
+    "time_s": 1.103852
+  },
+  {
+    "available_ram_bytes": 29307457536,
+    "gpu": {
+      "index": "0",
+      "total": "24564",
+      "used": "0",
+      "util": "0"
+    },
+    "memory": {
+      "cgroups": [
+        {
+          "current_bytes": 3189837824,
+          "events": {
+            "high": 0,
+            "low": 0,
+            "max": 0,
+            "oom": 0,
+            "oom_kill": 0
+          },
+          "path": "container"
+        }
+      ]
+    },
+    "time_s": 2.262325
+  },
+  {
+    "available_ram_bytes": 29273026560,
+    "gpu": {
+      "index": "0",
+      "total": "24564",
+      "used": "0",
+      "util": "0"
+    },
+    "memory": {
+      "cgroups": [
+        {
+          "current_bytes": 3224268800,
+          "events": {
+            "high": 0,
+            "low": 0,
+            "max": 0,
+            "oom": 0,
+            "oom_kill": 0
+          },
+          "path": "container"
+        }
+      ]
+    },
+    "time_s": 3.437795
+  },
+  {
+    "available_ram_bytes": 29240168448,
+    "gpu": {
+      "index": "0",
+      "total": "24564",
+      "used": "3",
+      "util": "0"
+    },
+    "memory": {
+      "cgroups": [
+        {
+          "current_bytes": 3257131008,
+          "events": {
+            "high": 0,
+            "low": 0,
+            "max": 0,
+            "oom": 0,
+            "oom_kill": 0
+          },
+          "path": "container"
+        }
+      ]
+    },
+    "time_s": 4.597456
+  },
+  {
+    "available_ram_bytes": 29212737536,
+    "gpu": {
+      "index": "0",
+      "total": "24564",
+      "used": "3",
+      "util": "0"
+    },
+    "memory": {
+      "cgroups": [
+        {
+          "current_bytes": 3284561920,
+          "events": {
+            "high": 0,
+            "low": 0,
+            "max": 0,
+            "oom": 0,
+            "oom_kill": 0
+          },
+          "path": "container"
+        }
+      ]
+    },
+    "time_s": 5.736089
+  },
+  {
+    "available_ram_bytes": 29180739584,
+    "gpu": {
+      "index": "0",
+      "total": "24564",
+      "used": "3",
+      "util": "0"
+    },
+    "memory": {
+      "cgroups": [
+        {
+          "current_bytes": 3316559872,
+          "events": {
+            "high": 0,
+            "low": 0,
+            "max": 0,
+            "oom": 0,
+            "oom_kill": 0
+          },
+          "path": "container"
+        }
+      ]
+    },
+    "time_s": 6.878472
+  },
+  {
+    "available_ram_bytes": 29162135552,
+    "gpu": {
+      "index": "0",
+      "total": "24564",
+      "used": "3",
+      "util": "0"
+    },
+    "memory": {
+      "cgroups": [
+        {
+          "current_bytes": 3335159808,
+          "events": {
+            "high": 0,
+            "low": 0,
+            "max": 0,
+            "oom": 0,
+            "oom_kill": 0
+          },
+          "path": "container"
+        }
+      ]
+    },
+    "time_s": 8.03652
+  },
+  {
+    "available_ram_bytes": 29149708288,
+    "gpu": {
+      "index": "0",
+      "total": "24564",
+      "used": "3",
+      "util": "0"
+    },
+    "memory": {
+      "cgroups": [
+        {
+          "current_bytes": 3347587072,
+          "events": {
+            "high": 0,
+            "low": 0,
+            "max": 0,
+            "oom": 0,
+            "oom_kill": 0
+          },
+          "path": "container"
+        }
+      ]
+    },
+    "time_s": 9.130124
+  },
+  {
+    "available_ram_bytes": 27495886848,
+    "gpu": {
+      "index": "0",
+      "total": "24564",
+      "used": "359",
+      "util": "2"
+    },
+    "memory": {
+      "cgroups": [
+        {
+          "current_bytes": 5001420800,
+          "events": {
+            "high": 0,
+            "low": 0,
+            "max": 0,
+            "oom": 0,
+            "oom_kill": 0
+          },
+          "path": "container"
+        }
+      ]
+    },
+    "time_s": 10.298239
+  },
+  {
+    "available_ram_bytes": 22624219136,
+    "gpu": {
+      "index": "0",
+      "total": "24564",
+      "used": "367",
+      "util": "1"
+    },
+    "memory": {
+      "cgroups": [
+        {
+          "current_bytes": 9873092608,
+          "events": {
+            "high": 0,
+            "low": 0,
+            "max": 0,
+            "oom": 0,
+            "oom_kill": 0
+          },
+          "path": "container"
+        }
+      ]
+    },
+    "time_s": 11.444896
+  },
+  {
+    "available_ram_bytes": 20262285312,
+    "gpu": {
+      "index": "0",
+      "total": "24564",
+      "used": "373",
+      "util": "0"
+    },
+    "memory": {
+      "cgroups": [
+        {
+          "current_bytes": 12235026432,
+          "events": {
+            "high": 0,
+            "low": 0,
+            "max": 0,
+            "oom": 0,
+            "oom_kill": 0
+          },
+          "path": "container"
+        }
+      ]
+    },
+    "time_s": 12.607505
+  },
+  {
+    "available_ram_bytes": 20224581632,
+    "gpu": {
+      "index": "0",
+      "total": "24564",
+      "used": "373",
+      "util": "0"
+    },
+    "memory": {
+      "cgroups": [
+        {
+          "current_bytes": 12272730112,
+          "events": {
+            "high": 0,
+            "low": 0,
+            "max": 0,
+            "oom": 0,
+            "oom_kill": 0
+          },
+          "path": "container"
+        }
+      ]
+    },
+    "time_s": 13.723781
+  },
+  {
+    "available_ram_bytes": 20183523328,
+    "gpu": {
+      "index": "0",
+      "total": "24564",
+      "used": "373",
+      "util": "0"
+    },
+    "memory": {
+      "cgroups": [
+        {
+          "current_bytes": 12313788416,
+          "events": {
+            "high": 0,
+            "low": 0,
+            "max": 0,
+            "oom": 0,
+            "oom_kill": 0
+          },
+          "path": "container"
+        }
+      ]
+    },
+    "time_s": 14.900446
+  },
+  {
+    "available_ram_bytes": 20168196096,
+    "gpu": {
+      "index": "0",
+      "total": "24564",
+      "used": "373",
+      "util": "0"
+    },
+    "memory": {
+      "cgroups": [
+        {
+          "current_bytes": 12329115648,
+          "events": {
+            "high": 0,
+            "low": 0,
+            "max": 0,
+            "oom": 0,
+            "oom_kill": 0
+          },
+          "path": "container"
+        }
+      ]
+    },
+    "time_s": 16.047062
+  },
+  {
+    "available_ram_bytes": 20141498368,
+    "gpu": {
+      "index": "0",
+      "total": "24564",
+      "used": "373",
+      "util": "0"
+    },
+    "memory": {
+      "cgroups": [
+        {
+          "current_bytes": 12355813376,
+          "events": {
+            "high": 0,
+            "low": 0,
+            "max": 0,
+            "oom": 0,
+            "oom_kill": 0
+          },
+          "path": "container"
+        }
+      ]
+    },
+    "time_s": 17.171142
+  },
+  {
+    "available_ram_bytes": 20101988352,
+    "gpu": {
+      "index": "0",
+      "total": "24564",
+      "used": "373",
+      "util": "0"
+    },
+    "memory": {
+      "cgroups": [
+        {
+          "current_bytes": 12395323392,
+          "events": {
+            "high": 0,
+            "low": 0,
+            "max": 0,
+            "oom": 0,
+            "oom_kill": 0
+          },
+          "path": "container"
+        }
+      ]
+    },
+    "time_s": 18.325479
+  },
+  {
+    "available_ram_bytes": 20086747136,
+    "gpu": {
+      "index": "0",
+      "total": "24564",
+      "used": "373",
+      "util": "0"
+    },
+    "memory": {
+      "cgroups": [
+        {
+          "current_bytes": 12410560512,
+          "events": {
+            "high": 0,
+            "low": 0,
+            "max": 0,
+            "oom": 0,
+            "oom_kill": 0
+          },
+          "path": "container"
+        }
+      ]
+    },
+    "time_s": 19.445492
+  },
+  {
+    "available_ram_bytes": 20067811328,
+    "gpu": {
+      "index": "0",
+      "total": "24564",
+      "used": "373",
+      "util": "0"
+    },
+    "memory": {
+      "cgroups": [
+        {
+          "current_bytes": 12429496320,
+          "events": {
+            "high": 0,
+            "low": 0,
+            "max": 0,
+            "oom": 0,
+            "oom_kill": 0
+          },
+          "path": "container"
+        }
+      ]
+    },
+    "time_s": 20.629798
+  },
+  {
+    "available_ram_bytes": 20049510400,
+    "gpu": {
+      "index": "0",
+      "total": "24564",
+      "used": "373",
+      "util": "0"
+    },
+    "memory": {
+      "cgroups": [
+        {
+          "current_bytes": 12447797248,
+          "events": {
+            "high": 0,
+            "low": 0,
+            "max": 0,
+            "oom": 0,
+            "oom_kill": 0
+          },
+          "path": "container"
+        }
+      ]
+    },
+    "time_s": 21.794115
+  },
+  {
+    "available_ram_bytes": 20028792832,
+    "gpu": {
+      "index": "0",
+      "total": "24564",
+      "used": "373",
+      "util": "0"
+    },
+    "memory": {
+      "cgroups": [
+        {
+          "current_bytes": 12468514816,
+          "events": {
+            "high": 0,
+            "low": 0,
+            "max": 0,
+            "oom": 0,
+            "oom_kill": 0
+          },
+          "path": "container"
+        }
+      ]
+    },
+    "time_s": 22.939375
+  },
+  {
+    "available_ram_bytes": 20017115136,
+    "gpu": {
+      "index": "0",
+      "total": "24564",
+      "used": "373",
+      "util": "0"
+    },
+    "memory": {
+      "cgroups": [
+        {
+          "current_bytes": 12480192512,
+          "events": {
+            "high": 0,
+            "low": 0,
+            "max": 0,
+            "oom": 0,
+            "oom_kill": 0
+          },
+          "path": "container"
+        }
+      ]
+    },
+    "time_s": 24.103432
+  },
+  {
+    "available_ram_bytes": 19991420928,
+    "gpu": {
+      "index": "0",
+      "total": "24564",
+      "used": "373",
+      "util": "0"
+    },
+    "memory": {
+      "cgroups": [
+        {
+          "current_bytes": 12505882624,
+          "events": {
+            "high": 0,
+            "low": 0,
+            "max": 0,
+            "oom": 0,
+            "oom_kill": 0
+          },
+          "path": "container"
+        }
+      ]
+    },
+    "time_s": 25.269399
+  },
+  {
+    "available_ram_bytes": 19964379136,
+    "gpu": {
+      "index": "0",
+      "total": "24564",
+      "used": "373",
+      "util": "0"
+    },
+    "memory": {
+      "cgroups": [
+        {
+          "current_bytes": 12532924416,
+          "events": {
+            "high": 0,
+            "low": 0,
+            "max": 0,
+            "oom": 0,
+            "oom_kill": 0
+          },
+          "path": "container"
+        }
+      ]
+    },
+    "time_s": 26.405806
+  },
+  {
+    "available_ram_bytes": 19925286912,
+    "gpu": {
+      "index": "0",
+      "total": "24564",
+      "used": "373",
+      "util": "0"
+    },
+    "memory": {
+      "cgroups": [
+        {
+          "current_bytes": 12572016640,
+          "events": {
+            "high": 0,
+            "low": 0,
+            "max": 0,
+            "oom": 0,
+            "oom_kill": 0
+          },
+          "path": "container"
+        }
+      ]
+    },
+    "time_s": 27.585678
+  },
+  {
+    "available_ram_bytes": 19894534144,
+    "gpu": {
+      "index": "0",
+      "total": "24564",
+      "used": "373",
+      "util": "0"
+    },
+    "memory": {
+      "cgroups": [
+        {
+          "current_bytes": 12602777600,
+          "events": {
+            "high": 0,
+            "low": 0,
+            "max": 0,
+            "oom": 0,
+            "oom_kill": 0
+          },
+          "path": "container"
+        }
+      ]
+    },
+    "time_s": 28.789511
+  },
+  {
+    "available_ram_bytes": 19798134784,
+    "gpu": {
+      "index": "0",
+      "total": "24564",
+      "used": "373",
+      "util": "0"
+    },
+    "memory": {
+      "cgroups": [
+        {
+          "current_bytes": 12699176960,
+          "events": {
+            "high": 0,
+            "low": 0,
+            "max": 0,
+            "oom": 0,
+            "oom_kill": 0
+          },
+          "path": "container"
+        }
+      ]
+    },
+    "time_s": 29.990973
+  },
+  {
+    "available_ram_bytes": 19705585664,
+    "gpu": {
+      "index": "0",
+      "total": "24564",
+      "used": "373",
+      "util": "0"
+    },
+    "memory": {
+      "cgroups": [
+        {
+          "current_bytes": 12791726080,
+          "events": {
+            "high": 0,
+            "low": 0,
+            "max": 0,
+            "oom": 0,
+            "oom_kill": 0
+          },
+          "path": "container"
+        }
+      ]
+    },
+    "time_s": 31.097756
+  },
+  {
+    "available_ram_bytes": 19578486784,
+    "gpu": {
+      "index": "0",
+      "total": "24564",
+      "used": "373",
+      "util": "0"
+    },
+    "memory": {
+      "cgroups": [
+        {
+          "current_bytes": 12918824960,
+          "events": {
+            "high": 0,
+            "low": 0,
+            "max": 0,
+            "oom": 0,
+            "oom_kill": 0
+          },
+          "path": "container"
+        }
+      ]
+    },
+    "time_s": 32.22473
+  },
+  {
+    "available_ram_bytes": 19328176128,
+    "gpu": {
+      "index": "0",
+      "total": "24564",
+      "used": "373",
+      "util": "0"
+    },
+    "memory": {
+      "cgroups": [
+        {
+          "current_bytes": 13169135616,
+          "events": {
+            "high": 0,
+            "low": 0,
+            "max": 0,
+            "oom": 0,
+            "oom_kill": 0
+          },
+          "path": "container"
+        }
+      ]
+    },
+    "time_s": 33.323519
+  },
+  {
+    "available_ram_bytes": 19249029120,
+    "gpu": {
+      "index": "0",
+      "total": "24564",
+      "used": "373",
+      "util": "0"
+    },
+    "memory": {
+      "cgroups": [
+        {
+          "current_bytes": 13247205376,
+          "events": {
+            "high": 0,
+            "low": 0,
+            "max": 0,
+            "oom": 0,
+            "oom_kill": 0
+          },
+          "path": "container"
+        }
+      ]
+    },
+    "time_s": 34.451503
+  },
+  {
+    "available_ram_bytes": 19227217920,
+    "gpu": {
+      "index": "0",
+      "total": "24564",
+      "used": "373",
+      "util": "0"
+    },
+    "memory": {
+      "cgroups": [
+        {
+          "current_bytes": 13269016576,
+          "events": {
+            "high": 0,
+            "low": 0,
+            "max": 0,
+            "oom": 0,
+            "oom_kill": 0
+          },
+          "path": "container"
+        }
+      ]
+    },
+    "time_s": 35.57884
+  },
+  {
+    "available_ram_bytes": 19198324736,
+    "gpu": {
+      "index": "0",
+      "total": "24564",
+      "used": "373",
+      "util": "0"
+    },
+    "memory": {
+      "cgroups": [
+        {
+          "current_bytes": 13297909760,
+          "events": {
+            "high": 0,
+            "low": 0,
+            "max": 0,
+            "oom": 0,
+            "oom_kill": 0
+          },
+          "path": "container"
+        }
+      ]
+    },
+    "time_s": 36.719883
+  },
+  {
+    "available_ram_bytes": 19159818240,
+    "gpu": {
+      "index": "0",
+      "total": "24564",
+      "used": "373",
+      "util": "0"
+    },
+    "memory": {
+      "cgroups": [
+        {
+          "current_bytes": 13336416256,
+          "events": {
+            "high": 0,
+            "low": 0,
+            "max": 0,
+            "oom": 0,
+            "oom_kill": 0
+          },
+          "path": "container"
+        }
+      ]
+    },
+    "time_s": 37.885049
+  },
+  {
+    "available_ram_bytes": 19137974272,
+    "gpu": {
+      "index": "0",
+      "total": "24564",
+      "used": "373",
+      "util": "0"
+    },
+    "memory": {
+      "cgroups": [
+        {
+          "current_bytes": 13358260224,
+          "events": {
+            "high": 0,
+            "low": 0,
+            "max": 0,
+            "oom": 0,
+            "oom_kill": 0
+          },
+          "path": "container"
+        }
+      ]
+    },
+    "time_s": 39.046636
+  },
+  {
+    "available_ram_bytes": 19109773312,
+    "gpu": {
+      "index": "0",
+      "total": "24564",
+      "used": "373",
+      "util": "0"
+    },
+    "memory": {
+      "cgroups": [
+        {
+          "current_bytes": 13386461184,
+          "events": {
+            "high": 0,
+            "low": 0,
+            "max": 0,
+            "oom": 0,
+            "oom_kill": 0
+          },
+          "path": "container"
+        }
+      ]
+    },
+    "time_s": 40.220767
+  },
+  {
+    "available_ram_bytes": 19075555328,
+    "gpu": {
+      "index": "0",
+      "total": "24564",
+      "used": "373",
+      "util": "0"
+    },
+    "memory": {
+      "cgroups": [
+        {
+          "current_bytes": 13420679168,
+          "events": {
+            "high": 0,
+            "low": 0,
+            "max": 0,
+            "oom": 0,
+            "oom_kill": 0
+          },
+          "path": "container"
+        }
+      ]
+    },
+    "time_s": 41.384673
+  },
+  {
+    "available_ram_bytes": 19048046592,
+    "gpu": {
+      "index": "0",
+      "total": "24564",
+      "used": "373",
+      "util": "0"
+    },
+    "memory": {
+      "cgroups": [
+        {
+          "current_bytes": 13448187904,
+          "events": {
+            "high": 0,
+            "low": 0,
+            "max": 0,
+            "oom": 0,
+            "oom_kill": 0
+          },
+          "path": "container"
+        }
+      ]
+    },
+    "time_s": 42.527905
+  },
+  {
+    "available_ram_bytes": 19040358400,
+    "gpu": {
+      "index": "0",
+      "total": "24564",
+      "used": "373",
+      "util": "0"
+    },
+    "memory": {
+      "cgroups": [
+        {
+          "current_bytes": 13455876096,
+          "events": {
+            "high": 0,
+            "low": 0,
+            "max": 0,
+            "oom": 0,
+            "oom_kill": 0
+          },
+          "path": "container"
+        }
+      ]
+    },
+    "time_s": 43.711187
+  },
+  {
+    "available_ram_bytes": 19025412096,
+    "gpu": {
+      "index": "0",
+      "total": "24564",
+      "used": "373",
+      "util": "0"
+    },
+    "memory": {
+      "cgroups": [
+        {
+          "current_bytes": 13470822400,
+          "events": {
+            "high": 0,
+            "low": 0,
+            "max": 0,
+            "oom": 0,
+            "oom_kill": 0
+          },
+          "path": "container"
+        }
+      ]
+    },
+    "time_s": 44.87969
+  },
+  {
+    "available_ram_bytes": 19005751296,
+    "gpu": {
+      "index": "0",
+      "total": "24564",
+      "used": "373",
+      "util": "0"
+    },
+    "memory": {
+      "cgroups": [
+        {
+          "current_bytes": 13490483200,
+          "events": {
+            "high": 0,
+            "low": 0,
+            "max": 0,
+            "oom": 0,
+            "oom_kill": 0
+          },
+          "path": "container"
+        }
+      ]
+    },
+    "time_s": 46.047905
+  },
+  {
+    "available_ram_bytes": 18985779200,
+    "gpu": {
+      "index": "0",
+      "total": "24564",
+      "used": "373",
+      "util": "0"
+    },
+    "memory": {
+      "cgroups": [
+        {
+          "current_bytes": 13510455296,
+          "events": {
+            "high": 0,
+            "low": 0,
+            "max": 0,
+            "oom": 0,
+            "oom_kill": 0
+          },
+          "path": "container"
+        }
+      ]
+    },
+    "time_s": 47.1776
+  },
+  {
+    "available_ram_bytes": 18957803520,
+    "gpu": {
+      "index": "0",
+      "total": "24564",
+      "used": "373",
+      "util": "0"
+    },
+    "memory": {
+      "cgroups": [
+        {
+          "current_bytes": 13538430976,
+          "events": {
+            "high": 0,
+            "low": 0,
+            "max": 0,
+            "oom": 0,
+            "oom_kill": 0
+          },
+          "path": "container"
+        }
+      ]
+    },
+    "time_s": 48.343874
+  },
+  {
+    "available_ram_bytes": 18921369600,
+    "gpu": {
+      "index": "0",
+      "total": "24564",
+      "used": "373",
+      "util": "0"
+    },
+    "memory": {
+      "cgroups": [
+        {
+          "current_bytes": 13574864896,
+          "events": {
+            "high": 0,
+            "low": 0,
+            "max": 0,
+            "oom": 0,
+            "oom_kill": 0
+          },
+          "path": "container"
+        }
+      ]
+    },
+    "time_s": 49.510925
+  },
+  {
+    "available_ram_bytes": 18889912320,
+    "gpu": {
+      "index": "0",
+      "total": "24564",
+      "used": "373",
+      "util": "0"
+    },
+    "memory": {
+      "cgroups": [
+        {
+          "current_bytes": 13606326272,
+          "events": {
+            "high": 0,
+            "low": 0,
+            "max": 0,
+            "oom": 0,
+            "oom_kill": 0
+          },
+          "path": "container"
+        }
+      ]
+    },
+    "time_s": 50.693782
+  },
+  {
+    "available_ram_bytes": 18459635712,
+    "gpu": {
+      "index": "0",
+      "total": "24564",
+      "used": "373",
+      "util": "0"
+    },
+    "memory": {
+      "cgroups": [
+        {
+          "current_bytes": 14036602880,
+          "events": {
+            "high": 0,
+            "low": 0,
+            "max": 0,
+            "oom": 0,
+            "oom_kill": 0
+          },
+          "path": "container"
+        }
+      ]
+    },
+    "time_s": 51.878671
+  },
+  {
+    "available_ram_bytes": 18370609152,
+    "gpu": {
+      "index": "0",
+      "total": "24564",
+      "used": "373",
+      "util": "0"
+    },
+    "memory": {
+      "cgroups": [
+        {
+          "current_bytes": 14125633536,
+          "events": {
+            "high": 0,
+            "low": 0,
+            "max": 0,
+            "oom": 0,
+            "oom_kill": 0
+          },
+          "path": "container"
+        }
+      ]
+    },
+    "time_s": 53.029906
+  },
+  {
+    "available_ram_bytes": 18294190080,
+    "gpu": {
+      "index": "0",
+      "total": "24564",
+      "used": "373",
+      "util": "0"
+    },
+    "memory": {
+      "cgroups": [
+        {
+          "current_bytes": 14202052608,
+          "events": {
+            "high": 0,
+            "low": 0,
+            "max": 0,
+            "oom": 0,
+            "oom_kill": 0
+          },
+          "path": "container"
+        }
+      ]
+    },
+    "time_s": 54.208583
+  },
+  {
+    "available_ram_bytes": 18220572672,
+    "gpu": {
+      "index": "0",
+      "total": "24564",
+      "used": "373",
+      "util": "0"
+    },
+    "memory": {
+      "cgroups": [
+        {
+          "current_bytes": 14275670016,
+          "events": {
+            "high": 0,
+            "low": 0,
+            "max": 0,
+            "oom": 0,
+            "oom_kill": 0
+          },
+          "path": "container"
+        }
+      ]
+    },
+    "time_s": 55.372882
+  },
+  {
+    "available_ram_bytes": 18873176064,
+    "gpu": {
+      "index": "0",
+      "total": "24564",
+      "used": "373",
+      "util": "0"
+    },
+    "memory": {
+      "cgroups": [
+        {
+          "current_bytes": 13623066624,
+          "events": {
+            "high": 0,
+            "low": 0,
+            "max": 0,
+            "oom": 0,
+            "oom_kill": 0
+          },
+          "path": "container"
+        }
+      ]
+    },
+    "time_s": 56.544203
+  },
+  {
+    "available_ram_bytes": 18870382592,
+    "gpu": {
+      "index": "0",
+      "total": "24564",
+      "used": "373",
+      "util": "0"
+    },
+    "memory": {
+      "cgroups": [
+        {
+          "current_bytes": 13625860096,
+          "events": {
+            "high": 0,
+            "low": 0,
+            "max": 0,
+            "oom": 0,
+            "oom_kill": 0
+          },
+          "path": "container"
+        }
+      ]
+    },
+    "time_s": 57.730035
+  },
+  {
+    "available_ram_bytes": 18672177152,
+    "gpu": {
+      "index": "0",
+      "total": "24564",
+      "used": "5418",
+      "util": "1"
+    },
+    "memory": {
+      "cgroups": [
+        {
+          "current_bytes": 13824061440,
+          "events": {
+            "high": 0,
+            "low": 0,
+            "max": 0,
+            "oom": 0,
+            "oom_kill": 0
+          },
+          "path": "container"
+        }
+      ]
+    },
+    "time_s": 58.904819
+  },
+  {
+    "available_ram_bytes": 18687541248,
+    "gpu": {
+      "index": "0",
+      "total": "24564",
+      "used": "16494",
+      "util": "27"
+    },
+    "memory": {
+      "cgroups": [
+        {
+          "current_bytes": 13808672768,
+          "events": {
+            "high": 0,
+            "low": 0,
+            "max": 0,
+            "oom": 0,
+            "oom_kill": 0
+          },
+          "path": "container"
+        }
+      ]
+    },
+    "time_s": 60.031561
+  },
+  {
+    "available_ram_bytes": 18684035072,
+    "gpu": {
+      "index": "0",
+      "total": "24564",
+      "used": "16494",
+      "util": "23"
+    },
+    "memory": {
+      "cgroups": [
+        {
+          "current_bytes": 13812178944,
+          "events": {
+            "high": 0,
+            "low": 0,
+            "max": 0,
+            "oom": 0,
+            "oom_kill": 0
+          },
+          "path": "container"
+        }
+      ]
+    },
+    "time_s": 61.179668
+  },
+  {
+    "available_ram_bytes": 18691657728,
+    "gpu": {
+      "index": "0",
+      "total": "24564",
+      "used": "16494",
+      "util": "24"
+    },
+    "memory": {
+      "cgroups": [
+        {
+          "current_bytes": 13804556288,
+          "events": {
+            "high": 0,
+            "low": 0,
+            "max": 0,
+            "oom": 0,
+            "oom_kill": 0
+          },
+          "path": "container"
+        }
+      ]
+    },
+    "time_s": 62.322053
+  },
+  {
+    "available_ram_bytes": 18658045952,
+    "gpu": {
+      "index": "0",
+      "total": "24564",
+      "used": "16454",
+      "util": "0"
+    },
+    "memory": {
+      "cgroups": [
+        {
+          "current_bytes": 13838168064,
+          "events": {
+            "high": 0,
+            "low": 0,
+            "max": 0,
+            "oom": 0,
+            "oom_kill": 0
+          },
+          "path": "container"
+        }
+      ]
+    },
+    "time_s": 63.482374
+  },
+  {
+    "available_ram_bytes": 18423611392,
+    "gpu": {
+      "index": "0",
+      "total": "24564",
+      "used": "16738",
+      "util": "100"
+    },
+    "memory": {
+      "cgroups": [
+        {
+          "current_bytes": 14069641216,
+          "events": {
+            "high": 0,
+            "low": 0,
+            "max": 0,
+            "oom": 0,
+            "oom_kill": 0
+          },
+          "path": "container"
+        }
+      ]
+    },
+    "time_s": 64.627852
+  },
+  {
+    "available_ram_bytes": 18381115392,
+    "gpu": {
+      "index": "0",
+      "total": "24564",
+      "used": "16508",
+      "util": "0"
+    },
+    "memory": {
+      "cgroups": [
+        {
+          "current_bytes": 14099353600,
+          "events": {
+            "high": 0,
+            "low": 0,
+            "max": 0,
+            "oom": 0,
+            "oom_kill": 0
+          },
+          "path": "container"
+        }
+      ]
+    },
+    "time_s": 65.810138
+  },
+  {
+    "available_ram_bytes": 18275262464,
+    "gpu": {
+      "index": "0",
+      "total": "24564",
+      "used": "22374",
+      "util": "0"
+    },
+    "memory": {
+      "cgroups": [
+        {
+          "current_bytes": 14205218816,
+          "events": {
+            "high": 0,
+            "low": 0,
+            "max": 0,
+            "oom": 0,
+            "oom_kill": 0
+          },
+          "path": "container"
+        }
+      ]
+    },
+    "time_s": 66.982698
+  },
+  {
+    "available_ram_bytes": 18215567360,
+    "gpu": {
+      "index": "0",
+      "total": "24564",
+      "used": "22374",
+      "util": "0"
+    },
+    "memory": {
+      "cgroups": [
+        {
+          "current_bytes": 14264913920,
+          "events": {
+            "high": 0,
+            "low": 0,
+            "max": 0,
+            "oom": 0,
+            "oom_kill": 0
+          },
+          "path": "container"
+        }
+      ]
+    },
+    "time_s": 68.113593
+  },
+  {
+    "available_ram_bytes": 18206552064,
+    "gpu": {
+      "index": "0",
+      "total": "24564",
+      "used": "22374",
+      "util": "0"
+    },
+    "memory": {
+      "cgroups": [
+        {
+          "current_bytes": 14273929216,
+          "events": {
+            "high": 0,
+            "low": 0,
+            "max": 0,
+            "oom": 0,
+            "oom_kill": 0
+          },
+          "path": "container"
+        }
+      ]
+    },
+    "time_s": 69.259001
+  },
+  {
+    "available_ram_bytes": 18197962752,
+    "gpu": {
+      "index": "0",
+      "total": "24564",
+      "used": "22374",
+      "util": "0"
+    },
+    "memory": {
+      "cgroups": [
+        {
+          "current_bytes": 14282465280,
+          "events": {
+            "high": 0,
+            "low": 0,
+            "max": 0,
+            "oom": 0,
+            "oom_kill": 0
+          },
+          "path": "container"
+        }
+      ]
+    },
+    "time_s": 70.404026
+  },
+  {
+    "available_ram_bytes": 18142072832,
+    "gpu": {
+      "index": "0",
+      "total": "24564",
+      "used": "22422",
+      "util": "0"
+    },
+    "memory": {
+      "cgroups": [
+        {
+          "current_bytes": 14338338816,
+          "events": {
+            "high": 0,
+            "low": 0,
+            "max": 0,
+            "oom": 0,
+            "oom_kill": 0
+          },
+          "path": "container"
+        }
+      ]
+    },
+    "time_s": 71.550205
+  },
+  {
+    "available_ram_bytes": 18132893696,
+    "gpu": {
+      "index": "0",
+      "total": "24564",
+      "used": "22422",
+      "util": "0"
+    },
+    "memory": {
+      "cgroups": [
+        {
+          "current_bytes": 14347472896,
+          "events": {
+            "high": 0,
+            "low": 0,
+            "max": 0,
+            "oom": 0,
+            "oom_kill": 0
+          },
+          "path": "container"
+        }
+      ]
+    },
+    "time_s": 72.665146
+  },
+  {
+    "available_ram_bytes": 17935933440,
+    "gpu": {
+      "index": "0",
+      "total": "24564",
+      "used": "22422",
+      "util": "0"
+    },
+    "memory": {
+      "cgroups": [
+        {
+          "current_bytes": 14544429056,
+          "events": {
+            "high": 0,
+            "low": 0,
+            "max": 0,
+            "oom": 0,
+            "oom_kill": 0
+          },
+          "path": "container"
+        }
+      ]
+    },
+    "time_s": 73.827807
+  },
+  {
+    "available_ram_bytes": 17827704832,
+    "gpu": {
+      "index": "0",
+      "total": "24564",
+      "used": "22422",
+      "util": "0"
+    },
+    "memory": {
+      "cgroups": [
+        {
+          "current_bytes": 14652657664,
+          "events": {
+            "high": 0,
+            "low": 0,
+            "max": 0,
+            "oom": 0,
+            "oom_kill": 0
+          },
+          "path": "container"
+        }
+      ]
+    },
+    "time_s": 74.973696
+  },
+  {
+    "available_ram_bytes": 17819209728,
+    "gpu": {
+      "index": "0",
+      "total": "24564",
+      "used": "22422",
+      "util": "0"
+    },
+    "memory": {
+      "cgroups": [
+        {
+          "current_bytes": 14661177344,
+          "events": {
+            "high": 0,
+            "low": 0,
+            "max": 0,
+            "oom": 0,
+            "oom_kill": 0
+          },
+          "path": "container"
+        }
+      ]
+    },
+    "time_s": 76.197723
+  },
+  {
+    "available_ram_bytes": 17741488128,
+    "gpu": {
+      "index": "0",
+      "total": "24564",
+      "used": "22662",
+      "util": "0"
+    },
+    "memory": {
+      "cgroups": [
+        {
+          "current_bytes": 14738821120,
+          "events": {
+            "high": 0,
+            "low": 0,
+            "max": 0,
+            "oom": 0,
+            "oom_kill": 0
+          },
+          "path": "container"
+        }
+      ]
+    },
+    "time_s": 77.368657
+  },
+  {
+    "available_ram_bytes": 17735860224,
+    "gpu": {
+      "index": "0",
+      "total": "24564",
+      "used": "22662",
+      "util": "0"
+    },
+    "memory": {
+      "cgroups": [
+        {
+          "current_bytes": 14744141824,
+          "events": {
+            "high": 0,
+            "low": 0,
+            "max": 0,
+            "oom": 0,
+            "oom_kill": 0
+          },
+          "path": "container"
+        }
+      ]
+    },
+    "time_s": 78.541482
+  },
+  {
+    "available_ram_bytes": 17734033408,
+    "gpu": {
+      "index": "0",
+      "total": "24564",
+      "used": "22662",
+      "util": "100"
+    },
+    "memory": {
+      "cgroups": [
+        {
+          "current_bytes": 14745993216,
+          "events": {
+            "high": 0,
+            "low": 0,
+            "max": 0,
+            "oom": 0,
+            "oom_kill": 0
+          },
+          "path": "container"
+        }
+      ]
+    },
+    "time_s": 79.742123
+  },
+  {
+    "available_ram_bytes": 17733091328,
+    "gpu": {
+      "index": "0",
+      "total": "24564",
+      "used": "22662",
+      "util": "0"
+    },
+    "memory": {
+      "cgroups": [
+        {
+          "current_bytes": 14746988544,
+          "events": {
+            "high": 0,
+            "low": 0,
+            "max": 0,
+            "oom": 0,
+            "oom_kill": 0
+          },
+          "path": "container"
+        }
+      ]
+    },
+    "time_s": 80.925599
+  },
+  {
+    "available_ram_bytes": 17732317184,
+    "gpu": {
+      "index": "0",
+      "total": "24564",
+      "used": "22662",
+      "util": "100"
+    },
+    "memory": {
+      "cgroups": [
+        {
+          "current_bytes": 14747947008,
+          "events": {
+            "high": 0,
+            "low": 0,
+            "max": 0,
+            "oom": 0,
+            "oom_kill": 0
+          },
+          "path": "container"
+        }
+      ]
+    },
+    "time_s": 82.106228
+  },
+  {
+    "available_ram_bytes": 17731530752,
+    "gpu": {
+      "index": "0",
+      "total": "24564",
+      "used": "22662",
+      "util": "100"
+    },
+    "memory": {
+      "cgroups": [
+        {
+          "current_bytes": 14748753920,
+          "events": {
+            "high": 0,
+            "low": 0,
+            "max": 0,
+            "oom": 0,
+            "oom_kill": 0
+          },
+          "path": "container"
+        }
+      ]
+    },
+    "time_s": 83.248453
+  },
+  {
+    "available_ram_bytes": 17731510272,
+    "gpu": {
+      "index": "0",
+      "total": "24564",
+      "used": "22662",
+      "util": "0"
+    },
+    "memory": {
+      "cgroups": [
+        {
+          "current_bytes": 14748979200,
+          "events": {
+            "high": 0,
+            "low": 0,
+            "max": 0,
+            "oom": 0,
+            "oom_kill": 0
+          },
+          "path": "container"
+        }
+      ]
+    },
+    "time_s": 84.408347
+  },
+  {
+    "available_ram_bytes": 17730674688,
+    "gpu": {
+      "index": "0",
+      "total": "24564",
+      "used": "22662",
+      "util": "100"
+    },
+    "memory": {
+      "cgroups": [
+        {
+          "current_bytes": 14749843456,
+          "events": {
+            "high": 0,
+            "low": 0,
+            "max": 0,
+            "oom": 0,
+            "oom_kill": 0
+          },
+          "path": "container"
+        }
+      ]
+    },
+    "time_s": 85.618707
+  },
+  {
+    "available_ram_bytes": 17729937408,
+    "gpu": {
+      "index": "0",
+      "total": "24564",
+      "used": "22662",
+      "util": "100"
+    },
+    "memory": {
+      "cgroups": [
+        {
+          "current_bytes": 14750605312,
+          "events": {
+            "high": 0,
+            "low": 0,
+            "max": 0,
+            "oom": 0,
+            "oom_kill": 0
+          },
+          "path": "container"
+        }
+      ]
+    },
+    "time_s": 86.861069
+  },
+  {
+    "available_ram_bytes": 17728098304,
+    "gpu": {
+      "index": "0",
+      "total": "24564",
+      "used": "22662",
+      "util": "34"
+    },
+    "memory": {
+      "cgroups": [
+        {
+          "current_bytes": 14752628736,
+          "events": {
+            "high": 0,
+            "low": 0,
+            "max": 0,
+            "oom": 0,
+            "oom_kill": 0
+          },
+          "path": "container"
+        }
+      ]
+    },
+    "time_s": 88.053253
+  },
+  {
+    "available_ram_bytes": 17728049152,
+    "gpu": {
+      "index": "0",
+      "total": "24564",
+      "used": "22662",
+      "util": "0"
+    },
+    "memory": {
+      "cgroups": [
+        {
+          "current_bytes": 14752710656,
+          "events": {
+            "high": 0,
+            "low": 0,
+            "max": 0,
+            "oom": 0,
+            "oom_kill": 0
+          },
+          "path": "container"
+        }
+      ]
+    },
+    "time_s": 89.213861
+  },
+  {
+    "available_ram_bytes": 17728532480,
+    "gpu": {
+      "index": "0",
+      "total": "24564",
+      "used": "22662",
+      "util": "0"
+    },
+    "memory": {
+      "cgroups": [
+        {
+          "current_bytes": 14752272384,
+          "events": {
+            "high": 0,
+            "low": 0,
+            "max": 0,
+            "oom": 0,
+            "oom_kill": 0
+          },
+          "path": "container"
+        }
+      ]
+    },
+    "time_s": 90.412694
+  },
+  {
+    "available_ram_bytes": 17727188992,
+    "gpu": {
+      "index": "0",
+      "total": "24564",
+      "used": "22662",
+      "util": "100"
+    },
+    "memory": {
+      "cgroups": [
+        {
+          "current_bytes": 14753804288,
+          "events": {
+            "high": 0,
+            "low": 0,
+            "max": 0,
+            "oom": 0,
+            "oom_kill": 0
+          },
+          "path": "container"
+        }
+      ]
+    },
+    "time_s": 91.625259
+  },
+  {
+    "available_ram_bytes": 17727131648,
+    "gpu": {
+      "index": "0",
+      "total": "24564",
+      "used": "22662",
+      "util": "100"
+    },
+    "memory": {
+      "cgroups": [
+        {
+          "current_bytes": 14753886208,
+          "events": {
+            "high": 0,
+            "low": 0,
+            "max": 0,
+            "oom": 0,
+            "oom_kill": 0
+          },
+          "path": "container"
+        }
+      ]
+    },
+    "time_s": 92.765158
+  },
+  {
+    "available_ram_bytes": 17725104128,
+    "gpu": {
+      "index": "0",
+      "total": "24564",
+      "used": "22662",
+      "util": "0"
+    },
+    "memory": {
+      "cgroups": [
+        {
+          "current_bytes": 14756118528,
+          "events": {
+            "high": 0,
+            "low": 0,
+            "max": 0,
+            "oom": 0,
+            "oom_kill": 0
+          },
+          "path": "container"
+        }
+      ]
+    },
+    "time_s": 93.974937
+  },
+  {
+    "available_ram_bytes": 17724235776,
+    "gpu": {
+      "index": "0",
+      "total": "24564",
+      "used": "22662",
+      "util": "0"
+    },
+    "memory": {
+      "cgroups": [
+        {
+          "current_bytes": 14757113856,
+          "events": {
+            "high": 0,
+            "low": 0,
+            "max": 0,
+            "oom": 0,
+            "oom_kill": 0
+          },
+          "path": "container"
+        }
+      ]
+    },
+    "time_s": 95.103883
+  },
+  {
+    "available_ram_bytes": 17724198912,
+    "gpu": {
+      "index": "0",
+      "total": "24564",
+      "used": "22662",
+      "util": "0"
+    },
+    "memory": {
+      "cgroups": [
+        {
+          "current_bytes": 14757150720,
+          "events": {
+            "high": 0,
+            "low": 0,
+            "max": 0,
+            "oom": 0,
+            "oom_kill": 0
+          },
+          "path": "container"
+        }
+      ]
+    },
+    "time_s": 96.312045
+  },
+  {
+    "available_ram_bytes": 17724002304,
+    "gpu": {
+      "index": "0",
+      "total": "24564",
+      "used": "22662",
+      "util": "0"
+    },
+    "memory": {
+      "cgroups": [
+        {
+          "current_bytes": 14757339136,
+          "events": {
+            "high": 0,
+            "low": 0,
+            "max": 0,
+            "oom": 0,
+            "oom_kill": 0
+          },
+          "path": "container"
+        }
+      ]
+    },
+    "time_s": 97.472466
+  },
+  {
+    "available_ram_bytes": 17724092416,
+    "gpu": {
+      "index": "0",
+      "total": "24564",
+      "used": "22662",
+      "util": "0"
+    },
+    "memory": {
+      "cgroups": [
+        {
+          "current_bytes": 14757244928,
+          "events": {
+            "high": 0,
+            "low": 0,
+            "max": 0,
+            "oom": 0,
+            "oom_kill": 0
+          },
+          "path": "container"
+        }
+      ]
+    },
+    "time_s": 98.675856
+  },
+  {
+    "available_ram_bytes": 17723772928,
+    "gpu": {
+      "index": "0",
+      "total": "24564",
+      "used": "22662",
+      "util": "0"
+    },
+    "memory": {
+      "cgroups": [
+        {
+          "current_bytes": 14757564416,
+          "events": {
+            "high": 0,
+            "low": 0,
+            "max": 0,
+            "oom": 0,
+            "oom_kill": 0
+          },
+          "path": "container"
+        }
+      ]
+    },
+    "time_s": 99.872568
+  },
+  {
+    "available_ram_bytes": 17723858944,
+    "gpu": {
+      "index": "0",
+      "total": "24564",
+      "used": "22662",
+      "util": "0"
+    },
+    "memory": {
+      "cgroups": [
+        {
+          "current_bytes": 14757482496,
+          "events": {
+            "high": 0,
+            "low": 0,
+            "max": 0,
+            "oom": 0,
+            "oom_kill": 0
+          },
+          "path": "container"
+        }
+      ]
+    },
+    "time_s": 101.072302
+  },
+  {
+    "available_ram_bytes": 17723850752,
+    "gpu": {
+      "index": "0",
+      "total": "24564",
+      "used": "22662",
+      "util": "0"
+    },
+    "memory": {
+      "cgroups": [
+        {
+          "current_bytes": 14757490688,
+          "events": {
+            "high": 0,
+            "low": 0,
+            "max": 0,
+            "oom": 0,
+            "oom_kill": 0
+          },
+          "path": "container"
+        }
+      ]
+    },
+    "time_s": 102.228846
+  },
+  {
+    "available_ram_bytes": 17722454016,
+    "gpu": {
+      "index": "0",
+      "total": "24564",
+      "used": "22662",
+      "util": "100"
+    },
+    "memory": {
+      "cgroups": [
+        {
+          "current_bytes": 14759022592,
+          "events": {
+            "high": 0,
+            "low": 0,
+            "max": 0,
+            "oom": 0,
+            "oom_kill": 0
+          },
+          "path": "container"
+        }
+      ]
+    },
+    "time_s": 103.41828
+  },
+  {
+    "available_ram_bytes": 17721856000,
+    "gpu": {
+      "index": "0",
+      "total": "24564",
+      "used": "22662",
+      "util": "100"
+    },
+    "memory": {
+      "cgroups": [
+        {
+          "current_bytes": 14759780352,
+          "events": {
+            "high": 0,
+            "low": 0,
+            "max": 0,
+            "oom": 0,
+            "oom_kill": 0
+          },
+          "path": "container"
+        }
+      ]
+    },
+    "time_s": 104.589955
+  },
+  {
+    "available_ram_bytes": 17722449920,
+    "gpu": {
+      "index": "0",
+      "total": "24564",
+      "used": "22662",
+      "util": "100"
+    },
+    "memory": {
+      "cgroups": [
+        {
+          "current_bytes": 14759354368,
+          "events": {
+            "high": 0,
+            "low": 0,
+            "max": 0,
+            "oom": 0,
+            "oom_kill": 0
+          },
+          "path": "container"
+        }
+      ]
+    },
+    "time_s": 105.815054
+  },
+  {
+    "available_ram_bytes": 17721737216,
+    "gpu": {
+      "index": "0",
+      "total": "24564",
+      "used": "22662",
+      "util": "100"
+    },
+    "memory": {
+      "cgroups": [
+        {
+          "current_bytes": 14760267776,
+          "events": {
+            "high": 0,
+            "low": 0,
+            "max": 0,
+            "oom": 0,
+            "oom_kill": 0
+          },
+          "path": "container"
+        }
+      ]
+    },
+    "time_s": 107.025075
+  },
+  {
+    "available_ram_bytes": 17721229312,
+    "gpu": {
+      "index": "0",
+      "total": "24564",
+      "used": "22662",
+      "util": "100"
+    },
+    "memory": {
+      "cgroups": [
+        {
+          "current_bytes": 14760976384,
+          "events": {
+            "high": 0,
+            "low": 0,
+            "max": 0,
+            "oom": 0,
+            "oom_kill": 0
+          },
+          "path": "container"
+        }
+      ]
+    },
+    "time_s": 108.245865
+  },
+  {
+    "available_ram_bytes": 17721327616,
+    "gpu": {
+      "index": "0",
+      "total": "24564",
+      "used": "22662",
+      "util": "100"
+    },
+    "memory": {
+      "cgroups": [
+        {
+          "current_bytes": 14761054208,
+          "events": {
+            "high": 0,
+            "low": 0,
+            "max": 0,
+            "oom": 0,
+            "oom_kill": 0
+          },
+          "path": "container"
+        }
+      ]
+    },
+    "time_s": 109.413002
+  },
+  {
+    "available_ram_bytes": 17721081856,
+    "gpu": {
+      "index": "0",
+      "total": "24564",
+      "used": "22662",
+      "util": "28"
+    },
+    "memory": {
+      "cgroups": [
+        {
+          "current_bytes": 14761500672,
+          "events": {
+            "high": 0,
+            "low": 0,
+            "max": 0,
+            "oom": 0,
+            "oom_kill": 0
+          },
+          "path": "container"
+        }
+      ]
+    },
+    "time_s": 110.652483
+  },
+  {
+    "available_ram_bytes": 17721057280,
+    "gpu": {
+      "index": "0",
+      "total": "24564",
+      "used": "22662",
+      "util": "100"
+    },
+    "memory": {
+      "cgroups": [
+        {
+          "current_bytes": 14761725952,
+          "events": {
+            "high": 0,
+            "low": 0,
+            "max": 0,
+            "oom": 0,
+            "oom_kill": 0
+          },
+          "path": "container"
+        }
+      ]
+    },
+    "time_s": 111.842632
+  },
+  {
+    "available_ram_bytes": 17727053824,
+    "gpu": {
+      "index": "0",
+      "total": "24564",
+      "used": "22662",
+      "util": "100"
+    },
+    "memory": {
+      "cgroups": [
+        {
+          "current_bytes": 14756102144,
+          "events": {
+            "high": 0,
+            "low": 0,
+            "max": 0,
+            "oom": 0,
+            "oom_kill": 0
+          },
+          "path": "container"
+        }
+      ]
+    },
+    "time_s": 113.063854
+  },
+  {
+    "available_ram_bytes": 17726681088,
+    "gpu": {
+      "index": "0",
+      "total": "24564",
+      "used": "22662",
+      "util": "100"
+    },
+    "memory": {
+      "cgroups": [
+        {
+          "current_bytes": 14756671488,
+          "events": {
+            "high": 0,
+            "low": 0,
+            "max": 0,
+            "oom": 0,
+            "oom_kill": 0
+          },
+          "path": "container"
+        }
+      ]
+    },
+    "time_s": 114.282676
+  },
+  {
+    "available_ram_bytes": 17726992384,
+    "gpu": {
+      "index": "0",
+      "total": "24564",
+      "used": "22662",
+      "util": "100"
+    },
+    "memory": {
+      "cgroups": [
+        {
+          "current_bytes": 14756556800,
+          "events": {
+            "high": 0,
+            "low": 0,
+            "max": 0,
+            "oom": 0,
+            "oom_kill": 0
+          },
+          "path": "container"
+        }
+      ]
+    },
+    "time_s": 115.482613
+  },
+  {
+    "available_ram_bytes": 17727152128,
+    "gpu": {
+      "index": "0",
+      "total": "24564",
+      "used": "22662",
+      "util": "100"
+    },
+    "memory": {
+      "cgroups": [
+        {
+          "current_bytes": 14756618240,
+          "events": {
+            "high": 0,
+            "low": 0,
+            "max": 0,
+            "oom": 0,
+            "oom_kill": 0
+          },
+          "path": "container"
+        }
+      ]
+    },
+    "time_s": 116.703137
+  },
+  {
+    "available_ram_bytes": 17727123456,
+    "gpu": {
+      "index": "0",
+      "total": "24564",
+      "used": "22664",
+      "util": "100"
+    },
+    "memory": {
+      "cgroups": [
+        {
+          "current_bytes": 14756864000,
+          "events": {
+            "high": 0,
+            "low": 0,
+            "max": 0,
+            "oom": 0,
+            "oom_kill": 0
+          },
+          "path": "container"
+        }
+      ]
+    },
+    "time_s": 117.923898
+  },
+  {
+    "available_ram_bytes": 17726722048,
+    "gpu": {
+      "index": "0",
+      "total": "24564",
+      "used": "22664",
+      "util": "100"
+    },
+    "memory": {
+      "cgroups": [
+        {
+          "current_bytes": 14757445632,
+          "events": {
+            "high": 0,
+            "low": 0,
+            "max": 0,
+            "oom": 0,
+            "oom_kill": 0
+          },
+          "path": "container"
+        }
+      ]
+    },
+    "time_s": 119.113967
+  },
+  {
+    "available_ram_bytes": 17725587456,
+    "gpu": {
+      "index": "0",
+      "total": "24564",
+      "used": "22664",
+      "util": "100"
+    },
+    "memory": {
+      "cgroups": [
+        {
+          "current_bytes": 14758789120,
+          "events": {
+            "high": 0,
+            "low": 0,
+            "max": 0,
+            "oom": 0,
+            "oom_kill": 0
+          },
+          "path": "container"
+        }
+      ]
+    },
+    "time_s": 120.281508
+  },
+  {
+    "available_ram_bytes": 17726988288,
+    "gpu": {
+      "index": "0",
+      "total": "24564",
+      "used": "22664",
+      "util": "100"
+    },
+    "memory": {
+      "cgroups": [
+        {
+          "current_bytes": 14757617664,
+          "events": {
+            "high": 0,
+            "low": 0,
+            "max": 0,
+            "oom": 0,
+            "oom_kill": 0
+          },
+          "path": "container"
+        }
+      ]
+    },
+    "time_s": 121.505502
+  },
+  {
+    "available_ram_bytes": 17725104128,
+    "gpu": {
+      "index": "0",
+      "total": "24564",
+      "used": "22666",
+      "util": "64"
+    },
+    "memory": {
+      "cgroups": [
+        {
+          "current_bytes": 14759763968,
+          "events": {
+            "high": 0,
+            "low": 0,
+            "max": 0,
+            "oom": 0,
+            "oom_kill": 0
+          },
+          "path": "container"
+        }
+      ]
+    },
+    "time_s": 122.67724
+  },
+  {
+    "available_ram_bytes": 17725231104,
+    "gpu": {
+      "index": "0",
+      "total": "24564",
+      "used": "22666",
+      "util": "100"
+    },
+    "memory": {
+      "cgroups": [
+        {
+          "current_bytes": 14759809024,
+          "events": {
+            "high": 0,
+            "low": 0,
+            "max": 0,
+            "oom": 0,
+            "oom_kill": 0
+          },
+          "path": "container"
+        }
+      ]
+    },
+    "time_s": 123.892862
+  },
+  {
+    "available_ram_bytes": 17725202432,
+    "gpu": {
+      "index": "0",
+      "total": "24564",
+      "used": "22666",
+      "util": "100"
+    },
+    "memory": {
+      "cgroups": [
+        {
+          "current_bytes": 14760046592,
+          "events": {
+            "high": 0,
+            "low": 0,
+            "max": 0,
+            "oom": 0,
+            "oom_kill": 0
+          },
+          "path": "container"
+        }
+      ]
+    },
+    "time_s": 125.055031
+  },
+  {
+    "available_ram_bytes": 17724833792,
+    "gpu": {
+      "index": "0",
+      "total": "24564",
+      "used": "22666",
+      "util": "100"
+    },
+    "memory": {
+      "cgroups": [
+        {
+          "current_bytes": 14760636416,
+          "events": {
+            "high": 0,
+            "low": 0,
+            "max": 0,
+            "oom": 0,
+            "oom_kill": 0
+          },
+          "path": "container"
+        }
+      ]
+    },
+    "time_s": 126.254005
+  },
+  {
+    "available_ram_bytes": 17725108224,
+    "gpu": {
+      "index": "0",
+      "total": "24564",
+      "used": "22666",
+      "util": "100"
+    },
+    "memory": {
+      "cgroups": [
+        {
+          "current_bytes": 14760521728,
+          "events": {
+            "high": 0,
+            "low": 0,
+            "max": 0,
+            "oom": 0,
+            "oom_kill": 0
+          },
+          "path": "container"
+        }
+      ]
+    },
+    "time_s": 127.448001
+  },
+  {
+    "available_ram_bytes": 17725394944,
+    "gpu": {
+      "index": "0",
+      "total": "24564",
+      "used": "22666",
+      "util": "100"
+    },
+    "memory": {
+      "cgroups": [
+        {
+          "current_bytes": 14760415232,
+          "events": {
+            "high": 0,
+            "low": 0,
+            "max": 0,
+            "oom": 0,
+            "oom_kill": 0
+          },
+          "path": "container"
+        }
+      ]
+    },
+    "time_s": 128.671836
+  },
+  {
+    "available_ram_bytes": 17725358080,
+    "gpu": {
+      "index": "0",
+      "total": "24564",
+      "used": "22666",
+      "util": "100"
+    },
+    "memory": {
+      "cgroups": [
+        {
+          "current_bytes": 14760615936,
+          "events": {
+            "high": 0,
+            "low": 0,
+            "max": 0,
+            "oom": 0,
+            "oom_kill": 0
+          },
+          "path": "container"
+        }
+      ]
+    },
+    "time_s": 129.874498
+  },
+  {
+    "available_ram_bytes": 17722671104,
+    "gpu": {
+      "index": "0",
+      "total": "24564",
+      "used": "22666",
+      "util": "100"
+    },
+    "memory": {
+      "cgroups": [
+        {
+          "current_bytes": 14763495424,
+          "events": {
+            "high": 0,
+            "low": 0,
+            "max": 0,
+            "oom": 0,
+            "oom_kill": 0
+          },
+          "path": "container"
+        }
+      ]
+    },
+    "time_s": 131.083157
+  },
+  {
+    "available_ram_bytes": 17724076032,
+    "gpu": {
+      "index": "0",
+      "total": "24564",
+      "used": "22666",
+      "util": "100"
+    },
+    "memory": {
+      "cgroups": [
+        {
+          "current_bytes": 14762295296,
+          "events": {
+            "high": 0,
+            "low": 0,
+            "max": 0,
+            "oom": 0,
+            "oom_kill": 0
+          },
+          "path": "container"
+        }
+      ]
+    },
+    "time_s": 132.309093
+  },
+  {
+    "available_ram_bytes": 17724235776,
+    "gpu": {
+      "index": "0",
+      "total": "24564",
+      "used": "22666",
+      "util": "100"
+    },
+    "memory": {
+      "cgroups": [
+        {
+          "current_bytes": 14762414080,
+          "events": {
+            "high": 0,
+            "low": 0,
+            "max": 0,
+            "oom": 0,
+            "oom_kill": 0
+          },
+          "path": "container"
+        }
+      ]
+    },
+    "time_s": 133.506649
+  },
+  {
+    "available_ram_bytes": 17724149760,
+    "gpu": {
+      "index": "0",
+      "total": "24564",
+      "used": "22666",
+      "util": "100"
+    },
+    "memory": {
+      "cgroups": [
+        {
+          "current_bytes": 14762668032,
+          "events": {
+            "high": 0,
+            "low": 0,
+            "max": 0,
+            "oom": 0,
+            "oom_kill": 0
+          },
+          "path": "container"
+        }
+      ]
+    },
+    "time_s": 134.680074
+  },
+  {
+    "available_ram_bytes": 17724063744,
+    "gpu": {
+      "index": "0",
+      "total": "24564",
+      "used": "22666",
+      "util": "100"
+    },
+    "memory": {
+      "cgroups": [
+        {
+          "current_bytes": 14763073536,
+          "events": {
+            "high": 0,
+            "low": 0,
+            "max": 0,
+            "oom": 0,
+            "oom_kill": 0
+          },
+          "path": "container"
+        }
+      ]
+    },
+    "time_s": 135.905218
+  },
+  {
+    "available_ram_bytes": 17723842560,
+    "gpu": {
+      "index": "0",
+      "total": "24564",
+      "used": "22666",
+      "util": "100"
+    },
+    "memory": {
+      "cgroups": [
+        {
+          "current_bytes": 14763470848,
+          "events": {
+            "high": 0,
+            "low": 0,
+            "max": 0,
+            "oom": 0,
+            "oom_kill": 0
+          },
+          "path": "container"
+        }
+      ]
+    },
+    "time_s": 137.101167
+  },
+  {
+    "available_ram_bytes": 17723543552,
+    "gpu": {
+      "index": "0",
+      "total": "24564",
+      "used": "22666",
+      "util": "82"
+    },
+    "memory": {
+      "cgroups": [
+        {
+          "current_bytes": 14764126208,
+          "events": {
+            "high": 0,
+            "low": 0,
+            "max": 0,
+            "oom": 0,
+            "oom_kill": 0
+          },
+          "path": "container"
+        }
+      ]
+    },
+    "time_s": 138.292408
+  },
+  {
+    "available_ram_bytes": 17723367424,
+    "gpu": {
+      "index": "0",
+      "total": "24564",
+      "used": "22666",
+      "util": "100"
+    },
+    "memory": {
+      "cgroups": [
+        {
+          "current_bytes": 14764482560,
+          "events": {
+            "high": 0,
+            "low": 0,
+            "max": 0,
+            "oom": 0,
+            "oom_kill": 0
+          },
+          "path": "container"
+        }
+      ]
+    },
+    "time_s": 139.506823
+  },
+  {
+    "available_ram_bytes": 17722908672,
+    "gpu": {
+      "index": "0",
+      "total": "24564",
+      "used": "22666",
+      "util": "100"
+    },
+    "memory": {
+      "cgroups": [
+        {
+          "current_bytes": 14765162496,
+          "events": {
+            "high": 0,
+            "low": 0,
+            "max": 0,
+            "oom": 0,
+            "oom_kill": 0
+          },
+          "path": "container"
+        }
+      ]
+    },
+    "time_s": 140.690963
+  },
+  {
+    "available_ram_bytes": 17720500224,
+    "gpu": {
+      "index": "0",
+      "total": "24564",
+      "used": "22666",
+      "util": "100"
+    },
+    "memory": {
+      "cgroups": [
+        {
+          "current_bytes": 14767783936,
+          "events": {
+            "high": 0,
+            "low": 0,
+            "max": 0,
+            "oom": 0,
+            "oom_kill": 0
+          },
+          "path": "container"
+        }
+      ]
+    },
+    "time_s": 141.941991
+  },
+  {
+    "available_ram_bytes": 17722839040,
+    "gpu": {
+      "index": "0",
+      "total": "24564",
+      "used": "22666",
+      "util": "100"
+    },
+    "memory": {
+      "cgroups": [
+        {
+          "current_bytes": 14765682688,
+          "events": {
+            "high": 0,
+            "low": 0,
+            "max": 0,
+            "oom": 0,
+            "oom_kill": 0
+          },
+          "path": "container"
+        }
+      ]
+    },
+    "time_s": 143.133714
+  },
+  {
+    "available_ram_bytes": 17722568704,
+    "gpu": {
+      "index": "0",
+      "total": "24564",
+      "used": "22666",
+      "util": "100"
+    },
+    "memory": {
+      "cgroups": [
+        {
+          "current_bytes": 14766182400,
+          "events": {
+            "high": 0,
+            "low": 0,
+            "max": 0,
+            "oom": 0,
+            "oom_kill": 0
+          },
+          "path": "container"
+        }
+      ]
+    },
+    "time_s": 144.385339
+  },
+  {
+    "available_ram_bytes": 17722368000,
+    "gpu": {
+      "index": "0",
+      "total": "24564",
+      "used": "22666",
+      "util": "100"
+    },
+    "memory": {
+      "cgroups": [
+        {
+          "current_bytes": 14766600192,
+          "events": {
+            "high": 0,
+            "low": 0,
+            "max": 0,
+            "oom": 0,
+            "oom_kill": 0
+          },
+          "path": "container"
+        }
+      ]
+    },
+    "time_s": 145.568133
+  },
+  {
+    "available_ram_bytes": 17722429440,
+    "gpu": {
+      "index": "0",
+      "total": "24564",
+      "used": "22666",
+      "util": "100"
+    },
+    "memory": {
+      "cgroups": [
+        {
+          "current_bytes": 14766723072,
+          "events": {
+            "high": 0,
+            "low": 0,
+            "max": 0,
+            "oom": 0,
+            "oom_kill": 0
+          },
+          "path": "container"
+        }
+      ]
+    },
+    "time_s": 146.744783
+  },
+  {
+    "available_ram_bytes": 17719283712,
+    "gpu": {
+      "index": "0",
+      "total": "24564",
+      "used": "22666",
+      "util": "55"
+    },
+    "memory": {
+      "cgroups": [
+        {
+          "current_bytes": 14770139136,
+          "events": {
+            "high": 0,
+            "low": 0,
+            "max": 0,
+            "oom": 0,
+            "oom_kill": 0
+          },
+          "path": "container"
+        }
+      ]
+    },
+    "time_s": 147.957769
+  },
+  {
+    "available_ram_bytes": 17719717888,
+    "gpu": {
+      "index": "0",
+      "total": "24564",
+      "used": "22666",
+      "util": "100"
+    },
+    "memory": {
+      "cgroups": [
+        {
+          "current_bytes": 14769881088,
+          "events": {
+            "high": 0,
+            "low": 0,
+            "max": 0,
+            "oom": 0,
+            "oom_kill": 0
+          },
+          "path": "container"
+        }
+      ]
+    },
+    "time_s": 149.180717
+  },
+  {
+    "available_ram_bytes": 17719857152,
+    "gpu": {
+      "index": "0",
+      "total": "24564",
+      "used": "22666",
+      "util": "100"
+    },
+    "memory": {
+      "cgroups": [
+        {
+          "current_bytes": 14769975296,
+          "events": {
+            "high": 0,
+            "low": 0,
+            "max": 0,
+            "oom": 0,
+            "oom_kill": 0
+          },
+          "path": "container"
+        }
+      ]
+    },
+    "time_s": 150.394121
+  },
+  {
+    "available_ram_bytes": 17719865344,
+    "gpu": {
+      "index": "0",
+      "total": "24564",
+      "used": "22666",
+      "util": "22"
+    },
+    "memory": {
+      "cgroups": [
+        {
+          "current_bytes": 14770311168,
+          "events": {
+            "high": 0,
+            "low": 0,
+            "max": 0,
+            "oom": 0,
+            "oom_kill": 0
+          },
+          "path": "container"
+        }
+      ]
+    },
+    "time_s": 151.624241
+  },
+  {
+    "available_ram_bytes": 17692622848,
+    "gpu": {
+      "index": "0",
+      "total": "24564",
+      "used": "22666",
+      "util": "100"
+    },
+    "memory": {
+      "cgroups": [
+        {
+          "current_bytes": 14797819904,
+          "events": {
+            "high": 0,
+            "low": 0,
+            "max": 0,
+            "oom": 0,
+            "oom_kill": 0
+          },
+          "path": "container"
+        }
+      ]
+    },
+    "time_s": 152.824301
+  },
+  {
+    "available_ram_bytes": 17718198272,
+    "gpu": {
+      "index": "0",
+      "total": "24564",
+      "used": "22666",
+      "util": "100"
+    },
+    "memory": {
+      "cgroups": [
+        {
+          "current_bytes": 14772633600,
+          "events": {
+            "high": 0,
+            "low": 0,
+            "max": 0,
+            "oom": 0,
+            "oom_kill": 0
+          },
+          "path": "container"
+        }
+      ]
+    },
+    "time_s": 154.015834
+  },
+  {
+    "available_ram_bytes": 17718444032,
+    "gpu": {
+      "index": "0",
+      "total": "24564",
+      "used": "22666",
+      "util": "100"
+    },
+    "memory": {
+      "cgroups": [
+        {
+          "current_bytes": 14772572160,
+          "events": {
+            "high": 0,
+            "low": 0,
+            "max": 0,
+            "oom": 0,
+            "oom_kill": 0
+          },
+          "path": "container"
+        }
+      ]
+    },
+    "time_s": 155.236057
+  },
+  {
+    "available_ram_bytes": 17718509568,
+    "gpu": {
+      "index": "0",
+      "total": "24564",
+      "used": "22666",
+      "util": "100"
+    },
+    "memory": {
+      "cgroups": [
+        {
+          "current_bytes": 14772768768,
+          "events": {
+            "high": 0,
+            "low": 0,
+            "max": 0,
+            "oom": 0,
+            "oom_kill": 0
+          },
+          "path": "container"
+        }
+      ]
+    },
+    "time_s": 156.38388
+  },
+  {
+    "available_ram_bytes": 17718788096,
+    "gpu": {
+      "index": "0",
+      "total": "24564",
+      "used": "22666",
+      "util": "100"
+    },
+    "memory": {
+      "cgroups": [
+        {
+          "current_bytes": 14772654080,
+          "events": {
+            "high": 0,
+            "low": 0,
+            "max": 0,
+            "oom": 0,
+            "oom_kill": 0
+          },
+          "path": "container"
+        }
+      ]
+    },
+    "time_s": 157.557015
+  },
+  {
+    "available_ram_bytes": 17717866496,
+    "gpu": {
+      "index": "0",
+      "total": "24564",
+      "used": "22666",
+      "util": "100"
+    },
+    "memory": {
+      "cgroups": [
+        {
+          "current_bytes": 14773780480,
+          "events": {
+            "high": 0,
+            "low": 0,
+            "max": 0,
+            "oom": 0,
+            "oom_kill": 0
+          },
+          "path": "container"
+        }
+      ]
+    },
+    "time_s": 158.790703
+  },
+  {
+    "available_ram_bytes": 17718157312,
+    "gpu": {
+      "index": "0",
+      "total": "24564",
+      "used": "22666",
+      "util": "100"
+    },
+    "memory": {
+      "cgroups": [
+        {
+          "current_bytes": 14773743616,
+          "events": {
+            "high": 0,
+            "low": 0,
+            "max": 0,
+            "oom": 0,
+            "oom_kill": 0
+          },
+          "path": "container"
+        }
+      ]
+    },
+    "time_s": 160.010757
+  },
+  {
+    "available_ram_bytes": 17718165504,
+    "gpu": {
+      "index": "0",
+      "total": "24564",
+      "used": "22666",
+      "util": "100"
+    },
+    "memory": {
+      "cgroups": [
+        {
+          "current_bytes": 14773960704,
+          "events": {
+            "high": 0,
+            "low": 0,
+            "max": 0,
+            "oom": 0,
+            "oom_kill": 0
+          },
+          "path": "container"
+        }
+      ]
+    },
+    "time_s": 161.234891
+  },
+  {
+    "available_ram_bytes": 17718026240,
+    "gpu": {
+      "index": "0",
+      "total": "24564",
+      "used": "22666",
+      "util": "100"
+    },
+    "memory": {
+      "cgroups": [
+        {
+          "current_bytes": 14774358016,
+          "events": {
+            "high": 0,
+            "low": 0,
+            "max": 0,
+            "oom": 0,
+            "oom_kill": 0
+          },
+          "path": "container"
+        }
+      ]
+    },
+    "time_s": 162.461755
+  },
+  {
+    "available_ram_bytes": 17718263808,
+    "gpu": {
+      "index": "0",
+      "total": "24564",
+      "used": "22666",
+      "util": "100"
+    },
+    "memory": {
+      "cgroups": [
+        {
+          "current_bytes": 14774288384,
+          "events": {
+            "high": 0,
+            "low": 0,
+            "max": 0,
+            "oom": 0,
+            "oom_kill": 0
+          },
+          "path": "container"
+        }
+      ]
+    },
+    "time_s": 163.666116
+  },
+  {
+    "available_ram_bytes": 17718939648,
+    "gpu": {
+      "index": "0",
+      "total": "24564",
+      "used": "22666",
+      "util": "100"
+    },
+    "memory": {
+      "cgroups": [
+        {
+          "current_bytes": 14773755904,
+          "events": {
+            "high": 0,
+            "low": 0,
+            "max": 0,
+            "oom": 0,
+            "oom_kill": 0
+          },
+          "path": "container"
+        }
+      ]
+    },
+    "time_s": 164.807924
+  },
+  {
+    "available_ram_bytes": 17718829056,
+    "gpu": {
+      "index": "0",
+      "total": "24564",
+      "used": "22666",
+      "util": "100"
+    },
+    "memory": {
+      "cgroups": [
+        {
+          "current_bytes": 14774030336,
+          "events": {
+            "high": 0,
+            "low": 0,
+            "max": 0,
+            "oom": 0,
+            "oom_kill": 0
+          },
+          "path": "container"
+        }
+      ]
+    },
+    "time_s": 165.984815
+  },
+  {
+    "available_ram_bytes": 17718632448,
+    "gpu": {
+      "index": "0",
+      "total": "24564",
+      "used": "22666",
+      "util": "100"
+    },
+    "memory": {
+      "cgroups": [
+        {
+          "current_bytes": 14774394880,
+          "events": {
+            "high": 0,
+            "low": 0,
+            "max": 0,
+            "oom": 0,
+            "oom_kill": 0
+          },
+          "path": "container"
+        }
+      ]
+    },
+    "time_s": 167.15815
+  },
+  {
+    "available_ram_bytes": 17718550528,
+    "gpu": {
+      "index": "0",
+      "total": "24564",
+      "used": "22666",
+      "util": "100"
+    },
+    "memory": {
+      "cgroups": [
+        {
+          "current_bytes": 14774689792,
+          "events": {
+            "high": 0,
+            "low": 0,
+            "max": 0,
+            "oom": 0,
+            "oom_kill": 0
+          },
+          "path": "container"
+        }
+      ]
+    },
+    "time_s": 168.340333
+  },
+  {
+    "available_ram_bytes": 17718022144,
+    "gpu": {
+      "index": "0",
+      "total": "24564",
+      "used": "22666",
+      "util": "100"
+    },
+    "memory": {
+      "cgroups": [
+        {
+          "current_bytes": 14775431168,
+          "events": {
+            "high": 0,
+            "low": 0,
+            "max": 0,
+            "oom": 0,
+            "oom_kill": 0
+          },
+          "path": "container"
+        }
+      ]
+    },
+    "time_s": 169.516909
+  },
+  {
+    "available_ram_bytes": 17718042624,
+    "gpu": {
+      "index": "0",
+      "total": "24564",
+      "used": "22666",
+      "util": "100"
+    },
+    "memory": {
+      "cgroups": [
+        {
+          "current_bytes": 14775545856,
+          "events": {
+            "high": 0,
+            "low": 0,
+            "max": 0,
+            "oom": 0,
+            "oom_kill": 0
+          },
+          "path": "container"
+        }
+      ]
+    },
+    "time_s": 170.736072
+  },
+  {
+    "available_ram_bytes": 17718644736,
+    "gpu": {
+      "index": "0",
+      "total": "24564",
+      "used": "22666",
+      "util": "100"
+    },
+    "memory": {
+      "cgroups": [
+        {
+          "current_bytes": 14775119872,
+          "events": {
+            "high": 0,
+            "low": 0,
+            "max": 0,
+            "oom": 0,
+            "oom_kill": 0
+          },
+          "path": "container"
+        }
+      ]
+    },
+    "time_s": 171.958205
+  },
+  {
+    "available_ram_bytes": 17718960128,
+    "gpu": {
+      "index": "0",
+      "total": "24564",
+      "used": "22666",
+      "util": "100"
+    },
+    "memory": {
+      "cgroups": [
+        {
+          "current_bytes": 14775095296,
+          "events": {
+            "high": 0,
+            "low": 0,
+            "max": 0,
+            "oom": 0,
+            "oom_kill": 0
+          },
+          "path": "container"
+        }
+      ]
+    },
+    "time_s": 173.135783
+  }
+]

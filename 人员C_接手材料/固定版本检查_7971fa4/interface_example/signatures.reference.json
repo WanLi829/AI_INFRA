@@ -1,0 +1,56 @@
+[
+  {
+    "program": "django__django-12308",
+    "stage": 0,
+    "prompt_tokens": 1218,
+    "prompt_sha256": "a6762ed3af64530582b18b8cb206e520a60c56532d4f93a9d79bb98fc9333304"
+  },
+  {
+    "program": "django__django-12308",
+    "stage": 1,
+    "prompt_tokens": 2160,
+    "prompt_sha256": "71b64637fa21fe5a409602dd9073f075ba6bee76af713594c5443f54277e7481"
+  },
+  {
+    "program": "django__django-12308",
+    "stage": 2,
+    "prompt_tokens": 2284,
+    "prompt_sha256": "c2f0c3756d61fd3806704b630fa4e972dd28fbce8517f37536c01f31b3795eff"
+  },
+  {
+    "program": "django__django-12308",
+    "stage": 3,
+    "prompt_tokens": 2720,
+    "prompt_sha256": "751dde1e58be7ff041fc4d5d6275f7e8e9e7420ada080e0e767071064d68534c"
+  },
+  {
+    "program": "django__django-12308",
+    "stage": 4,
+    "prompt_tokens": 3113,
+    "prompt_sha256": "ffaa2a50895f00f168f410f7ef65ded99516c477d8f4dca6cf15d7dc03f4c31a"
+  },
+  {
+    "program": "django__django-12308",
+    "stage": 5,
+    "prompt_tokens": 5415,
+    "prompt_sha256": "c36c9e9b5a1eb52e76b27ac746b61e3cd9dfea903fb1f7721f569bbcd7db90f9"
+  },
+  {
+    "program": "django__django-12308",
+    "stage": 6,
+    "prompt_tokens": 5684,
+    "prompt_sha256": "b747bfb621c12d72f72a344d227bc183c0797edd8c6bcf70e156b20d062d3c29"
+  },
+  {
+    "program": "django__django-12308",
+    "stage": 7,
+    "prompt_tokens": 5941,
+    "prompt_sha256": "8749adc0661bfc08eda51fe06e5424edbf9f3108632e5ed86ba30c1d4ac6e88d"
+  },
+  {
+    "program": "django__django-12308",
+    "stage": 8,
+    "prompt_tokens": 6209,
+    "prompt_sha256": "a28fa31bbbf1f0796f6d66544a16d43445548075615ed0c8f8721e51f63ec9ac"
+  }
+]

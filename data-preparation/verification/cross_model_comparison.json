@@ -1,0 +1,11 @@
+{
+  "accepted_ids_identical": true,
+  "checked_calls": 13884,
+  "identical_request_signatures": true,
+  "mismatches": [],
+  "note": "Both models independently re-tokenized all source calls; equality does not establish 4B runtime support",
+  "template_hashes": {
+    "Qwen3-4B": "a55ee1b1660128b7098723e0abcd92caa0788061051c62d51cbe87d9cf1974d8",
+    "Qwen3-8B": "a55ee1b1660128b7098723e0abcd92caa0788061051c62d51cbe87d9cf1974d8"
+  }
+}

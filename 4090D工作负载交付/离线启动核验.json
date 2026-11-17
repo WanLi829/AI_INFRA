@@ -1,0 +1,29 @@
+[
+  {
+    "jps": 0.05,
+    "planned_first_arrival_s": 15.76330896251096,
+    "planned_last_arrival_s": 243.22249751960211,
+    "regenerated_byte_identical": true,
+    "frozen_files_verified": 179,
+    "status": "plan_only",
+    "gpu_started": false
+  },
+  {
+    "jps": 0.1,
+    "planned_first_arrival_s": 7.88165448125548,
+    "planned_last_arrival_s": 121.61124875980106,
+    "regenerated_byte_identical": true,
+    "frozen_files_verified": 179,
+    "status": "plan_only",
+    "gpu_started": false
+  },
+  {
+    "jps": 0.2,
+    "planned_first_arrival_s": 3.94082724062774,
+    "planned_last_arrival_s": 60.80562437990053,
+    "regenerated_byte_identical": true,
+    "frozen_files_verified": 179,
+    "status": "plan_only",
+    "gpu_started": false
+  }
+]

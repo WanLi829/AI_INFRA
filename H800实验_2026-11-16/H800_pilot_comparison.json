@@ -1,0 +1,66 @@
+{
+  "runs": {
+    "native": {
+      "run": "r/native04",
+      "method": "native",
+      "jps": 0.1,
+      "status": "complete",
+      "ttl_seconds": null,
+      "error": null,
+      "completed_calls": 161,
+      "completed_programs": 14,
+      "speedup_eligible": false,
+      "gpu_pid_policy": "record-only",
+      "jct_mean_s": 25.822691438187444,
+      "jct_p95_s": 54.33974437462165,
+      "output_tokens": 24182,
+      "output_tokens_per_s": 171.80413872375678,
+      "ttft_p95_s": 0.1458624880760908,
+      "sampled_gpu_peak_mib": 73563,
+      "sampled_cgroup_peak_bytes": 28715913216,
+      "gpu_kv_capacity_tokens": 403872,
+      "counter_changes": {
+        "num_preemptions_total": 0.0,
+        "prefix_cache_hits_total": 703552.0,
+        "prefix_cache_queries_total": 815052.0
+      },
+      "observation_s": 140.75330303236842
+    },
+    "continuum": {
+      "run": "r/continuum02",
+      "method": "continuum",
+      "jps": 0.1,
+      "status": "complete",
+      "ttl_seconds": null,
+      "error": null,
+      "completed_calls": 161,
+      "completed_programs": 14,
+      "speedup_eligible": false,
+      "gpu_pid_policy": "record-only",
+      "jct_mean_s": 18.638308538123965,
+      "jct_p95_s": 28.61266733501106,
+      "output_tokens": 24182,
+      "output_tokens_per_s": 171.44418212668566,
+      "ttft_p95_s": 0.14458145201206207,
+      "sampled_gpu_peak_mib": 74341,
+      "sampled_cgroup_peak_bytes": 37324873728,
+      "gpu_kv_capacity_tokens": 403872,
+      "counter_changes": {
+        "num_preemptions_total": 0.0,
+        "prefix_cache_hits_total": 703552.0,
+        "prefix_cache_queries_total": 815052.0
+      },
+      "observation_s": 141.04882242158055
+    }
+  },
+  "matched_conditions": true,
+  "independent_repetitions": 1,
+  "verified_gpu_ownership": false,
+  "formal_speedup_eligible": false,
+  "observed_mean_jct_ratio": 1.3854632455175904,
+  "observed_output_throughput_ratio": 0.9979048432724319,
+  "source_sha256": {
+    "Continuum_原始记录.tar.gz": "edd7adc9cebe02a22daefd9cc2e78180b5ae30f6e0ccf9ead8e2fd51de024d78",
+    "原生vLLM_原始记录.tar.gz": "2914540574df9542fbcb45e365cc43b46e9c71ce9b8fa222b4ca6e5404f40c72"
+  }
+}

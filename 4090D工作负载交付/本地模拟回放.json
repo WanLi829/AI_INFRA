@@ -1,0 +1,38 @@
+[
+  {
+    "arrival_jps": 1000,
+    "arrival_rate_purpose": "Protocol test only; not a GPU recommendation",
+    "calls": 10,
+    "evidence": "CPU mock protocol test only",
+    "future_tool_annotation_sent": false,
+    "online_tool_label": "unclassified-gap",
+    "programs": 1,
+    "strict_complete": true,
+    "subset": "pilot_1",
+    "wait_policy": "Unscaled original gaps"
+  },
+  {
+    "arrival_jps": 1000,
+    "arrival_rate_purpose": "Protocol test only; not a GPU recommendation",
+    "calls": 44,
+    "evidence": "CPU mock protocol test only",
+    "future_tool_annotation_sent": false,
+    "online_tool_label": "unclassified-gap",
+    "programs": 4,
+    "strict_complete": true,
+    "subset": "pilot_4",
+    "wait_policy": "Unscaled original gaps"
+  },
+  {
+    "arrival_jps": 1000,
+    "arrival_rate_purpose": "Protocol test only; not a GPU recommendation",
+    "calls": 161,
+    "evidence": "CPU mock protocol test only",
+    "future_tool_annotation_sent": false,
+    "online_tool_label": "unclassified-gap",
+    "programs": 14,
+    "strict_complete": true,
+    "subset": "pilot_14",
+    "wait_policy": "Unscaled original gaps"
+  }
+]

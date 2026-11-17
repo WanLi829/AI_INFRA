@@ -1,0 +1,40 @@
+{
+  "checks": 68,
+  "failed": [],
+  "configuration_equal": {
+    "gpu": true,
+    "packages": true,
+    "profile_sha256": true,
+    "reload_sha256": true,
+    "trace_sha256": true,
+    "expected_model_revision": true,
+    "verified_model": true
+  },
+  "deltas": {
+    "r1": {
+      "jct_mean_s": -3.907716430048014,
+      "jct_p95_s": -10.075104679036484,
+      "ttft_mean_s": -13.550874758540676,
+      "ttft_p95_s": 8.90485429584642,
+      "e2e_mean_s": -4.126986398769795,
+      "e2e_p95_s": 10.752359479625696,
+      "wall_s": -9.815526917089713,
+      "output_token_throughput": 10.883832417655647
+    },
+    "_r2": {
+      "jct_mean_s": -10.572901898425302,
+      "jct_p95_s": -3.3356014770093756,
+      "ttft_mean_s": -25.808120100669374,
+      "ttft_p95_s": 29.279739486595922,
+      "e2e_mean_s": -11.187044324355288,
+      "e2e_p95_s": 2.2834917062823257,
+      "wall_s": -5.30820353033461,
+      "output_token_throughput": 5.605769167168662
+    }
+  },
+  "program_jct_improvements": [
+    9,
+    10
+  ],
+  "direction_changes": 5
+}

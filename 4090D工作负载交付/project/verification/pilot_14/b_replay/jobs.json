@@ -1,0 +1,156 @@
+[
+  {
+    "actual_arrival_s": 7.882815212011337,
+    "arrival_lag_s": 0.0011607307558572089,
+    "completed_calls": 10,
+    "end_s": 62.626681081950665,
+    "jct_s": 54.74386586993933,
+    "planned_arrival_s": 7.88165448125548,
+    "program_id": "astropy__astropy-13977",
+    "success": true,
+    "tool_dependency_s": 0.6452445983886719
+  },
+  {
+    "actual_arrival_s": 16.097946375608444,
+    "arrival_lag_s": 0.0010343386187052772,
+    "completed_calls": 13,
+    "end_s": 61.7738818526268,
+    "jct_s": 45.675935477018356,
+    "planned_arrival_s": 16.09691203698974,
+    "program_id": "django__django-11734",
+    "success": true,
+    "tool_dependency_s": 2.4697957038879395
+  },
+  {
+    "actual_arrival_s": 36.15969616919756,
+    "arrival_lag_s": 0.0006662500391882986,
+    "completed_calls": 12,
+    "end_s": 89.91993609815836,
+    "jct_s": 53.7602399289608,
+    "planned_arrival_s": 36.15902991915837,
+    "program_id": "django__django-12039",
+    "success": true,
+    "tool_dependency_s": 1.1355371475219727
+  },
+  {
+    "actual_arrival_s": 36.54111800342798,
+    "arrival_lag_s": 0.0011176733277835638,
+    "completed_calls": 9,
+    "end_s": 69.59992965310812,
+    "jct_s": 33.05881164968014,
+    "planned_arrival_s": 36.5400003301002,
+    "program_id": "django__django-12308",
+    "success": true,
+    "tool_dependency_s": 3.571626663208008
+  },
+  {
+    "actual_arrival_s": 52.303793117403984,
+    "arrival_lag_s": 0.0010630462840381938,
+    "completed_calls": 15,
+    "end_s": 123.49782048165798,
+    "jct_s": 71.194027364254,
+    "planned_arrival_s": 52.302730071119946,
+    "program_id": "django__django-13012",
+    "success": true,
+    "tool_dependency_s": 5.493307113647461
+  },
+  {
+    "actual_arrival_s": 61.24876410514116,
+    "arrival_lag_s": 0.0020054814449892433,
+    "completed_calls": 13,
+    "end_s": 121.05662228167057,
+    "jct_s": 59.80785817652941,
+    "planned_arrival_s": 61.246758623696174,
+    "program_id": "django__django-13512",
+    "success": true,
+    "tool_dependency_s": 10.898159742355347
+  },
+  {
+    "actual_arrival_s": 64.28458432108164,
+    "arrival_lag_s": 0.00035130770075397777,
+    "completed_calls": 7,
+    "end_s": 94.88845790922642,
+    "jct_s": 30.60387358814478,
+    "planned_arrival_s": 64.28423301338088,
+    "program_id": "django__django-14672",
+    "success": true,
+    "tool_dependency_s": 3.228259801864624
+  },
+  {
+    "actual_arrival_s": 67.4321188479662,
+    "arrival_lag_s": 0.00018879686939499152,
+    "completed_calls": 12,
+    "end_s": 116.59582513570786,
+    "jct_s": 49.16370628774166,
+    "planned_arrival_s": 67.4319300510968,
+    "program_id": "matplotlib__matplotlib-23412",
+    "success": true,
+    "tool_dependency_s": 0.5666069984436035
+  },
+  {
+    "actual_arrival_s": 71.57709519565105,
+    "arrival_lag_s": 0.0006695385928594533,
+    "completed_calls": 8,
+    "end_s": 103.97893065959215,
+    "jct_s": 32.4018354639411,
+    "planned_arrival_s": 71.5764256570582,
+    "program_id": "pytest-dev__pytest-7521",
+    "success": true,
+    "tool_dependency_s": 0.6409187316894531
+  },
+  {
+    "actual_arrival_s": 76.89671987295151,
+    "arrival_lag_s": 0.0010035318257024528,
+    "completed_calls": 15,
+    "end_s": 129.46788641810417,
+    "jct_s": 52.571166545152664,
+    "planned_arrival_s": 76.8957163411258,
+    "program_id": "scikit-learn__scikit-learn-14983",
+    "success": true,
+    "tool_dependency_s": 4.8962578773498535
+  },
+  {
+    "actual_arrival_s": 115.79971789568663,
+    "arrival_lag_s": 0.0008541519989933022,
+    "completed_calls": 14,
+    "end_s": 184.80217838287354,
+    "jct_s": 69.00246048718691,
+    "planned_arrival_s": 115.79886374368763,
+    "program_id": "sympy__sympy-13974",
+    "success": true,
+    "tool_dependency_s": 12.759988784790039
+  },
+  {
+    "actual_arrival_s": 117.40193944424391,
+    "arrival_lag_s": 0.00033162595434532705,
+    "completed_calls": 11,
+    "end_s": 159.72681452333927,
+    "jct_s": 42.324875079095364,
+    "planned_arrival_s": 117.40160781828956,
+    "program_id": "sympy__sympy-17318",
+    "success": true,
+    "tool_dependency_s": 3.282698631286621
+  },
+  {
+    "actual_arrival_s": 118.26876623928547,
+    "arrival_lag_s": 0.000880014221522174,
+    "completed_calls": 14,
+    "end_s": 171.63271339982748,
+    "jct_s": 53.36394716054201,
+    "planned_arrival_s": 118.26788622506395,
+    "program_id": "sympy__sympy-18763",
+    "success": true,
+    "tool_dependency_s": 0.6452248096466064
+  },
+  {
+    "actual_arrival_s": 121.6121748611331,
+    "arrival_lag_s": 0.0009261013320411848,
+    "completed_calls": 8,
+    "end_s": 157.70640340447426,
+    "jct_s": 36.09422854334116,
+    "planned_arrival_s": 121.61124875980106,
+    "program_id": "sympy__sympy-23824",
+    "success": true,
+    "tool_dependency_s": 1.6659660339355469
+  }
+]

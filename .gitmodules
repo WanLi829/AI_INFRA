@@ -1,0 +1,4 @@
+[submodule "kairos"]
+	path = 4090D工作负载交付/project/runtime/Kairos
+	url = https://github.com/MaxizYB/Kairos.git
+	shallow = true

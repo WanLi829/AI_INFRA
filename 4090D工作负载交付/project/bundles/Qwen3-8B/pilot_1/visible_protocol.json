@@ -1,0 +1,78 @@
+{
+  "current_assistant_included": false,
+  "future_outcomes_included": false,
+  "request_signatures": [
+    {
+      "output_tokens": 73,
+      "program_id": "astropy__astropy-13977",
+      "prompt_sha256": "054212d69fe85ed001777d50c8af78ec3c6a4bf753398dcd257f0129f50f45d1",
+      "prompt_tokens": 2028,
+      "turn_id": 0
+    },
+    {
+      "output_tokens": 85,
+      "program_id": "astropy__astropy-13977",
+      "prompt_sha256": "b6411f599431a6f933824d7482c9b226ed9f4efb47d49eb105b9b19edc7bb101",
+      "prompt_tokens": 3163,
+      "turn_id": 1
+    },
+    {
+      "output_tokens": 104,
+      "program_id": "astropy__astropy-13977",
+      "prompt_sha256": "8dcef7b62d19eba8d5430c340851f4c6390c3072e5483fdfdea9689ae221fec6",
+      "prompt_tokens": 3977,
+      "turn_id": 2
+    },
+    {
+      "output_tokens": 132,
+      "program_id": "astropy__astropy-13977",
+      "prompt_sha256": "220375a0eaf672a9a1e84cc6a46f17c3258b937cae09ed1d3f7934deeabc088d",
+      "prompt_tokens": 4192,
+      "turn_id": 3
+    },
+    {
+      "output_tokens": 96,
+      "program_id": "astropy__astropy-13977",
+      "prompt_sha256": "da35779fd61637d2168e6ecbb9d0b1fb2d40dfc27c980ab9196102248eb654a9",
+      "prompt_tokens": 4701,
+      "turn_id": 4
+    },
+    {
+      "output_tokens": 491,
+      "program_id": "astropy__astropy-13977",
+      "prompt_sha256": "5ae365953f6f972254007816771dde03ee947f97a3fa1d0ea6b2b8200b692920",
+      "prompt_tokens": 5356,
+      "turn_id": 5
+    },
+    {
+      "output_tokens": 699,
+      "program_id": "astropy__astropy-13977",
+      "prompt_sha256": "5ebacf1506d2266429f9f6d7472141e6001b06492d88fd379c7790373c799898",
+      "prompt_tokens": 5873,
+      "turn_id": 6
+    },
+    {
+      "output_tokens": 603,
+      "program_id": "astropy__astropy-13977",
+      "prompt_sha256": "28e815cebbce8fe67ddafdb95d880e5c05ae6f005697c4e6b0a4e6b11577d832",
+      "prompt_tokens": 6610,
+      "turn_id": 7
+    },
+    {
+      "output_tokens": 39,
+      "program_id": "astropy__astropy-13977",
+      "prompt_sha256": "08d7548c0b86dfb80f29a5d3c4f0921550d2413638422b2f1b7a1b48373e1bc0",
+      "prompt_tokens": 7239,
+      "turn_id": 8
+    },
+    {
+      "output_tokens": 115,
+      "program_id": "astropy__astropy-13977",
+      "prompt_sha256": "0be7dace7205e441dc3a557ac94742113644b6f7ad1c0800f92e0f636ccd1ed9",
+      "prompt_tokens": 7754,
+      "turn_id": 9
+    }
+  ],
+  "trace_sha256": "a12da4529318e1c915f2f3237630710bf4615034a3039eaa27538638d0898abe",
+  "visible_messages_sha256": "3ae07f7c4a507c6ced59b3e4fd5beb106920a6a7c780493a1d7c05df85dc9db9"
+}

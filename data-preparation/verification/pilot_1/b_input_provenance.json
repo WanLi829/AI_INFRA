@@ -1,0 +1,50 @@
+{
+  "arrivals": {
+    "arrivals": [
+      {
+        "arrival_s": 7.88165448125548,
+        "program_id": "astropy__astropy-13977"
+      }
+    ],
+    "first_arrival_rule": "Includes the first exponential inter-arrival from clock zero",
+    "jps": 0.1,
+    "program_order": "Bundle program_ids order",
+    "schema_version": "b-replay-arrivals/1.0",
+    "seed": 20261030,
+    "trace_sha256": "a12da4529318e1c915f2f3237630710bf4615034a3039eaa27538638d0898abe"
+  },
+  "b_runtime_sha256": {
+    "cli.py": "d4b4e56f58679a811984bab53e851fc6564f89bc68c7da61de401951b8f41f2a",
+    "client.py": "5892c1b73ff133bdbb53534976b7a28c116b551225d3106c9acb061008ad9d0d",
+    "common.py": "0d1995d1258a19e4b20a8b65f7c5f6a750ad45e4c504020b0b88ca94558b27c8",
+    "low_memory.py": "4b017149d0334ba8705ad3d1d0eef64b1eec42efc7c1e35f5c7e423fabebe5c2",
+    "resources.py": "aec0632e35259f438b4837c5d4ebac2972d38a5a8fa5dea85bbea9bc8e236112",
+    "scripts/gpu_python.py": "7efb4dba86cb7fe8d3a1a4f976ab9e82ed76747ea74560e050b8117404390881",
+    "server.py": "063941b6c1553158e5c9f54f6e74749d2c33958025e909f1958284ff15b841c0"
+  },
+  "gpu_input_smoke_validated": true,
+  "manifest": {
+    "calls": 10,
+    "coverage": "recorded_assistant_calls_only",
+    "files": {
+      "trace.json": "a12da4529318e1c915f2f3237630710bf4615034a3039eaa27538638d0898abe",
+      "visible_messages.json": "3ae07f7c4a507c6ced59b3e4fd5beb106920a6a7c780493a1d7c05df85dc9db9",
+      "visible_protocol.json": "423e2a5ab863f1345328745581c071906434b06e888512338cf2ad76cf2a3e3e"
+    },
+    "gpu_validated": false,
+    "intended_use": "Pilot/development",
+    "model": "Qwen3-8B",
+    "model_revision": "b968826d9c46dd6066d109eabc6255188de91218",
+    "program_ids": [
+      "astropy__astropy-13977"
+    ],
+    "programs": 1,
+    "schema_version": "b-replay-bundle/1.0",
+    "subset": "pilot_1",
+    "total_output_tokens": 2437,
+    "unrecorded_api_attempts": 1
+  },
+  "performance_claim_supported": false,
+  "runtime_commit": "7971fa40323f16e8e4ce8f12dfd5db9755a98cf1",
+  "server_profile": "ram30"
+}

@@ -1,0 +1,7 @@
+{
+  "passed": 49,
+  "platform": "macOS CPU",
+  "skip_reason": "Linux-specific process-group cleanup test",
+  "skipped": 1,
+  "status": "passed"
+}

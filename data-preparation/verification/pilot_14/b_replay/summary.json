@@ -1,0 +1,57 @@
+{
+  "arrival_lag_s": {
+    "max": 0.0020054814449892433,
+    "mean": 0.0008751849261553321,
+    "min": 0.00018879686939499152,
+    "n": 14,
+    "p50": 0.0009030577767816794,
+    "p95": 0.0014563934970534206
+  },
+  "completed_calls": 161,
+  "completed_programs": 14,
+  "evidence": "Serving replay; hardware/engine identity requires C's run record",
+  "expected_calls": 161,
+  "expected_programs": 14,
+  "failed_calls": 0,
+  "failed_programs": 0,
+  "gpu_validated": false,
+  "jct_s": {
+    "max": 71.194027364254,
+    "mean": 48.840487972966265,
+    "min": 30.60387358814478,
+    "n": 14,
+    "p50": 50.86743641644716,
+    "p95": 69.7695088941604
+  },
+  "metric_notes": [
+    "Program JCT includes tool wait and queueing; starts at actual arrival",
+    "Throughput window includes tool idle and drain, excludes initial pre-arrival idle",
+    "ITL samples use adjacent single-token chunks only; chunk sizes retained",
+    "No cache-hit/transfer metrics are inferred by the client; unavailable values remain absent",
+    "GPU validation requires independent model, engine and hardware evidence"
+  ],
+  "observation_from_first_actual_arrival_s": 176.92012029886246,
+  "output_tokens_per_s": 136.6831537258201,
+  "programs_per_s": 0.07913175718143584,
+  "request_e2e_s": {
+    "max": 15.322469055652618,
+    "mean": 3.922220362778406,
+    "min": 1.1930653154850006,
+    "n": 161,
+    "p50": 2.8884145691990852,
+    "p95": 9.539314225316048
+  },
+  "request_ttft_s": {
+    "max": 2.4183942526578903,
+    "mean": 0.23802932837735052,
+    "min": 0.09637665748596191,
+    "n": 161,
+    "p50": 0.18872077018022537,
+    "p95": 0.4658827558159828
+  },
+  "status": "complete",
+  "strict_complete": true,
+  "timed_out": false,
+  "unattempted_calls": 0,
+  "wall_from_clock_zero_s": 184.8029355108738
+}

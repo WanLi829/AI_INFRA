@@ -1,0 +1,2022 @@
+{
+  "analysis_date": "2026-11-02",
+  "implementation_commit": "4f4c600367b02b82b389689b9a7ece2b2af4c4b9",
+  "trace_sha256": "4c896b93b14eff39bcc6e2fd0700ba59a1bfcfd785bd15e645d5e1a2ffeee2e8",
+  "source_manifest": {
+    "continuum_jobs.json": {
+      "bytes": 8633,
+      "sha256": "3179e994c38ce721d5a81781b842ce431c566c1fb83f7ec0392ad50c1bfecd67"
+    },
+    "continuum_r2_jobs.json": {
+      "bytes": 8639,
+      "sha256": "dea515ec5f2077e0b845a7102fb9753f89c493e018279dbe87b581a50737dc67"
+    },
+    "continuum_r2_state.json": {
+      "bytes": 2307,
+      "sha256": "e2145ecf9c60a23b3661510442a9afa02f34809b7f2682b94b4a693a4b9890f5"
+    },
+    "continuum_r2_summary.json": {
+      "bytes": 872,
+      "sha256": "6471b255d9c3c599606b10b10f12a1b47777bc1939d8f69609c87613ee7a3898"
+    },
+    "continuum_state.json": {
+      "bytes": 2308,
+      "sha256": "dbcdfc30b044305c1a4a8fa651cf148dcd8290b572650156e546b0f17197430e"
+    },
+    "continuum_summary.json": {
+      "bytes": 873,
+      "sha256": "8407f1ebfa7c8550156a4de52b0320006c5b40ec7b9459f7bcfe87e7a64462e0"
+    },
+    "env_freeze_kairos.txt": {
+      "bytes": 4886,
+      "sha256": "4605a1479b238c3737f84ad70b83ae4f8e8bdfae7e61edd953193710daaa5c67"
+    },
+    "kairos_jobs.json": {
+      "bytes": 8646,
+      "sha256": "8b60c487e2c4b5da5be40e270753ff4e06b36f5bc349b260e3cc5b93ce741ad4"
+    },
+    "kairos_r2_jobs.json": {
+      "bytes": 8635,
+      "sha256": "b1c45fa25b19b4d87bf306006b6ba3ac3d260d5dd77c99385486cc629d193f70"
+    },
+    "kairos_r2_state.json": {
+      "bytes": 2299,
+      "sha256": "042763bf1eb9f425088264039381fac026e9f84a555a934ca33eacb841b04563"
+    },
+    "kairos_r2_summary.json": {
+      "bytes": 869,
+      "sha256": "155f9ec9f2d5785f17a7243f0319d13d46a68f5ad40736ca4e98bd0dfa256a1a"
+    },
+    "kairos_state.json": {
+      "bytes": 2298,
+      "sha256": "f6beda8eaef961564f93307ba78efe13406f90c101b99d42ae9f3822b24eb3cf"
+    },
+    "kairos_summary.json": {
+      "bytes": 866,
+      "sha256": "c9f853fb08311e0ebefd676a568e1564506369efc5297b79366dc2d29831e8b3"
+    },
+    "REPRO.md": {
+      "bytes": 5097,
+      "sha256": "f58ff3b5c140d74b99b7d07af12e86cecf9b304abe9eb98c0e90cbf09840b91a"
+    },
+    "run_relaxed.py": {
+      "bytes": 1615,
+      "sha256": "5a4053a89b9f91fe5adc0e938717a004be3f2b9f8612317087e8baac557dc523"
+    },
+    "SUMMARY.md": {
+      "bytes": 15954,
+      "sha256": "8cb58114edf9265aa6c04626a2e3764cb41316fa65b626c754a772b22278bee0"
+    }
+  },
+  "audits": [
+    {
+      "run": "continuum",
+      "check": "state complete",
+      "passed": true
+    },
+    {
+      "run": "continuum",
+      "check": "reported complete calls / failures / jobs",
+      "passed": true
+    },
+    {
+      "run": "continuum",
+      "check": "state embedded summary equals standalone summary",
+      "passed": true
+    },
+    {
+      "run": "continuum",
+      "check": "unique complete program ID set",
+      "passed": true
+    },
+    {
+      "run": "continuum",
+      "check": "per-program turn counts",
+      "passed": true
+    },
+    {
+      "run": "continuum",
+      "check": "JCT mean recomputation",
+      "passed": true
+    },
+    {
+      "run": "continuum",
+      "check": "JCT p95 linear interpolation",
+      "passed": true
+    },
+    {
+      "run": "continuum",
+      "check": "job end minus arrival equals JCT",
+      "passed": true
+    },
+    {
+      "run": "continuum",
+      "check": "post-initial JCT identity",
+      "passed": true
+    },
+    {
+      "run": "continuum",
+      "check": "tool waiting sums",
+      "passed": true
+    },
+    {
+      "run": "continuum",
+      "check": "trace SHA256",
+      "passed": true
+    },
+    {
+      "run": "continuum",
+      "check": "request throughput arithmetic",
+      "passed": true
+    },
+    {
+      "run": "continuum",
+      "check": "output throughput arithmetic against planned budget",
+      "passed": true
+    },
+    {
+      "run": "continuum",
+      "check": "total throughput arithmetic against submitted input plus planned output",
+      "passed": true
+    },
+    {
+      "run": "continuum",
+      "check": "replay contained within lifecycle",
+      "passed": true
+    },
+    {
+      "run": "continuum",
+      "check": "method labels agree",
+      "passed": true
+    },
+    {
+      "run": "continuum",
+      "check": "model verification record",
+      "passed": true
+    },
+    {
+      "run": "kairos",
+      "check": "state complete",
+      "passed": true
+    },
+    {
+      "run": "kairos",
+      "check": "reported complete calls / failures / jobs",
+      "passed": true
+    },
+    {
+      "run": "kairos",
+      "check": "state embedded summary equals standalone summary",
+      "passed": true
+    },
+    {
+      "run": "kairos",
+      "check": "unique complete program ID set",
+      "passed": true
+    },
+    {
+      "run": "kairos",
+      "check": "per-program turn counts",
+      "passed": true
+    },
+    {
+      "run": "kairos",
+      "check": "JCT mean recomputation",
+      "passed": true
+    },
+    {
+      "run": "kairos",
+      "check": "JCT p95 linear interpolation",
+      "passed": true
+    },
+    {
+      "run": "kairos",
+      "check": "job end minus arrival equals JCT",
+      "passed": true
+    },
+    {
+      "run": "kairos",
+      "check": "post-initial JCT identity",
+      "passed": true
+    },
+    {
+      "run": "kairos",
+      "check": "tool waiting sums",
+      "passed": true
+    },
+    {
+      "run": "kairos",
+      "check": "trace SHA256",
+      "passed": true
+    },
+    {
+      "run": "kairos",
+      "check": "request throughput arithmetic",
+      "passed": true
+    },
+    {
+      "run": "kairos",
+      "check": "output throughput arithmetic against planned budget",
+      "passed": true
+    },
+    {
+      "run": "kairos",
+      "check": "total throughput arithmetic against submitted input plus planned output",
+      "passed": true
+    },
+    {
+      "run": "kairos",
+      "check": "replay contained within lifecycle",
+      "passed": true
+    },
+    {
+      "run": "kairos",
+      "check": "method labels agree",
+      "passed": true
+    },
+    {
+      "run": "kairos",
+      "check": "model verification record",
+      "passed": true
+    },
+    {
+      "run": "continuum_r2",
+      "check": "state complete",
+      "passed": true
+    },
+    {
+      "run": "continuum_r2",
+      "check": "reported complete calls / failures / jobs",
+      "passed": true
+    },
+    {
+      "run": "continuum_r2",
+      "check": "state embedded summary equals standalone summary",
+      "passed": true
+    },
+    {
+      "run": "continuum_r2",
+      "check": "unique complete program ID set",
+      "passed": true
+    },
+    {
+      "run": "continuum_r2",
+      "check": "per-program turn counts",
+      "passed": true
+    },
+    {
+      "run": "continuum_r2",
+      "check": "JCT mean recomputation",
+      "passed": true
+    },
+    {
+      "run": "continuum_r2",
+      "check": "JCT p95 linear interpolation",
+      "passed": true
+    },
+    {
+      "run": "continuum_r2",
+      "check": "job end minus arrival equals JCT",
+      "passed": true
+    },
+    {
+      "run": "continuum_r2",
+      "check": "post-initial JCT identity",
+      "passed": true
+    },
+    {
+      "run": "continuum_r2",
+      "check": "tool waiting sums",
+      "passed": true
+    },
+    {
+      "run": "continuum_r2",
+      "check": "trace SHA256",
+      "passed": true
+    },
+    {
+      "run": "continuum_r2",
+      "check": "request throughput arithmetic",
+      "passed": true
+    },
+    {
+      "run": "continuum_r2",
+      "check": "output throughput arithmetic against planned budget",
+      "passed": true
+    },
+    {
+      "run": "continuum_r2",
+      "check": "total throughput arithmetic against submitted input plus planned output",
+      "passed": true
+    },
+    {
+      "run": "continuum_r2",
+      "check": "replay contained within lifecycle",
+      "passed": true
+    },
+    {
+      "run": "continuum_r2",
+      "check": "method labels agree",
+      "passed": true
+    },
+    {
+      "run": "continuum_r2",
+      "check": "model verification record",
+      "passed": true
+    },
+    {
+      "run": "kairos_r2",
+      "check": "state complete",
+      "passed": true
+    },
+    {
+      "run": "kairos_r2",
+      "check": "reported complete calls / failures / jobs",
+      "passed": true
+    },
+    {
+      "run": "kairos_r2",
+      "check": "state embedded summary equals standalone summary",
+      "passed": true
+    },
+    {
+      "run": "kairos_r2",
+      "check": "unique complete program ID set",
+      "passed": true
+    },
+    {
+      "run": "kairos_r2",
+      "check": "per-program turn counts",
+      "passed": true
+    },
+    {
+      "run": "kairos_r2",
+      "check": "JCT mean recomputation",
+      "passed": true
+    },
+    {
+      "run": "kairos_r2",
+      "check": "JCT p95 linear interpolation",
+      "passed": true
+    },
+    {
+      "run": "kairos_r2",
+      "check": "job end minus arrival equals JCT",
+      "passed": true
+    },
+    {
+      "run": "kairos_r2",
+      "check": "post-initial JCT identity",
+      "passed": true
+    },
+    {
+      "run": "kairos_r2",
+      "check": "tool waiting sums",
+      "passed": true
+    },
+    {
+      "run": "kairos_r2",
+      "check": "trace SHA256",
+      "passed": true
+    },
+    {
+      "run": "kairos_r2",
+      "check": "request throughput arithmetic",
+      "passed": true
+    },
+    {
+      "run": "kairos_r2",
+      "check": "output throughput arithmetic against planned budget",
+      "passed": true
+    },
+    {
+      "run": "kairos_r2",
+      "check": "total throughput arithmetic against submitted input plus planned output",
+      "passed": true
+    },
+    {
+      "run": "kairos_r2",
+      "check": "replay contained within lifecycle",
+      "passed": true
+    },
+    {
+      "run": "kairos_r2",
+      "check": "method labels agree",
+      "passed": true
+    },
+    {
+      "run": "kairos_r2",
+      "check": "model verification record",
+      "passed": true
+    }
+  ],
+  "recorded_config_equal": {
+    "gpu": true,
+    "packages": true,
+    "profile_sha256": true,
+    "reload_sha256": true,
+    "trace_sha256": true,
+    "expected_model_revision": true,
+    "verified_model": true
+  },
+  "runs": {
+    "continuum": {
+      "summary": {
+        "method": "continuum",
+        "wall_s": 164.7018185555935,
+        "start_wall_time": 1793070944.6868844,
+        "end_wall_time": 1793071109.3933191,
+        "completed": 178,
+        "failed": 0,
+        "jobs": 16,
+        "jct_mean_s": 106.72646729880944,
+        "jct_p95_s": 158.6940088570118,
+        "primed_jct_mean_s": null,
+        "primed_jct_p95_s": null,
+        "ttft_mean_s": 5.1374011014200995,
+        "ttft_p95_s": 28.816920889541517,
+        "itl_mean_s": 0.026986669450837747,
+        "itl_p95_s": 0.03838597238063812,
+        "e2e_mean_s": 9.078003765994243,
+        "e2e_p95_s": 30.37871628776194,
+        "request_throughput": 1.0807409508955594,
+        "output_token_throughput": 158.8567766248956,
+        "total_token_throughput": 5718.194299610029,
+        "hierarchy": "Program=one user target; human wait excluded from Program JCT",
+        "workload_scope": "public production metadata, synthetic token identity, bounded serial subset"
+      },
+      "state": {
+        "status": "complete",
+        "method": "continuum",
+        "started_at": 1793070806.2273765,
+        "gpu": {
+          "index": "0",
+          "uuid": "GPU-ec71dfdd-7e85-91bf-4d96-2658fb724a5e",
+          "total": "24564",
+          "used": "0",
+          "util": "0"
+        },
+        "packages": {
+          "torch": "2.13.0+cu132",
+          "vllm": "0.28.0",
+          "lmcache": "0.5.5rc4",
+          "transformers": "5.16.1",
+          "httpx": "0.28.1"
+        },
+        "profile_sha256": "a08d9e3b28095bc20366a3a7dfe9b7578c514b0b4cbebb60be048bf75c73e022",
+        "reload_sha256": "5238b9cc074cef7794c8665ca05f032ffbc236d8e24f499e8cf3ae62cab4b7d2",
+        "trace_sha256": "4c896b93b14eff39bcc6e2fd0700ba59a1bfcfd785bd15e645d5e1a2ffeee2e8",
+        "expected_model_revision": "b968826d9c46dd6066d109eabc6255188de91218",
+        "verified_model": {
+          "revision": "b968826d9c46dd6066d109eabc6255188de91218",
+          "files_verified": [
+            "config.json",
+            "generation_config.json",
+            "merges.txt",
+            "model-00001-of-00005.safetensors",
+            "model-00002-of-00005.safetensors",
+            "model-00003-of-00005.safetensors",
+            "model-00004-of-00005.safetensors",
+            "model-00005-of-00005.safetensors",
+            "model.safetensors.index.json",
+            "tokenizer.json",
+            "tokenizer_config.json",
+            "vocab.json"
+          ],
+          "weights_verified": true
+        },
+        "packaging_gpu_revalidation": true,
+        "summary": {
+          "method": "continuum",
+          "wall_s": 164.7018185555935,
+          "start_wall_time": 1793070944.6868844,
+          "end_wall_time": 1793071109.3933191,
+          "completed": 178,
+          "failed": 0,
+          "jobs": 16,
+          "jct_mean_s": 106.72646729880944,
+          "jct_p95_s": 158.6940088570118,
+          "primed_jct_mean_s": null,
+          "primed_jct_p95_s": null,
+          "ttft_mean_s": 5.1374011014200995,
+          "ttft_p95_s": 28.816920889541517,
+          "itl_mean_s": 0.026986669450837747,
+          "itl_p95_s": 0.03838597238063812,
+          "e2e_mean_s": 9.078003765994243,
+          "e2e_p95_s": 30.37871628776194,
+          "request_throughput": 1.0807409508955594,
+          "output_token_throughput": 158.8567766248956,
+          "total_token_throughput": 5718.194299610029,
+          "hierarchy": "Program=one user target; human wait excluded from Program JCT",
+          "workload_scope": "public production metadata, synthetic token identity, bounded serial subset"
+        },
+        "ended_at": 1793071115.0739868
+      },
+      "jobs": {
+        "django__django-16256": {
+          "program": "django__django-16256",
+          "session": "frontier:django__django-16256",
+          "user": "frontier-user:django__django-16256",
+          "cohort": "mechanism-stress",
+          "jct_s": 36.94231925159693,
+          "arrival_s": 0.409036822617054,
+          "end_s": 37.35135607421398,
+          "turns": 8,
+          "first_turn_end_s": 4.383760295808315,
+          "post_initial_jct_s": 32.967595778405666,
+          "primed_jct_s": null,
+          "tool_dependency_s": 4.205882049423218,
+          "human_gap_original_s": 0.0,
+          "human_gap_replay_s": 0.0
+        },
+        "sympy__sympy-17318": {
+          "program": "sympy__sympy-17318",
+          "session": "frontier:sympy__sympy-17318",
+          "user": "frontier-user:sympy__sympy-17318",
+          "cohort": "mechanism-stress",
+          "jct_s": 69.21161834150553,
+          "arrival_s": 0.41001516580581665,
+          "end_s": 69.62163350731134,
+          "turns": 11,
+          "first_turn_end_s": 6.015541814267635,
+          "post_initial_jct_s": 63.60609169304371,
+          "primed_jct_s": null,
+          "tool_dependency_s": 5.966248143951416,
+          "human_gap_original_s": 0.0,
+          "human_gap_replay_s": 0.0
+        },
+        "django__django-12039": {
+          "program": "django__django-12039",
+          "session": "frontier:django__django-12039",
+          "user": "frontier-user:django__django-12039",
+          "cohort": "mechanism-stress",
+          "jct_s": 73.09832759201527,
+          "arrival_s": 0.42926688492298126,
+          "end_s": 73.52759447693825,
+          "turns": 12,
+          "first_turn_end_s": 3.5731426551938057,
+          "post_initial_jct_s": 69.95445182174444,
+          "primed_jct_s": null,
+          "tool_dependency_s": 4.899711120101928,
+          "human_gap_original_s": 0.0,
+          "human_gap_replay_s": 0.0
+        },
+        "sympy__sympy-18763": {
+          "program": "sympy__sympy-18763",
+          "session": "frontier:sympy__sympy-18763",
+          "user": "frontier-user:sympy__sympy-18763",
+          "cohort": "mechanism-stress",
+          "jct_s": 79.05474408715963,
+          "arrival_s": 0.26402295380830765,
+          "end_s": 79.31876704096794,
+          "turns": 14,
+          "first_turn_end_s": 3.1653102040290833,
+          "post_initial_jct_s": 76.15345683693886,
+          "primed_jct_s": null,
+          "tool_dependency_s": 4.707073055511475,
+          "human_gap_original_s": 0.0,
+          "human_gap_replay_s": 0.0
+        },
+        "astropy__astropy-13453": {
+          "program": "astropy__astropy-13453",
+          "session": "frontier:astropy__astropy-13453",
+          "user": "frontier-user:astropy__astropy-13453",
+          "cohort": "mechanism-stress",
+          "jct_s": 83.2297967672348,
+          "arrival_s": 0.47336459904909134,
+          "end_s": 83.7031613662839,
+          "turns": 9,
+          "first_turn_end_s": 5.574947148561478,
+          "post_initial_jct_s": 78.12821421772242,
+          "primed_jct_s": null,
+          "tool_dependency_s": 7.582995223831176,
+          "human_gap_original_s": 0.0,
+          "human_gap_replay_s": 0.0
+        },
+        "django__django-14672": {
+          "program": "django__django-14672",
+          "session": "frontier:django__django-14672",
+          "user": "frontier-user:django__django-14672",
+          "cohort": "mechanism-stress",
+          "jct_s": 86.45394273102283,
+          "arrival_s": 0.5079673826694489,
+          "end_s": 86.96191011369228,
+          "turns": 7,
+          "first_turn_end_s": 3.851569801568985,
+          "post_initial_jct_s": 83.1103403121233,
+          "primed_jct_s": null,
+          "tool_dependency_s": 6.69239092666626,
+          "human_gap_original_s": 0.0,
+          "human_gap_replay_s": 0.0
+        },
+        "astropy__astropy-13977": {
+          "program": "astropy__astropy-13977",
+          "session": "frontier:astropy__astropy-13977",
+          "user": "frontier-user:astropy__astropy-13977",
+          "cohort": "mechanism-stress",
+          "jct_s": 86.49898412078619,
+          "arrival_s": 0.48329467326402664,
+          "end_s": 86.98227879405022,
+          "turns": 10,
+          "first_turn_end_s": 4.119039379060268,
+          "post_initial_jct_s": 82.86323941498995,
+          "primed_jct_s": null,
+          "tool_dependency_s": 3.988616657714844,
+          "human_gap_original_s": 0.0,
+          "human_gap_replay_s": 0.0
+        },
+        "matplotlib__matplotlib-23412": {
+          "program": "matplotlib__matplotlib-23412",
+          "session": "frontier:matplotlib__matplotlib-23412",
+          "user": "frontier-user:matplotlib__matplotlib-23412",
+          "cohort": "mechanism-stress",
+          "jct_s": 98.81054333597422,
+          "arrival_s": 2.7232614010572433,
+          "end_s": 101.53380473703146,
+          "turns": 12,
+          "first_turn_end_s": 6.421147495508194,
+          "post_initial_jct_s": 95.11265724152327,
+          "primed_jct_s": null,
+          "tool_dependency_s": 1.2511900132598877,
+          "human_gap_original_s": 0.0,
+          "human_gap_replay_s": 0.0
+        },
+        "django__django-12308": {
+          "program": "django__django-12308",
+          "session": "frontier:django__django-12308",
+          "user": "frontier-user:django__django-12308",
+          "cohort": "mechanism-stress",
+          "jct_s": 107.14133350551128,
+          "arrival_s": 2.72479460388422,
+          "end_s": 109.8661281093955,
+          "turns": 9,
+          "first_turn_end_s": 6.01903510838747,
+          "post_initial_jct_s": 103.84709300100803,
+          "primed_jct_s": null,
+          "tool_dependency_s": 4.40246296421814,
+          "human_gap_original_s": 0.0,
+          "human_gap_replay_s": 0.0
+        },
+        "django__django-13512": {
+          "program": "django__django-13512",
+          "session": "frontier:django__django-13512",
+          "user": "frontier-user:django__django-13512",
+          "cohort": "mechanism-stress",
+          "jct_s": 121.43560423702002,
+          "arrival_s": 0.4905576780438423,
+          "end_s": 121.92616191506386,
+          "turns": 13,
+          "first_turn_end_s": 4.8283220157027245,
+          "post_initial_jct_s": 117.09783989936113,
+          "primed_jct_s": null,
+          "tool_dependency_s": 14.225140677688598,
+          "human_gap_original_s": 0.0,
+          "human_gap_replay_s": 0.0
+        },
+        "pytest-dev__pytest-7521": {
+          "program": "pytest-dev__pytest-7521",
+          "session": "frontier:pytest-dev__pytest-7521",
+          "user": "frontier-user:pytest-dev__pytest-7521",
+          "cohort": "mechanism-stress",
+          "jct_s": 123.99202118068933,
+          "arrival_s": 2.8366677835583687,
+          "end_s": 126.8286889642477,
+          "turns": 8,
+          "first_turn_end_s": 8.566767565906048,
+          "post_initial_jct_s": 118.26192139834166,
+          "primed_jct_s": null,
+          "tool_dependency_s": 1.1114278644256592,
+          "human_gap_original_s": 0.0,
+          "human_gap_replay_s": 0.0
+        },
+        "django__django-13012": {
+          "program": "django__django-13012",
+          "session": "frontier:django__django-13012",
+          "user": "frontier-user:django__django-13012",
+          "cohort": "mechanism-stress",
+          "jct_s": 126.56922685354948,
+          "arrival_s": 2.7181632220745087,
+          "end_s": 129.287390075624,
+          "turns": 15,
+          "first_turn_end_s": 5.3663588389754295,
+          "post_initial_jct_s": 123.92103123664856,
+          "primed_jct_s": null,
+          "tool_dependency_s": 6.412882180679321,
+          "human_gap_original_s": 0.0,
+          "human_gap_replay_s": 0.0
+        },
+        "sympy__sympy-23824": {
+          "program": "sympy__sympy-23824",
+          "session": "frontier:sympy__sympy-23824",
+          "user": "frontier-user:sympy__sympy-23824",
+          "cohort": "mechanism-stress",
+          "jct_s": 143.640221811831,
+          "arrival_s": 2.904168665409088,
+          "end_s": 146.54439047724009,
+          "turns": 8,
+          "first_turn_end_s": 7.08383122831583,
+          "post_initial_jct_s": 139.46055924892426,
+          "primed_jct_s": null,
+          "tool_dependency_s": 2.589404752456665,
+          "human_gap_original_s": 0.0,
+          "human_gap_replay_s": 0.0
+        },
+        "django__django-11734": {
+          "program": "django__django-11734",
+          "session": "frontier:django__django-11734",
+          "user": "frontier-user:django__django-11734",
+          "cohort": "mechanism-stress",
+          "jct_s": 152.02408273518085,
+          "arrival_s": 2.895569607615471,
+          "end_s": 154.91965234279633,
+          "turns": 13,
+          "first_turn_end_s": 6.533613279461861,
+          "post_initial_jct_s": 148.38603906333447,
+          "primed_jct_s": null,
+          "tool_dependency_s": 3.8077629308166503,
+          "human_gap_original_s": 0.0,
+          "human_gap_replay_s": 0.0
+        },
+        "scikit-learn__scikit-learn-14983": {
+          "program": "scikit-learn__scikit-learn-14983",
+          "session": "frontier:scikit-learn__scikit-learn-14983",
+          "user": "frontier-user:scikit-learn__scikit-learn-14983",
+          "cohort": "mechanism-stress",
+          "jct_s": 157.62766259908676,
+          "arrival_s": 2.910281077027321,
+          "end_s": 160.53794367611408,
+          "turns": 15,
+          "first_turn_end_s": 7.957829192280769,
+          "post_initial_jct_s": 152.5801144838333,
+          "primed_jct_s": null,
+          "tool_dependency_s": 5.403130610809326,
+          "human_gap_original_s": 0.0,
+          "human_gap_replay_s": 0.0
+        },
+        "sympy__sympy-13974": {
+          "program": "sympy__sympy-13974",
+          "session": "frontier:sympy__sympy-13974",
+          "user": "frontier-user:sympy__sympy-13974",
+          "cohort": "mechanism-stress",
+          "jct_s": 161.8930476307869,
+          "arrival_s": 2.807820089161396,
+          "end_s": 164.7008677199483,
+          "turns": 14,
+          "first_turn_end_s": 6.033010087907314,
+          "post_initial_jct_s": 158.66785763204098,
+          "primed_jct_s": null,
+          "tool_dependency_s": 13.897826496688843,
+          "human_gap_original_s": 0.0,
+          "human_gap_replay_s": 0.0
+        }
+      },
+      "start_beijing": "2026-10-27T11:15:44+08:00",
+      "end_beijing": "2026-10-27T11:18:29+08:00",
+      "lifecycle_s": 308.8466103076935
+    },
+    "kairos": {
+      "summary": {
+        "method": "kairos",
+        "wall_s": 148.53546722233295,
+        "start_wall_time": 1793071503.2000713,
+        "end_wall_time": 1793071651.7378004,
+        "completed": 178,
+        "failed": 0,
+        "jobs": 16,
+        "jct_mean_s": 102.55589960096404,
+        "jct_p95_s": 142.70542134530842,
+        "primed_jct_mean_s": null,
+        "primed_jct_p95_s": null,
+        "ttft_mean_s": 4.441238312322772,
+        "ttft_p95_s": 31.38302570730452,
+        "itl_mean_s": 0.02918853667580961,
+        "itl_p95_s": 0.05962047353386879,
+        "e2e_mean_s": 8.703355785291851,
+        "e2e_p95_s": 33.6451450683177,
+        "request_throughput": 1.19836698486001,
+        "output_token_throughput": 176.1464819768388,
+        "total_token_throughput": 6340.552984495522,
+        "hierarchy": "Program=one user target; human wait excluded from Program JCT",
+        "workload_scope": "public production metadata, synthetic token identity, bounded serial subset"
+      },
+      "state": {
+        "status": "complete",
+        "method": "kairos",
+        "started_at": 1793071361.0142925,
+        "gpu": {
+          "index": "0",
+          "uuid": "GPU-ec71dfdd-7e85-91bf-4d96-2658fb724a5e",
+          "total": "24564",
+          "used": "0",
+          "util": "0"
+        },
+        "packages": {
+          "torch": "2.13.0+cu132",
+          "vllm": "0.28.0",
+          "lmcache": "0.5.5rc4",
+          "transformers": "5.16.1",
+          "httpx": "0.28.1"
+        },
+        "profile_sha256": "a08d9e3b28095bc20366a3a7dfe9b7578c514b0b4cbebb60be048bf75c73e022",
+        "reload_sha256": "5238b9cc074cef7794c8665ca05f032ffbc236d8e24f499e8cf3ae62cab4b7d2",
+        "trace_sha256": "4c896b93b14eff39bcc6e2fd0700ba59a1bfcfd785bd15e645d5e1a2ffeee2e8",
+        "expected_model_revision": "b968826d9c46dd6066d109eabc6255188de91218",
+        "verified_model": {
+          "revision": "b968826d9c46dd6066d109eabc6255188de91218",
+          "files_verified": [
+            "config.json",
+            "generation_config.json",
+            "merges.txt",
+            "model-00001-of-00005.safetensors",
+            "model-00002-of-00005.safetensors",
+            "model-00003-of-00005.safetensors",
+            "model-00004-of-00005.safetensors",
+            "model-00005-of-00005.safetensors",
+            "model.safetensors.index.json",
+            "tokenizer.json",
+            "tokenizer_config.json",
+            "vocab.json"
+          ],
+          "weights_verified": true
+        },
+        "packaging_gpu_revalidation": true,
+        "summary": {
+          "method": "kairos",
+          "wall_s": 148.53546722233295,
+          "start_wall_time": 1793071503.2000713,
+          "end_wall_time": 1793071651.7378004,
+          "completed": 178,
+          "failed": 0,
+          "jobs": 16,
+          "jct_mean_s": 102.55589960096404,
+          "jct_p95_s": 142.70542134530842,
+          "primed_jct_mean_s": null,
+          "primed_jct_p95_s": null,
+          "ttft_mean_s": 4.441238312322772,
+          "ttft_p95_s": 31.38302570730452,
+          "itl_mean_s": 0.02918853667580961,
+          "itl_p95_s": 0.05962047353386879,
+          "e2e_mean_s": 8.703355785291851,
+          "e2e_p95_s": 33.6451450683177,
+          "request_throughput": 1.19836698486001,
+          "output_token_throughput": 176.1464819768388,
+          "total_token_throughput": 6340.552984495522,
+          "hierarchy": "Program=one user target; human wait excluded from Program JCT",
+          "workload_scope": "public production metadata, synthetic token identity, bounded serial subset"
+        },
+        "ended_at": 1793071657.2565203
+      },
+      "jobs": {
+        "django__django-12308": {
+          "program": "django__django-12308",
+          "session": "frontier:django__django-12308",
+          "user": "frontier-user:django__django-12308",
+          "cohort": "mechanism-stress",
+          "jct_s": 55.36739069223404,
+          "arrival_s": 2.7247891649603844,
+          "end_s": 58.092179857194424,
+          "turns": 9,
+          "first_turn_end_s": 5.500864952802658,
+          "post_initial_jct_s": 52.591314904391766,
+          "primed_jct_s": null,
+          "tool_dependency_s": 4.40246296421814,
+          "human_gap_original_s": 0.0,
+          "human_gap_replay_s": 0.0
+        },
+        "django__django-14672": {
+          "program": "django__django-14672",
+          "session": "frontier:django__django-14672",
+          "user": "frontier-user:django__django-14672",
+          "cohort": "mechanism-stress",
+          "jct_s": 61.26696218550205,
+          "arrival_s": 0.509725421667099,
+          "end_s": 61.77668760716915,
+          "turns": 7,
+          "first_turn_end_s": 3.554170496761799,
+          "post_initial_jct_s": 58.22251711040735,
+          "primed_jct_s": null,
+          "tool_dependency_s": 6.69239092666626,
+          "human_gap_original_s": 0.0,
+          "human_gap_replay_s": 0.0
+        },
+        "django__django-12039": {
+          "program": "django__django-12039",
+          "session": "frontier:django__django-12039",
+          "user": "frontier-user:django__django-12039",
+          "cohort": "mechanism-stress",
+          "jct_s": 68.15903842449188,
+          "arrival_s": 0.42944154143333435,
+          "end_s": 68.58847996592522,
+          "turns": 12,
+          "first_turn_end_s": 3.3242790326476097,
+          "post_initial_jct_s": 65.2642009332776,
+          "primed_jct_s": null,
+          "tool_dependency_s": 4.899711120101928,
+          "human_gap_original_s": 0.0,
+          "human_gap_replay_s": 0.0
+        },
+        "pytest-dev__pytest-7521": {
+          "program": "pytest-dev__pytest-7521",
+          "session": "frontier:pytest-dev__pytest-7521",
+          "user": "frontier-user:pytest-dev__pytest-7521",
+          "cohort": "mechanism-stress",
+          "jct_s": 76.57628668099642,
+          "arrival_s": 2.83667578548193,
+          "end_s": 79.41296246647835,
+          "turns": 8,
+          "first_turn_end_s": 10.411506988108158,
+          "post_initial_jct_s": 69.00145547837019,
+          "primed_jct_s": null,
+          "tool_dependency_s": 1.1114278644256592,
+          "human_gap_original_s": 0.0,
+          "human_gap_replay_s": 0.0
+        },
+        "django__django-16256": {
+          "program": "django__django-16256",
+          "session": "frontier:django__django-16256",
+          "user": "frontier-user:django__django-16256",
+          "cohort": "mechanism-stress",
+          "jct_s": 81.54024694859982,
+          "arrival_s": 0.34557946771383286,
+          "end_s": 81.88582641631365,
+          "turns": 8,
+          "first_turn_end_s": 4.144331902265549,
+          "post_initial_jct_s": 77.7414945140481,
+          "primed_jct_s": null,
+          "tool_dependency_s": 4.205882049423218,
+          "human_gap_original_s": 0.0,
+          "human_gap_replay_s": 0.0
+        },
+        "sympy__sympy-17318": {
+          "program": "sympy__sympy-17318",
+          "session": "frontier:sympy__sympy-17318",
+          "user": "frontier-user:sympy__sympy-17318",
+          "cohort": "mechanism-stress",
+          "jct_s": 82.46432236582041,
+          "arrival_s": 0.39489390701055527,
+          "end_s": 82.85921627283096,
+          "turns": 11,
+          "first_turn_end_s": 6.063303343951702,
+          "post_initial_jct_s": 76.79591292887926,
+          "primed_jct_s": null,
+          "tool_dependency_s": 5.966248143951416,
+          "human_gap_original_s": 0.0,
+          "human_gap_replay_s": 0.0
+        },
+        "sympy__sympy-23824": {
+          "program": "sympy__sympy-23824",
+          "session": "frontier:sympy__sympy-23824",
+          "user": "frontier-user:sympy__sympy-23824",
+          "cohort": "mechanism-stress",
+          "jct_s": 83.44167843461037,
+          "arrival_s": 2.9055462926626205,
+          "end_s": 86.34722472727299,
+          "turns": 8,
+          "first_turn_end_s": 6.548342809081078,
+          "post_initial_jct_s": 79.79888191819191,
+          "primed_jct_s": null,
+          "tool_dependency_s": 2.589404752456665,
+          "human_gap_original_s": 0.0,
+          "human_gap_replay_s": 0.0
+        },
+        "django__django-11734": {
+          "program": "django__django-11734",
+          "session": "frontier:django__django-11734",
+          "user": "frontier-user:django__django-11734",
+          "cohort": "mechanism-stress",
+          "jct_s": 106.01981064677238,
+          "arrival_s": 2.8967983350157738,
+          "end_s": 108.91660898178816,
+          "turns": 13,
+          "first_turn_end_s": 6.280927821993828,
+          "post_initial_jct_s": 102.63568115979433,
+          "primed_jct_s": null,
+          "tool_dependency_s": 3.8077629308166503,
+          "human_gap_original_s": 0.0,
+          "human_gap_replay_s": 0.0
+        },
+        "scikit-learn__scikit-learn-14983": {
+          "program": "scikit-learn__scikit-learn-14983",
+          "session": "frontier:scikit-learn__scikit-learn-14983",
+          "user": "frontier-user:scikit-learn__scikit-learn-14983",
+          "cohort": "mechanism-stress",
+          "jct_s": 108.47122830152512,
+          "arrival_s": 2.9099627062678337,
+          "end_s": 111.38119100779295,
+          "turns": 15,
+          "first_turn_end_s": 7.972825743257999,
+          "post_initial_jct_s": 103.40836526453495,
+          "primed_jct_s": null,
+          "tool_dependency_s": 5.403130610809326,
+          "human_gap_original_s": 0.0,
+          "human_gap_replay_s": 0.0
+        },
+        "django__django-13512": {
+          "program": "django__django-13512",
+          "session": "frontier:django__django-13512",
+          "user": "frontier-user:django__django-13512",
+          "cohort": "mechanism-stress",
+          "jct_s": 114.8362329006195,
+          "arrival_s": 0.4905478060245514,
+          "end_s": 115.32678070664406,
+          "turns": 13,
+          "first_turn_end_s": 4.4795390367507935,
+          "post_initial_jct_s": 110.84724166989326,
+          "primed_jct_s": null,
+          "tool_dependency_s": 14.225140677688598,
+          "human_gap_original_s": 0.0,
+          "human_gap_replay_s": 0.0
+        },
+        "sympy__sympy-18763": {
+          "program": "sympy__sympy-18763",
+          "session": "frontier:sympy__sympy-18763",
+          "user": "frontier-user:sympy__sympy-18763",
+          "cohort": "mechanism-stress",
+          "jct_s": 120.81146705150604,
+          "arrival_s": 0.26401715725660324,
+          "end_s": 121.07548420876265,
+          "turns": 14,
+          "first_turn_end_s": 3.077664703130722,
+          "post_initial_jct_s": 117.99781950563192,
+          "primed_jct_s": null,
+          "tool_dependency_s": 4.707073055511475,
+          "human_gap_original_s": 0.0,
+          "human_gap_replay_s": 0.0
+        },
+        "astropy__astropy-13453": {
+          "program": "astropy__astropy-13453",
+          "session": "frontier:astropy__astropy-13453",
+          "user": "frontier-user:astropy__astropy-13453",
+          "cohort": "mechanism-stress",
+          "jct_s": 121.88546808063984,
+          "arrival_s": 0.4724072143435478,
+          "end_s": 122.35787529498339,
+          "turns": 9,
+          "first_turn_end_s": 5.3421632796525955,
+          "post_initial_jct_s": 117.01571201533079,
+          "primed_jct_s": null,
+          "tool_dependency_s": 7.582995223831176,
+          "human_gap_original_s": 0.0,
+          "human_gap_replay_s": 0.0
+        },
+        "astropy__astropy-13977": {
+          "program": "astropy__astropy-13977",
+          "session": "frontier:astropy__astropy-13977",
+          "user": "frontier-user:astropy__astropy-13977",
+          "cohort": "mechanism-stress",
+          "jct_s": 135.75288493931293,
+          "arrival_s": 0.4825582057237625,
+          "end_s": 136.2354431450367,
+          "turns": 10,
+          "first_turn_end_s": 3.8800932317972183,
+          "post_initial_jct_s": 132.35534991323948,
+          "primed_jct_s": null,
+          "tool_dependency_s": 3.988616657714844,
+          "human_gap_original_s": 0.0,
+          "human_gap_replay_s": 0.0
+        },
+        "matplotlib__matplotlib-23412": {
+          "program": "matplotlib__matplotlib-23412",
+          "session": "frontier:matplotlib__matplotlib-23412",
+          "user": "frontier-user:matplotlib__matplotlib-23412",
+          "cohort": "mechanism-stress",
+          "jct_s": 136.87548929452896,
+          "arrival_s": 2.7239596620202065,
+          "end_s": 139.59944895654917,
+          "turns": 12,
+          "first_turn_end_s": 8.346026219427586,
+          "post_initial_jct_s": 131.25342273712158,
+          "primed_jct_s": null,
+          "tool_dependency_s": 1.2511900132598877,
+          "human_gap_original_s": 0.0,
+          "human_gap_replay_s": 0.0
+        },
+        "django__django-13012": {
+          "program": "django__django-13012",
+          "session": "frontier:django__django-13012",
+          "user": "frontier-user:django__django-13012",
+          "cohort": "mechanism-stress",
+          "jct_s": 141.6978993564844,
+          "arrival_s": 2.719293534755707,
+          "end_s": 144.41719289124012,
+          "turns": 15,
+          "first_turn_end_s": 6.146019294857979,
+          "post_initial_jct_s": 138.27117359638214,
+          "primed_jct_s": null,
+          "tool_dependency_s": 6.412882180679321,
+          "human_gap_original_s": 0.0,
+          "human_gap_replay_s": 0.0
+        },
+        "sympy__sympy-13974": {
+          "program": "sympy__sympy-13974",
+          "session": "frontier:sympy__sympy-13974",
+          "user": "frontier-user:sympy__sympy-13974",
+          "cohort": "mechanism-stress",
+          "jct_s": 145.72798731178045,
+          "arrival_s": 2.806831032037735,
+          "end_s": 148.5348183438182,
+          "turns": 14,
+          "first_turn_end_s": 5.318407125771046,
+          "post_initial_jct_s": 143.21641121804714,
+          "primed_jct_s": null,
+          "tool_dependency_s": 13.897826496688843,
+          "human_gap_original_s": 0.0,
+          "human_gap_replay_s": 0.0
+        }
+      },
+      "start_beijing": "2026-10-27T11:25:03+08:00",
+      "end_beijing": "2026-10-27T11:27:31+08:00",
+      "lifecycle_s": 296.24222779273987
+    },
+    "continuum_r2": {
+      "summary": {
+        "method": "continuum",
+        "wall_s": 157.69415278732777,
+        "start_wall_time": 1793075357.37733,
+        "end_wall_time": 1793075515.074053,
+        "completed": 178,
+        "failed": 0,
+        "jobs": 16,
+        "jct_mean_s": 103.79540793085471,
+        "jct_p95_s": 149.50094078667462,
+        "primed_jct_mean_s": null,
+        "primed_jct_p95_s": null,
+        "ttft_mean_s": 5.001616017955743,
+        "ttft_p95_s": 18.353964120894698,
+        "itl_mean_s": 0.026113632183046326,
+        "itl_p95_s": 0.03590179979801178,
+        "e2e_mean_s": 8.814699377194884,
+        "e2e_p95_s": 25.574785038083796,
+        "request_throughput": 1.1287672805475384,
+        "output_token_throughput": 165.91610746205504,
+        "total_token_throughput": 5972.30133998781,
+        "hierarchy": "Program=one user target; human wait excluded from Program JCT",
+        "workload_scope": "public production metadata, synthetic token identity, bounded serial subset"
+      },
+      "state": {
+        "status": "complete",
+        "method": "continuum",
+        "started_at": 1793075212.3451128,
+        "gpu": {
+          "index": "0",
+          "uuid": "GPU-ec71dfdd-7e85-91bf-4d96-2658fb724a5e",
+          "total": "24564",
+          "used": "0",
+          "util": "0"
+        },
+        "packages": {
+          "torch": "2.13.0+cu132",
+          "vllm": "0.28.0",
+          "lmcache": "0.5.5rc4",
+          "transformers": "5.16.1",
+          "httpx": "0.28.1"
+        },
+        "profile_sha256": "a08d9e3b28095bc20366a3a7dfe9b7578c514b0b4cbebb60be048bf75c73e022",
+        "reload_sha256": "5238b9cc074cef7794c8665ca05f032ffbc236d8e24f499e8cf3ae62cab4b7d2",
+        "trace_sha256": "4c896b93b14eff39bcc6e2fd0700ba59a1bfcfd785bd15e645d5e1a2ffeee2e8",
+        "expected_model_revision": "b968826d9c46dd6066d109eabc6255188de91218",
+        "verified_model": {
+          "revision": "b968826d9c46dd6066d109eabc6255188de91218",
+          "files_verified": [
+            "config.json",
+            "generation_config.json",
+            "merges.txt",
+            "model-00001-of-00005.safetensors",
+            "model-00002-of-00005.safetensors",
+            "model-00003-of-00005.safetensors",
+            "model-00004-of-00005.safetensors",
+            "model-00005-of-00005.safetensors",
+            "model.safetensors.index.json",
+            "tokenizer.json",
+            "tokenizer_config.json",
+            "vocab.json"
+          ],
+          "weights_verified": true
+        },
+        "packaging_gpu_revalidation": true,
+        "summary": {
+          "method": "continuum",
+          "wall_s": 157.69415278732777,
+          "start_wall_time": 1793075357.37733,
+          "end_wall_time": 1793075515.074053,
+          "completed": 178,
+          "failed": 0,
+          "jobs": 16,
+          "jct_mean_s": 103.79540793085471,
+          "jct_p95_s": 149.50094078667462,
+          "primed_jct_mean_s": null,
+          "primed_jct_p95_s": null,
+          "ttft_mean_s": 5.001616017955743,
+          "ttft_p95_s": 18.353964120894698,
+          "itl_mean_s": 0.026113632183046326,
+          "itl_p95_s": 0.03590179979801178,
+          "e2e_mean_s": 8.814699377194884,
+          "e2e_p95_s": 25.574785038083796,
+          "request_throughput": 1.1287672805475384,
+          "output_token_throughput": 165.91610746205504,
+          "total_token_throughput": 5972.30133998781,
+          "hierarchy": "Program=one user target; human wait excluded from Program JCT",
+          "workload_scope": "public production metadata, synthetic token identity, bounded serial subset"
+        },
+        "ended_at": 1793075522.1364138
+      },
+      "jobs": {
+        "django__django-16256": {
+          "program": "django__django-16256",
+          "session": "frontier:django__django-16256",
+          "user": "frontier-user:django__django-16256",
+          "cohort": "mechanism-stress",
+          "jct_s": 42.17240106314421,
+          "arrival_s": 0.33152855187654495,
+          "end_s": 42.50392961502075,
+          "turns": 8,
+          "first_turn_end_s": 4.272091716527939,
+          "post_initial_jct_s": 38.23183789849281,
+          "primed_jct_s": null,
+          "tool_dependency_s": 4.205882049423218,
+          "human_gap_original_s": 0.0,
+          "human_gap_replay_s": 0.0
+        },
+        "sympy__sympy-17318": {
+          "program": "sympy__sympy-17318",
+          "session": "frontier:sympy__sympy-17318",
+          "user": "frontier-user:sympy__sympy-17318",
+          "cohort": "mechanism-stress",
+          "jct_s": 63.25660002231598,
+          "arrival_s": 0.3949768766760826,
+          "end_s": 63.65157689899206,
+          "turns": 11,
+          "first_turn_end_s": 5.903734087944031,
+          "post_initial_jct_s": 57.74784281104803,
+          "primed_jct_s": null,
+          "tool_dependency_s": 5.966248143951416,
+          "human_gap_original_s": 0.0,
+          "human_gap_replay_s": 0.0
+        },
+        "django__django-12039": {
+          "program": "django__django-12039",
+          "session": "frontier:django__django-12039",
+          "user": "frontier-user:django__django-12039",
+          "cohort": "mechanism-stress",
+          "jct_s": 76.15263987332582,
+          "arrival_s": 0.42924246937036514,
+          "end_s": 76.58188234269619,
+          "turns": 12,
+          "first_turn_end_s": 3.4650793746113777,
+          "post_initial_jct_s": 73.11680296808481,
+          "primed_jct_s": null,
+          "tool_dependency_s": 4.899711120101928,
+          "human_gap_original_s": 0.0,
+          "human_gap_replay_s": 0.0
+        },
+        "django__django-14672": {
+          "program": "django__django-14672",
+          "session": "frontier:django__django-14672",
+          "user": "frontier-user:django__django-14672",
+          "cohort": "mechanism-stress",
+          "jct_s": 78.8659376129508,
+          "arrival_s": 0.5088127180933952,
+          "end_s": 79.3747503310442,
+          "turns": 7,
+          "first_turn_end_s": 3.7645745798945427,
+          "post_initial_jct_s": 75.61017575114965,
+          "primed_jct_s": null,
+          "tool_dependency_s": 6.69239092666626,
+          "human_gap_original_s": 0.0,
+          "human_gap_replay_s": 0.0
+        },
+        "astropy__astropy-13977": {
+          "program": "astropy__astropy-13977",
+          "session": "frontier:astropy__astropy-13977",
+          "user": "frontier-user:astropy__astropy-13977",
+          "cohort": "mechanism-stress",
+          "jct_s": 83.89974088221788,
+          "arrival_s": 0.4824601784348488,
+          "end_s": 84.38220106065273,
+          "turns": 10,
+          "first_turn_end_s": 4.029177963733673,
+          "post_initial_jct_s": 80.35302309691906,
+          "primed_jct_s": null,
+          "tool_dependency_s": 3.988616657714844,
+          "human_gap_original_s": 0.0,
+          "human_gap_replay_s": 0.0
+        },
+        "sympy__sympy-18763": {
+          "program": "sympy__sympy-18763",
+          "session": "frontier:sympy__sympy-18763",
+          "user": "frontier-user:sympy__sympy-18763",
+          "cohort": "mechanism-stress",
+          "jct_s": 84.78279485553503,
+          "arrival_s": 0.2638903260231018,
+          "end_s": 85.04668518155813,
+          "turns": 14,
+          "first_turn_end_s": 3.0565876588225365,
+          "post_initial_jct_s": 81.9900975227356,
+          "primed_jct_s": null,
+          "tool_dependency_s": 4.707073055511475,
+          "human_gap_original_s": 0.0,
+          "human_gap_replay_s": 0.0
+        },
+        "astropy__astropy-13453": {
+          "program": "astropy__astropy-13453",
+          "session": "frontier:astropy__astropy-13453",
+          "user": "frontier-user:astropy__astropy-13453",
+          "cohort": "mechanism-stress",
+          "jct_s": 90.2009002789855,
+          "arrival_s": 0.4725155159831047,
+          "end_s": 90.6734157949686,
+          "turns": 9,
+          "first_turn_end_s": 5.483952924609184,
+          "post_initial_jct_s": 85.18946287035942,
+          "primed_jct_s": null,
+          "tool_dependency_s": 7.582995223831176,
+          "human_gap_original_s": 0.0,
+          "human_gap_replay_s": 0.0
+        },
+        "django__django-13512": {
+          "program": "django__django-13512",
+          "session": "frontier:django__django-13512",
+          "user": "frontier-user:django__django-13512",
+          "cohort": "mechanism-stress",
+          "jct_s": 99.59066683799028,
+          "arrival_s": 0.4912460595369339,
+          "end_s": 100.08191289752722,
+          "turns": 13,
+          "first_turn_end_s": 4.718015871942043,
+          "post_initial_jct_s": 95.36389702558517,
+          "primed_jct_s": null,
+          "tool_dependency_s": 14.225140677688598,
+          "human_gap_original_s": 0.0,
+          "human_gap_replay_s": 0.0
+        },
+        "django__django-13012": {
+          "program": "django__django-13012",
+          "session": "frontier:django__django-13012",
+          "user": "frontier-user:django__django-13012",
+          "cohort": "mechanism-stress",
+          "jct_s": 104.32898220419884,
+          "arrival_s": 2.7190001234412193,
+          "end_s": 107.04798232764006,
+          "turns": 15,
+          "first_turn_end_s": 5.255617447197437,
+          "post_initial_jct_s": 101.79236488044262,
+          "primed_jct_s": null,
+          "tool_dependency_s": 6.412882180679321,
+          "human_gap_original_s": 0.0,
+          "human_gap_replay_s": 0.0
+        },
+        "django__django-12308": {
+          "program": "django__django-12308",
+          "session": "frontier:django__django-12308",
+          "user": "frontier-user:django__django-12308",
+          "cohort": "mechanism-stress",
+          "jct_s": 110.08628612011671,
+          "arrival_s": 2.7255206182599068,
+          "end_s": 112.81180673837662,
+          "turns": 9,
+          "first_turn_end_s": 5.923603519797325,
+          "post_initial_jct_s": 106.88820321857929,
+          "primed_jct_s": null,
+          "tool_dependency_s": 4.40246296421814,
+          "human_gap_original_s": 0.0,
+          "human_gap_replay_s": 0.0
+        },
+        "matplotlib__matplotlib-23412": {
+          "program": "matplotlib__matplotlib-23412",
+          "session": "frontier:matplotlib__matplotlib-23412",
+          "user": "frontier-user:matplotlib__matplotlib-23412",
+          "cohort": "mechanism-stress",
+          "jct_s": 117.30076861381531,
+          "arrival_s": 2.7237712517380714,
+          "end_s": 120.02453986555338,
+          "turns": 12,
+          "first_turn_end_s": 6.310015462338924,
+          "post_initial_jct_s": 113.71452440321445,
+          "primed_jct_s": null,
+          "tool_dependency_s": 1.2511900132598877,
+          "human_gap_original_s": 0.0,
+          "human_gap_replay_s": 0.0
+        },
+        "pytest-dev__pytest-7521": {
+          "program": "pytest-dev__pytest-7521",
+          "session": "frontier:pytest-dev__pytest-7521",
+          "user": "frontier-user:pytest-dev__pytest-7521",
+          "cohort": "mechanism-stress",
+          "jct_s": 126.19135779887438,
+          "arrival_s": 2.8360695540905,
+          "end_s": 129.02742735296488,
+          "turns": 8,
+          "first_turn_end_s": 8.475910067558289,
+          "post_initial_jct_s": 120.55151728540659,
+          "primed_jct_s": null,
+          "tool_dependency_s": 1.1114278644256592,
+          "human_gap_original_s": 0.0,
+          "human_gap_replay_s": 0.0
+        },
+        "sympy__sympy-23824": {
+          "program": "sympy__sympy-23824",
+          "session": "frontier:sympy__sympy-23824",
+          "user": "frontier-user:sympy__sympy-23824",
+          "cohort": "mechanism-stress",
+          "jct_s": 138.60430900007486,
+          "arrival_s": 2.9031284898519516,
+          "end_s": 141.50743748992682,
+          "turns": 8,
+          "first_turn_end_s": 6.980213671922684,
+          "post_initial_jct_s": 134.52722381800413,
+          "primed_jct_s": null,
+          "tool_dependency_s": 2.589404752456665,
+          "human_gap_original_s": 0.0,
+          "human_gap_replay_s": 0.0
+        },
+        "django__django-11734": {
+          "program": "django__django-11734",
+          "session": "frontier:django__django-11734",
+          "user": "frontier-user:django__django-11734",
+          "cohort": "mechanism-stress",
+          "jct_s": 142.7011447250843,
+          "arrival_s": 2.8959507793188095,
+          "end_s": 145.59709550440311,
+          "turns": 13,
+          "first_turn_end_s": 6.427684493362904,
+          "post_initial_jct_s": 139.1694110110402,
+          "primed_jct_s": null,
+          "tool_dependency_s": 3.8077629308166503,
+          "human_gap_original_s": 0.0,
+          "human_gap_replay_s": 0.0
+        },
+        "scikit-learn__scikit-learn-14983": {
+          "program": "scikit-learn__scikit-learn-14983",
+          "session": "frontier:scikit-learn__scikit-learn-14983",
+          "user": "frontier-user:scikit-learn__scikit-learn-14983",
+          "cohort": "mechanism-stress",
+          "jct_s": 147.70588307082653,
+          "arrival_s": 2.9102175757288933,
+          "end_s": 150.61610064655542,
+          "turns": 15,
+          "first_turn_end_s": 7.886359177529812,
+          "post_initial_jct_s": 142.7297414690256,
+          "primed_jct_s": null,
+          "tool_dependency_s": 5.403130610809326,
+          "human_gap_original_s": 0.0,
+          "human_gap_replay_s": 0.0
+        },
+        "sympy__sympy-13974": {
+          "program": "sympy__sympy-13974",
+          "session": "frontier:sympy__sympy-13974",
+          "user": "frontier-user:sympy__sympy-13974",
+          "cohort": "mechanism-stress",
+          "jct_s": 154.88611393421888,
+          "arrival_s": 2.8074661642313004,
+          "end_s": 157.69358009845018,
+          "turns": 14,
+          "first_turn_end_s": 5.9474223256111145,
+          "post_initial_jct_s": 151.74615777283907,
+          "primed_jct_s": null,
+          "tool_dependency_s": 13.897826496688843,
+          "human_gap_original_s": 0.0,
+          "human_gap_replay_s": 0.0
+        }
+      },
+      "start_beijing": "2026-10-27T12:29:17+08:00",
+      "end_beijing": "2026-10-27T12:31:55+08:00",
+      "lifecycle_s": 309.7913010120392
+    },
+    "kairos_r2": {
+      "summary": {
+        "method": "kairos",
+        "wall_s": 149.32342620193958,
+        "start_wall_time": 1793075957.8391523,
+        "end_wall_time": 1793076107.164264,
+        "completed": 178,
+        "failed": 0,
+        "jobs": 16,
+        "jct_mean_s": 92.82122127525508,
+        "jct_p95_s": 144.5141851976514,
+        "primed_jct_mean_s": null,
+        "primed_jct_p95_s": null,
+        "ttft_mean_s": 3.710792949067408,
+        "ttft_p95_s": 23.727957000955954,
+        "itl_mean_s": 0.02820096187764316,
+        "itl_p95_s": 0.05757364444434643,
+        "e2e_mean_s": 7.828595050809423,
+        "e2e_p95_s": 26.158783133327972,
+        "request_throughput": 1.1920433687295606,
+        "output_token_throughput": 175.21698145752936,
+        "total_token_throughput": 6307.094767075248,
+        "hierarchy": "Program=one user target; human wait excluded from Program JCT",
+        "workload_scope": "public production metadata, synthetic token identity, bounded serial subset"
+      },
+      "state": {
+        "status": "complete",
+        "method": "kairos",
+        "started_at": 1793075820.737052,
+        "gpu": {
+          "index": "0",
+          "uuid": "GPU-ec71dfdd-7e85-91bf-4d96-2658fb724a5e",
+          "total": "24564",
+          "used": "0",
+          "util": "0"
+        },
+        "packages": {
+          "torch": "2.13.0+cu132",
+          "vllm": "0.28.0",
+          "lmcache": "0.5.5rc4",
+          "transformers": "5.16.1",
+          "httpx": "0.28.1"
+        },
+        "profile_sha256": "a08d9e3b28095bc20366a3a7dfe9b7578c514b0b4cbebb60be048bf75c73e022",
+        "reload_sha256": "5238b9cc074cef7794c8665ca05f032ffbc236d8e24f499e8cf3ae62cab4b7d2",
+        "trace_sha256": "4c896b93b14eff39bcc6e2fd0700ba59a1bfcfd785bd15e645d5e1a2ffeee2e8",
+        "expected_model_revision": "b968826d9c46dd6066d109eabc6255188de91218",
+        "verified_model": {
+          "revision": "b968826d9c46dd6066d109eabc6255188de91218",
+          "files_verified": [
+            "config.json",
+            "generation_config.json",
+            "merges.txt",
+            "model-00001-of-00005.safetensors",
+            "model-00002-of-00005.safetensors",
+            "model-00003-of-00005.safetensors",
+            "model-00004-of-00005.safetensors",
+            "model-00005-of-00005.safetensors",
+            "model.safetensors.index.json",
+            "tokenizer.json",
+            "tokenizer_config.json",
+            "vocab.json"
+          ],
+          "weights_verified": true
+        },
+        "packaging_gpu_revalidation": true,
+        "summary": {
+          "method": "kairos",
+          "wall_s": 149.32342620193958,
+          "start_wall_time": 1793075957.8391523,
+          "end_wall_time": 1793076107.164264,
+          "completed": 178,
+          "failed": 0,
+          "jobs": 16,
+          "jct_mean_s": 92.82122127525508,
+          "jct_p95_s": 144.5141851976514,
+          "primed_jct_mean_s": null,
+          "primed_jct_p95_s": null,
+          "ttft_mean_s": 3.710792949067408,
+          "ttft_p95_s": 23.727957000955954,
+          "itl_mean_s": 0.02820096187764316,
+          "itl_p95_s": 0.05757364444434643,
+          "e2e_mean_s": 7.828595050809423,
+          "e2e_p95_s": 26.158783133327972,
+          "request_throughput": 1.1920433687295606,
+          "output_token_throughput": 175.21698145752936,
+          "total_token_throughput": 6307.094767075248,
+          "hierarchy": "Program=one user target; human wait excluded from Program JCT",
+          "workload_scope": "public production metadata, synthetic token identity, bounded serial subset"
+        },
+        "ended_at": 1793076113.277919
+      },
+      "jobs": {
+        "django__django-16256": {
+          "program": "django__django-16256",
+          "session": "frontier:django__django-16256",
+          "user": "frontier-user:django__django-16256",
+          "cohort": "mechanism-stress",
+          "jct_s": 38.12453047186136,
+          "arrival_s": 0.3448729068040848,
+          "end_s": 38.46940337866545,
+          "turns": 8,
+          "first_turn_end_s": 4.191419772803783,
+          "post_initial_jct_s": 34.277983605861664,
+          "primed_jct_s": null,
+          "tool_dependency_s": 4.205882049423218,
+          "human_gap_original_s": 0.0,
+          "human_gap_replay_s": 0.0
+        },
+        "pytest-dev__pytest-7521": {
+          "program": "pytest-dev__pytest-7521",
+          "session": "frontier:pytest-dev__pytest-7521",
+          "user": "frontier-user:pytest-dev__pytest-7521",
+          "cohort": "mechanism-stress",
+          "jct_s": 40.778562501072884,
+          "arrival_s": 2.836852103471756,
+          "end_s": 43.61541460454464,
+          "turns": 8,
+          "first_turn_end_s": 10.388802453875542,
+          "post_initial_jct_s": 33.2266121506691,
+          "primed_jct_s": null,
+          "tool_dependency_s": 1.1114278644256592,
+          "human_gap_original_s": 0.0,
+          "human_gap_replay_s": 0.0
+        },
+        "django__django-14672": {
+          "program": "django__django-14672",
+          "session": "frontier:django__django-14672",
+          "user": "frontier-user:django__django-14672",
+          "cohort": "mechanism-stress",
+          "jct_s": 46.51934392750263,
+          "arrival_s": 0.5081922262907028,
+          "end_s": 47.027536153793335,
+          "turns": 7,
+          "first_turn_end_s": 3.5818534046411514,
+          "post_initial_jct_s": 43.44568274915218,
+          "primed_jct_s": null,
+          "tool_dependency_s": 6.69239092666626,
+          "human_gap_original_s": 0.0,
+          "human_gap_replay_s": 0.0
+        },
+        "sympy__sympy-23824": {
+          "program": "sympy__sympy-23824",
+          "session": "frontier:sympy__sympy-23824",
+          "user": "frontier-user:sympy__sympy-23824",
+          "cohort": "mechanism-stress",
+          "jct_s": 71.21388626098633,
+          "arrival_s": 2.903145059943199,
+          "end_s": 74.11703132092953,
+          "turns": 8,
+          "first_turn_end_s": 6.625088796019554,
+          "post_initial_jct_s": 67.49194252490997,
+          "primed_jct_s": null,
+          "tool_dependency_s": 2.589404752456665,
+          "human_gap_original_s": 0.0,
+          "human_gap_replay_s": 0.0
+        },
+        "sympy__sympy-18763": {
+          "program": "sympy__sympy-18763",
+          "session": "frontier:sympy__sympy-18763",
+          "user": "frontier-user:sympy__sympy-18763",
+          "cohort": "mechanism-stress",
+          "jct_s": 75.73653998225927,
+          "arrival_s": 0.2640426382422447,
+          "end_s": 76.00058262050152,
+          "turns": 14,
+          "first_turn_end_s": 3.1053857505321503,
+          "post_initial_jct_s": 72.89519686996937,
+          "primed_jct_s": null,
+          "tool_dependency_s": 4.707073055511475,
+          "human_gap_original_s": 0.0,
+          "human_gap_replay_s": 0.0
+        },
+        "scikit-learn__scikit-learn-14983": {
+          "program": "scikit-learn__scikit-learn-14983",
+          "session": "frontier:scikit-learn__scikit-learn-14983",
+          "user": "frontier-user:scikit-learn__scikit-learn-14983",
+          "cohort": "mechanism-stress",
+          "jct_s": 76.56926649808884,
+          "arrival_s": 2.9102522283792496,
+          "end_s": 79.47951872646809,
+          "turns": 15,
+          "first_turn_end_s": 8.07189916074276,
+          "post_initial_jct_s": 71.40761956572533,
+          "primed_jct_s": null,
+          "tool_dependency_s": 5.403130610809326,
+          "human_gap_original_s": 0.0,
+          "human_gap_replay_s": 0.0
+        },
+        "django__django-12039": {
+          "program": "django__django-12039",
+          "session": "frontier:django__django-12039",
+          "user": "frontier-user:django__django-12039",
+          "cohort": "mechanism-stress",
+          "jct_s": 82.3602744936943,
+          "arrival_s": 0.42867832630872726,
+          "end_s": 82.78895282000303,
+          "turns": 12,
+          "first_turn_end_s": 3.373647838830948,
+          "post_initial_jct_s": 79.41530498117208,
+          "primed_jct_s": null,
+          "tool_dependency_s": 4.899711120101928,
+          "human_gap_original_s": 0.0,
+          "human_gap_replay_s": 0.0
+        },
+        "django__django-11734": {
+          "program": "django__django-11734",
+          "session": "frontier:django__django-11734",
+          "user": "frontier-user:django__django-11734",
+          "cohort": "mechanism-stress",
+          "jct_s": 86.21194168925285,
+          "arrival_s": 2.896039202809334,
+          "end_s": 89.10798089206219,
+          "turns": 13,
+          "first_turn_end_s": 6.339891955256462,
+          "post_initial_jct_s": 82.76808893680573,
+          "primed_jct_s": null,
+          "tool_dependency_s": 3.8077629308166503,
+          "human_gap_original_s": 0.0,
+          "human_gap_replay_s": 0.0
+        },
+        "django__django-12308": {
+          "program": "django__django-12308",
+          "session": "frontier:django__django-12308",
+          "user": "frontier-user:django__django-12308",
+          "cohort": "mechanism-stress",
+          "jct_s": 95.05821322649717,
+          "arrival_s": 2.723439298570156,
+          "end_s": 97.78165252506733,
+          "turns": 9,
+          "first_turn_end_s": 5.564410649240017,
+          "post_initial_jct_s": 92.21724187582731,
+          "primed_jct_s": null,
+          "tool_dependency_s": 4.40246296421814,
+          "human_gap_original_s": 0.0,
+          "human_gap_replay_s": 0.0
+        },
+        "sympy__sympy-17318": {
+          "program": "sympy__sympy-17318",
+          "session": "frontier:sympy__sympy-17318",
+          "user": "frontier-user:sympy__sympy-17318",
+          "cohort": "mechanism-stress",
+          "jct_s": 99.80179600417614,
+          "arrival_s": 0.39606937021017075,
+          "end_s": 100.19786537438631,
+          "turns": 11,
+          "first_turn_end_s": 5.817628726363182,
+          "post_initial_jct_s": 94.38023664802313,
+          "primed_jct_s": null,
+          "tool_dependency_s": 5.966248143951416,
+          "human_gap_original_s": 0.0,
+          "human_gap_replay_s": 0.0
+        },
+        "matplotlib__matplotlib-23412": {
+          "program": "matplotlib__matplotlib-23412",
+          "session": "frontier:matplotlib__matplotlib-23412",
+          "user": "frontier-user:matplotlib__matplotlib-23412",
+          "cohort": "mechanism-stress",
+          "jct_s": 102.05768579244614,
+          "arrival_s": 2.722796358168125,
+          "end_s": 104.78048215061426,
+          "turns": 12,
+          "first_turn_end_s": 8.479981377720833,
+          "post_initial_jct_s": 96.30050077289343,
+          "primed_jct_s": null,
+          "tool_dependency_s": 1.2511900132598877,
+          "human_gap_original_s": 0.0,
+          "human_gap_replay_s": 0.0
+        },
+        "astropy__astropy-13453": {
+          "program": "astropy__astropy-13453",
+          "session": "frontier:astropy__astropy-13453",
+          "user": "frontier-user:astropy__astropy-13453",
+          "cohort": "mechanism-stress",
+          "jct_s": 120.38646031916142,
+          "arrival_s": 0.472050704061985,
+          "end_s": 120.8585110232234,
+          "turns": 9,
+          "first_turn_end_s": 5.398592598736286,
+          "post_initial_jct_s": 115.45991842448711,
+          "primed_jct_s": null,
+          "tool_dependency_s": 7.582995223831176,
+          "human_gap_original_s": 0.0,
+          "human_gap_replay_s": 0.0
+        },
+        "astropy__astropy-13977": {
+          "program": "astropy__astropy-13977",
+          "session": "frontier:astropy__astropy-13977",
+          "user": "frontier-user:astropy__astropy-13977",
+          "cohort": "mechanism-stress",
+          "jct_s": 127.30320016294718,
+          "arrival_s": 0.48342084884643555,
+          "end_s": 127.78662101179361,
+          "turns": 10,
+          "first_turn_end_s": 3.9182877019047737,
+          "post_initial_jct_s": 123.86833330988884,
+          "primed_jct_s": null,
+          "tool_dependency_s": 3.988616657714844,
+          "human_gap_original_s": 0.0,
+          "human_gap_replay_s": 0.0
+        },
+        "sympy__sympy-13974": {
+          "program": "sympy__sympy-13974",
+          "session": "frontier:sympy__sympy-13974",
+          "user": "frontier-user:sympy__sympy-13974",
+          "cohort": "mechanism-stress",
+          "jct_s": 132.59618090093136,
+          "arrival_s": 2.8073362708091736,
+          "end_s": 135.40351717174053,
+          "turns": 14,
+          "first_turn_end_s": 5.399825640022755,
+          "post_initial_jct_s": 130.00369153171778,
+          "primed_jct_s": null,
+          "tool_dependency_s": 13.897826496688843,
+          "human_gap_original_s": 0.0,
+          "human_gap_replay_s": 0.0
+        },
+        "django__django-13512": {
+          "program": "django__django-13512",
+          "session": "frontier:django__django-13512",
+          "user": "frontier-user:django__django-13512",
+          "cohort": "mechanism-stress",
+          "jct_s": 143.81754130870104,
+          "arrival_s": 0.4912659749388695,
+          "end_s": 144.3088072836399,
+          "turns": 13,
+          "first_turn_end_s": 4.5414170399308205,
+          "post_initial_jct_s": 139.7673902437091,
+          "primed_jct_s": null,
+          "tool_dependency_s": 14.225140677688598,
+          "human_gap_original_s": 0.0,
+          "human_gap_replay_s": 0.0
+        },
+        "django__django-13012": {
+          "program": "django__django-13012",
+          "session": "frontier:django__django-13012",
+          "user": "frontier-user:django__django-13012",
+          "cohort": "mechanism-stress",
+          "jct_s": 146.60411686450243,
+          "arrival_s": 2.718889392912388,
+          "end_s": 149.32300625741482,
+          "turns": 15,
+          "first_turn_end_s": 6.209849625825882,
+          "post_initial_jct_s": 143.11315663158894,
+          "primed_jct_s": null,
+          "tool_dependency_s": 6.412882180679321,
+          "human_gap_original_s": 0.0,
+          "human_gap_replay_s": 0.0
+        }
+      },
+      "start_beijing": "2026-10-27T12:39:17+08:00",
+      "end_beijing": "2026-10-27T12:41:47+08:00",
+      "lifecycle_s": 292.5408670902252
+    }
+  },
+  "relative_changes_pct": {
+    "r1": {
+      "jct_mean_s": -3.907716430048014,
+      "jct_p95_s": -10.075104679036484,
+      "ttft_mean_s": -13.550874758540676,
+      "ttft_p95_s": 8.90485429584642,
+      "e2e_mean_s": -4.126986398769795,
+      "e2e_p95_s": 10.752359479625696,
+      "wall_s": -9.815526917089713,
+      "output_token_throughput": 10.883832417655647
+    },
+    "_r2": {
+      "jct_mean_s": -10.572901898425302,
+      "jct_p95_s": -3.3356014770093756,
+      "ttft_mean_s": -25.808120100669374,
+      "ttft_p95_s": 29.279739486595922,
+      "e2e_mean_s": -11.187044324355288,
+      "e2e_p95_s": 2.2834917062823257,
+      "wall_s": -5.30820353033461,
+      "output_token_throughput": 5.605769167168662
+    }
+  },
+  "program_changes": [
+    {
+      "program": "django__django-12308",
+      "continuum": 107.14133350551128,
+      "kairos": 55.36739069223404,
+      "continuum_r2": 110.08628612011671,
+      "kairos_r2": 95.05821322649717,
+      "r1_change_pct": -48.32303380899587,
+      "r2_change_pct": -13.651176203021508
+    },
+    {
+      "program": "sympy__sympy-17318",
+      "continuum": 69.21161834150553,
+      "kairos": 82.46432236582041,
+      "continuum_r2": 63.25660002231598,
+      "kairos_r2": 99.80179600417614,
+      "r1_change_pct": 19.148091522615584,
+      "r2_change_pct": 57.77293747840946
+    },
+    {
+      "program": "django__django-12039",
+      "continuum": 73.09832759201527,
+      "kairos": 68.15903842449188,
+      "continuum_r2": 76.15263987332582,
+      "kairos_r2": 82.3602744936943,
+      "r1_change_pct": -6.7570481161909886,
+      "r2_change_pct": 8.151568521714303
+    },
+    {
+      "program": "sympy__sympy-13974",
+      "continuum": 161.8930476307869,
+      "kairos": 145.72798731178045,
+      "continuum_r2": 154.88611393421888,
+      "kairos_r2": 132.59618090093136,
+      "r1_change_pct": -9.985024406898846,
+      "r2_change_pct": -14.391175856316085
+    },
+    {
+      "program": "django__django-11734",
+      "continuum": 152.02408273518085,
+      "kairos": 106.01981064677238,
+      "continuum_r2": 142.7011447250843,
+      "kairos_r2": 86.21194168925285,
+      "r1_change_pct": -30.261173927650564,
+      "r2_change_pct": -39.58566915819678
+    },
+    {
+      "program": "matplotlib__matplotlib-23412",
+      "continuum": 98.81054333597422,
+      "kairos": 136.87548929452896,
+      "continuum_r2": 117.30076861381531,
+      "kairos_r2": 102.05768579244614,
+      "r1_change_pct": 38.52316227948152,
+      "r2_change_pct": -12.994870367434142
+    },
+    {
+      "program": "sympy__sympy-23824",
+      "continuum": 143.640221811831,
+      "kairos": 83.44167843461037,
+      "continuum_r2": 138.60430900007486,
+      "kairos_r2": 71.21388626098633,
+      "r1_change_pct": -41.90925258809531,
+      "r2_change_pct": -48.62072703602032
+    },
+    {
+      "program": "astropy__astropy-13453",
+      "continuum": 83.2297967672348,
+      "kairos": 121.88546808063984,
+      "continuum_r2": 90.2009002789855,
+      "kairos_r2": 120.38646031916142,
+      "r1_change_pct": 46.444510037086474,
+      "r2_change_pct": 33.46481015911586
+    },
+    {
+      "program": "django__django-16256",
+      "continuum": 36.94231925159693,
+      "kairos": 81.54024694859982,
+      "continuum_r2": 42.17240106314421,
+      "kairos_r2": 38.12453047186136,
+      "r1_change_pct": 120.72313975001725,
+      "r2_change_pct": -9.598387782621199
+    },
+    {
+      "program": "scikit-learn__scikit-learn-14983",
+      "continuum": 157.62766259908676,
+      "kairos": 108.47122830152512,
+      "continuum_r2": 147.70588307082653,
+      "kairos_r2": 76.56926649808884,
+      "r1_change_pct": -31.185157152642084,
+      "r2_change_pct": -48.16099067538626
+    },
+    {
+      "program": "django__django-13512",
+      "continuum": 121.43560423702002,
+      "kairos": 114.8362329006195,
+      "continuum_r2": 99.59066683799028,
+      "kairos_r2": 143.81754130870104,
+      "r1_change_pct": -5.434461645630506,
+      "r2_change_pct": 44.40865381758823
+    },
+    {
+      "program": "django__django-14672",
+      "continuum": 86.45394273102283,
+      "kairos": 61.26696218550205,
+      "continuum_r2": 78.8659376129508,
+      "kairos_r2": 46.51934392750263,
+      "r1_change_pct": -29.13340878377635,
+      "r2_change_pct": -41.014656852486894
+    },
+    {
+      "program": "sympy__sympy-18763",
+      "continuum": 79.05474408715963,
+      "kairos": 120.81146705150604,
+      "continuum_r2": 84.78279485553503,
+      "kairos_r2": 75.73653998225927,
+      "r1_change_pct": 52.82000902856468,
+      "r2_change_pct": -10.669918217121822
+    },
+    {
+      "program": "pytest-dev__pytest-7521",
+      "continuum": 123.99202118068933,
+      "kairos": 76.57628668099642,
+      "continuum_r2": 126.19135779887438,
+      "kairos_r2": 40.778562501072884,
+      "r1_change_pct": -38.24095619071778,
+      "r2_change_pct": -67.6851384973079
+    },
+    {
+      "program": "astropy__astropy-13977",
+      "continuum": 86.49898412078619,
+      "kairos": 135.75288493931293,
+      "continuum_r2": 83.89974088221788,
+      "kairos_r2": 127.30320016294718,
+      "r1_change_pct": 56.941594539132566,
+      "r2_change_pct": 51.7325307853584
+    },
+    {
+      "program": "django__django-13012",
+      "continuum": 126.56922685354948,
+      "kairos": 141.6978993564844,
+      "continuum_r2": 104.32898220419884,
+      "kairos_r2": 146.60411686450243,
+      "r1_change_pct": 11.952883713542771,
+      "r2_change_pct": 40.520988288336035
+    }
+  ],
+  "absent_evidence": [
+    "requests.jsonl",
+    "resources.json",
+    "FOREIGN_LOG",
+    "launch.json",
+    "scheduler.jsonl",
+    "transfers.jsonl"
+  ],
+  "interference_counts_from_SUMMARY_only": {
+    "continuum": 76,
+    "continuum_r2": 73,
+    "kairos": 69,
+    "kairos_r2": 69
+  }
+}

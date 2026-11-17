@@ -1,0 +1,47 @@
+{
+  "scope": "Local structural statistics only; no tokenizer, GPU or performance measurement",
+  "kairos_commit": "7971fa40323f16e8e4ce8f12dfd5db9755a98cf1",
+  "programs": 16,
+  "requests": 178,
+  "turns_per_program": {
+    "min": 7,
+    "median": 11.5,
+    "p95_nearest_rank": 15,
+    "max": 15
+  },
+  "prompt_tokens": {
+    "min": 1218,
+    "median": 5247.5,
+    "p95_nearest_rank": 8727,
+    "max": 11455
+  },
+  "planned_output_tokens": {
+    "min": 39,
+    "median": 104.0,
+    "p95_nearest_rank": 390,
+    "max": 699
+  },
+  "inter_turn_gap_s": {
+    "min": 0.025516033172607422,
+    "median": 0.27621138095855713,
+    "p95_nearest_rank": 2.9772839546203613,
+    "max": 6.476503133773804
+  },
+  "sum_prompt_tokens": 915633,
+  "sum_planned_output_tokens": 26164,
+  "nonfirst_retained_prefix_fraction": 0.8874413862944861,
+  "programs_with_predecessor": 0,
+  "root_arrival_s": {
+    "min": 0.263108,
+    "median": 1.612767,
+    "p95_nearest_rank": 2.909618,
+    "max": 2.909618
+  },
+  "all_local_structure_checks_passed": true,
+  "check_count": 372,
+  "sha256": {
+    "trace.json": "4c896b93b14eff39bcc6e2fd0700ba59a1bfcfd785bd15e645d5e1a2ffeee2e8",
+    "visible_messages.json": "59deb05bfffb29825ee474f17376e4b6c9a23056b473cec061fc3b7123e81a1a",
+    "visible_protocol.json": "22470611302f9e4d4cbf486c636a94cc6709a2e482507db7666ac36f86f48a27"
+  }
+}

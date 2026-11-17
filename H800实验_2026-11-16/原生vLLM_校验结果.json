@@ -1,0 +1,25 @@
+{
+  "comparisons": [],
+  "note": "Ratios require matched native runs; n<3 remains exploratory.",
+  "runs": [
+    {
+      "completed_calls": 161,
+      "completed_programs": 14,
+      "error": null,
+      "gpu_pid_policy": "record-only",
+      "jct_mean_s": 25.822691438187444,
+      "jct_p95_s": 54.33974437462165,
+      "jps": 0.1,
+      "method": "native",
+      "output_tokens": 24182,
+      "output_tokens_per_s": 171.80413872375678,
+      "run": "r/native04",
+      "sampled_cgroup_peak_bytes": 28715913216,
+      "sampled_gpu_peak_mib": 73563,
+      "speedup_eligible": false,
+      "status": "complete",
+      "ttft_p95_s": 0.1458624880760908,
+      "ttl_seconds": null
+    }
+  ]
+}

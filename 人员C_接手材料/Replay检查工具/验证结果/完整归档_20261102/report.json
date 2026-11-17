@@ -1,0 +1,52 @@
+{
+  "verdict": "结构与签名检查完成（请查看警告）",
+  "exit_code": 0,
+  "errors": 0,
+  "warnings": 2,
+  "inputs": {
+    "trace": {
+      "path": "C:\\Users\\USER\\Desktop\\学习\\大三上\\大模型网络\\人员C_接手材料\\实验准备\\负载分析\\source\\trace.json",
+      "sha256": "4c896b93b14eff39bcc6e2fd0700ba59a1bfcfd785bd15e645d5e1a2ffeee2e8",
+      "bytes": 2352957
+    },
+    "messages": {
+      "path": "C:\\Users\\USER\\Desktop\\学习\\大三上\\大模型网络\\人员C_接手材料\\实验准备\\负载分析\\source\\visible_messages.json",
+      "sha256": "59deb05bfffb29825ee474f17376e4b6c9a23056b473cec061fc3b7123e81a1a",
+      "bytes": 3880488
+    },
+    "protocol": {
+      "path": "C:\\Users\\USER\\Desktop\\学习\\大三上\\大模型网络\\人员C_接手材料\\实验准备\\负载分析\\source\\visible_protocol.json",
+      "sha256": "22470611302f9e4d4cbf486c636a94cc6709a2e482507db7666ac36f86f48a27",
+      "bytes": 36301
+    }
+  },
+  "limits": {
+    "max_context": 16384,
+    "vocab_size": null
+  },
+  "counts": {
+    "programs": 16,
+    "requests": 178,
+    "reconstructed": 178,
+    "matched_signatures": 178
+  },
+  "limitations": [
+    "未验证 tokenizer/chat template 与消息语义一致性或未来信息泄漏。",
+    "未验证模型、发布清单、资源容量、GPU 执行或性能；通过不代表可直接上机。",
+    "不修复数据、不重签协议；检查依据 Kairos 7971fa4，其他接口需另行适配。"
+  ],
+  "issues": [
+    {
+      "level": "warning",
+      "code": "TRACE_PROVENANCE_HASH",
+      "location": "protocol.trace_sha256",
+      "detail": "协议记录的 trace 哈希与输入文件不符。上游未校验此来源字段；需维护者解释，工具不改写它。"
+    },
+    {
+      "level": "warning",
+      "code": "VOCAB_NOT_CHECKED",
+      "location": "options",
+      "detail": "未提供 --vocab-size，仅检查 token 是非负整数。"
+    }
+  ]
+}

@@ -1,0 +1,65 @@
+{
+  "arrivals": {
+    "arrivals": [
+      {
+        "arrival_s": 7.88165448125548,
+        "program_id": "astropy__astropy-13977"
+      },
+      {
+        "arrival_s": 16.09691203698974,
+        "program_id": "django__django-11734"
+      },
+      {
+        "arrival_s": 36.15902991915837,
+        "program_id": "django__django-12039"
+      },
+      {
+        "arrival_s": 36.5400003301002,
+        "program_id": "django__django-12308"
+      }
+    ],
+    "first_arrival_rule": "Includes the first exponential inter-arrival from clock zero",
+    "jps": 0.1,
+    "program_order": "Bundle program_ids order",
+    "schema_version": "b-replay-arrivals/1.0",
+    "seed": 20261030,
+    "trace_sha256": "732503cc3f56283f8ab01f49504739a772414367b8ae342a4cf9a7d102dfab2f"
+  },
+  "b_runtime_sha256": {
+    "cli.py": "d4b4e56f58679a811984bab53e851fc6564f89bc68c7da61de401951b8f41f2a",
+    "client.py": "5892c1b73ff133bdbb53534976b7a28c116b551225d3106c9acb061008ad9d0d",
+    "common.py": "0d1995d1258a19e4b20a8b65f7c5f6a750ad45e4c504020b0b88ca94558b27c8",
+    "low_memory.py": "4b017149d0334ba8705ad3d1d0eef64b1eec42efc7c1e35f5c7e423fabebe5c2",
+    "resources.py": "aec0632e35259f438b4837c5d4ebac2972d38a5a8fa5dea85bbea9bc8e236112",
+    "scripts/gpu_python.py": "7efb4dba86cb7fe8d3a1a4f976ab9e82ed76747ea74560e050b8117404390881",
+    "server.py": "063941b6c1553158e5c9f54f6e74749d2c33958025e909f1958284ff15b841c0"
+  },
+  "gpu_input_smoke_validated": true,
+  "manifest": {
+    "calls": 44,
+    "coverage": "recorded_assistant_calls_only",
+    "files": {
+      "trace.json": "732503cc3f56283f8ab01f49504739a772414367b8ae342a4cf9a7d102dfab2f",
+      "visible_messages.json": "73a07e4511dd415547e60f8d2a38b6d9032e71ca00b5d18c518949f34a9d24d0",
+      "visible_protocol.json": "4d4bb7e5d622a92908b898e661fe9445314182a95e8e3a97962fcaaa54858b64"
+    },
+    "gpu_validated": false,
+    "intended_use": "Pilot/development",
+    "model": "Qwen3-8B",
+    "model_revision": "b968826d9c46dd6066d109eabc6255188de91218",
+    "program_ids": [
+      "astropy__astropy-13977",
+      "django__django-11734",
+      "django__django-12039",
+      "django__django-12308"
+    ],
+    "programs": 4,
+    "schema_version": "b-replay-bundle/1.0",
+    "subset": "pilot_4",
+    "total_output_tokens": 7311,
+    "unrecorded_api_attempts": 4
+  },
+  "performance_claim_supported": false,
+  "runtime_commit": "7971fa40323f16e8e4ce8f12dfd5db9755a98cf1",
+  "server_profile": "ram30"
+}
