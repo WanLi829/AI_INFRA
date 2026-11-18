@@ -12,7 +12,7 @@ from .common import ROOT, MODELS, sha, read_json, write_json
 from .client import load_bundle, validate_arrivals, replay
 
 RUNTIME_ROOT = ROOT / "runtime/Kairos"
-RUNTIME_COMMIT = "7971fa40323f16e8e4ce8f12dfd5db9755a98cf1"
+RUNTIME_COMMIT = "a3dbac12eac80d6444222ca3e2e9592fef029158"
 
 def verify_runtime():
     manifest=read_json(RUNTIME_ROOT/"provenance/release_manifest.json")
@@ -28,10 +28,12 @@ def validate_inputs(args):
     manifest,trace,_=load_bundle(args.bundle)
     if manifest["model"]!="Qwen3-8B" or manifest["model_revision"]!=MODELS["Qwen3-8B"]:
         raise ValueError("Frozen runtime supports only the pinned Qwen3-8B snapshot; 4B data is conversion-only")
-    validate_arrivals(manifest,read_json(args.arrivals))
+    from .workload import validate_workload
+    validate_workload(manifest,read_json(args.arrivals))
     if args.method=="kairos":
         trained=set(read_json(RUNTIME_ROOT/"assets/forest.json")["training_ids"])
-        overlap=sorted(trained.intersection(manifest["program_ids"]))
+        sources={p.get('source_id', p['id']) for p in trace['programs']}
+        overlap=sorted(trained.intersection(sources))
         if overlap:raise ValueError(f"Frozen Kairos forest rejects training identities: {len(overlap)} overlaps; use pilot_* or heldout_candidates")
     if args.request_timeout<=0 or args.run_timeout<=0 or args.start_timeout<=0:
         raise ValueError("Timeouts must be positive")
@@ -64,7 +66,9 @@ def native_args(args, *, actual):
     engine,helper,deferred=cpu_sets(args.engine_cpus,args.helper_cpus,actual=actual)
     return SimpleNamespace(method=args.method,model=str(Path(args.model).expanduser().resolve()),
         output=Path(args.output).resolve(),gpu=args.gpu,engine_cpus=engine,helper_cpus=helper,
-        profile=RUNTIME_ROOT/"assets/deployment_profile.json",reload_profile=RUNTIME_ROOT/"assets/reload_profile.json",
+        profile=getattr(args,'profile',None) or RUNTIME_ROOT/"assets/deployment_profile.json",
+        reload_profile=getattr(args,'reload_profile',None) or RUNTIME_ROOT/"assets/reload_profile.json",
+        joint_assets=getattr(args,'joint_assets',None),
         start_timeout=args.start_timeout,gpu_pid_policy=getattr(args,"gpu_pid_policy","strict"),dry_run=False),deferred
 
 def server_profile(args):

@@ -31,12 +31,12 @@ class ComparisonTests(unittest.TestCase):
                     with patch.dict("os.environ", {"CONTINUUM_TTL_SECONDS": "999", "LMCACHE_CONFIG_FILE": "/bad.yaml"}):
                         plan, _, _, env = build(args)
                     self.assertEqual(plan["calls"], 161)
-                    self.assertEqual(plan["runtime"]["files_verified"], 179)
+                    self.assertEqual(plan["runtime"]["files_verified"], 340)
                     self.assertNotIn("LMCACHE_CONFIG_FILE", env)
                     command = plan["engine_command"]
                     if method in ("native", "lmcache"):
                         self.assertIsNone(plan["helper_command"])
-                        self.assertNotIn("--scheduler-cls", command)
+                        self.assertEqual(command[command.index('--scheduler-cls')+1], 'b_replay.native_scheduler.ReplayNativeScheduler')
                         self.assertNotIn("--worker-cls", command)
                         self.assertEqual(command[command.index("--scheduling-policy")+1], "fcfs")
                         self.assertEqual("--kv-transfer-config" in command, method == "lmcache")
@@ -66,15 +66,14 @@ class ComparisonTests(unittest.TestCase):
                     turn = programs[pid]["turns"][i]
                     prompt = prompts[pid][:turn["keep_prefix_tokens"]] + turn["added_token_ids"]
                     self.assertEqual(body["prompt"], prompt)
-                    self.assertEqual(body["max_tokens"], turn["output_tokens"])
+                    self.assertEqual(body["max_tokens"], trace['model']['max_sequence_tokens']-len(prompt))
                     self.assertTrue(body["return_token_ids"] and body["ignore_eos"])
-                    if method in ("native", "lmcache"):
-                        self.assertNotIn("vllm_xargs", body)
-                    else:
-                        meta = body["vllm_xargs"]
-                        self.assertEqual(meta["cont_program_id"], pid)
-                        self.assertEqual(json.loads(meta["cont_visible_messages"]), visible[pid][i])
-                        self.assertEqual(meta["cont_oracle_gap"], 0)
+                    meta = body['vllm_xargs']
+                    self.assertEqual(meta['cont_program_id'],pid)
+                    self.assertEqual(json.loads(meta['cont_visible_messages']),visible[pid][i])
+                    self.assertNotIn('cont_final',meta)
+                    self.assertNotIn('cont_oracle_gap',meta)
+                    self.assertEqual(meta['cont_tool'],'unknown')
                     prompts[pid] = prompt
                     cursor[pid] += 1
                     chunks = [{"choices": [{"token_ids": [1] * turn["output_tokens"]}]},
@@ -157,13 +156,21 @@ class ComparisonTests(unittest.TestCase):
             plan, _, _, _ = build(args)
             shutil.copytree(ROOT/"verification/pilot_14", run)
             state = read_json(run/"state.json")
-            state.update(schema="comparison/1", protocol="comparison-v1-cold-process",
+            state.update(schema="comparison/2", protocol="comparison-v2-private-stop-cold-process",
                          plan=plan, gpu_pid_policy="strict", gpu_ownership_verified=True)
             write_json(run/"state.json", state)
             client = dict(status="complete", method="kairos", evidence="Synthetic validation fixture",
+                          generation_protocol='fixed-work-private-stop-v1',
                           bundle_manifest_sha256=plan["bundle_manifest_sha256"],
                           trace_sha256=plan["trace_sha256"], arrivals_sha256=plan["arrivals_sha256"])
             write_json(run/"b_replay/state.json", client)
+            from b_replay.client import replay_metadata
+            path=run/'b_replay/requests.jsonl'
+            records=[json.loads(line) for line in path.read_text().splitlines()]
+            for record in records:
+                record['public_max_tokens']=16384-record['prompt_tokens']
+                record['replay_key']=replay_metadata('kairos',record['program_id'],record['turn_id'],[])['cont_replay_key']
+            path.write_text(''.join(json.dumps(r)+'\n' for r in records),encoding='utf-8')
             resources = read_json(run/"resources.json")
             for sample in resources:
                 if "memory" in sample:

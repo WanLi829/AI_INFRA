@@ -1,0 +1,17 @@
+{
+  "axis": "dataset",
+  "datasets": [
+    {"name": "mini-swe-verified", "bundle": "../runs/prepared/heldout-v2"},
+    {"name": "nebius-verified-pending", "bundle": "/data/replay/nebius-audited-v2"}
+  ],
+  "model": "/data/models/models--Qwen--Qwen3-8B/snapshots/b968826d9c46dd6066d109eabc6255188de91218",
+  "joint_assets": "/data/kairos-joint",
+  "jps": [0.1, 1],
+  "seeds": [2026111801, 2026111802, 2026111803],
+  "static_ttl_seconds": 2,
+  "cpu_kv_gib": 8,
+  "start_timeout": 1200,
+  "request_timeout": 120,
+  "run_timeout": 3600,
+  "allow_exploratory": true
+}

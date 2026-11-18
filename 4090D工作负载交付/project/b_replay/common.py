@@ -18,7 +18,7 @@ MODELS = {
 }
 # Exact descriptor translation in the pinned Kairos activation.py, without importing upstream code.
 RUNTIME_ACTIVATION = {
-    "kairos": "v21-eager-a~r5callcommitment~progressivewindow~jointmean~localeta~provenanceprior~onlinefitresidual~knownoutput~finishlogical~kairos",
+    "kairos": "continuity-eager-a~provenanceprior~onlinefitresidual~finishlogical~kairos",
     "continuum": "continuum-index-partial-eager-a",
 }
 

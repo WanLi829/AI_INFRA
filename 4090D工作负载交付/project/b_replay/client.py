@@ -7,6 +7,13 @@ from pathlib import Path
 import random
 import time
 from .common import read_json, write_json, sha, stats, json_bytes, RUNTIME_ACTIVATION
+from .workload import validate_workload, concurrency
+
+def replay_metadata(method, pid, turn_id, messages):
+    experiment = RUNTIME_ACTIVATION.get(method, RUNTIME_ACTIVATION['continuum']) + '~heterogeneous'
+    key = sha(json.dumps([experiment, pid, turn_id], separators=(',', ':')).encode())
+    return dict(cont_program_id=pid, cont_tool='unknown', cont_experiment=experiment,
+                cont_replay_key=key, cont_visible_messages=json.dumps(messages, separators=(',', ':')))
 
 def load_bundle(bundle):
     bundle = Path(bundle)
@@ -47,6 +54,19 @@ def load_bundle(bundle):
             calls += 1
     if calls != manifest["calls"] or len(ids) != manifest["programs"]:
         raise ValueError("Bundle count mismatch")
+    if manifest.get('schema_version') == 'b-replay-bundle/2.0':
+        if not {'completed_actions.json','data_audit.json'} <= manifest['files'].keys():
+            raise ValueError('Prepared bundle lacks hashed completion/audit evidence')
+        payload=read_json(bundle/'completed_actions.json')
+        if payload.get('schema')!='recorded-current-actions-v1' or set(payload.get('actions',{}))!=set(ids):
+            raise ValueError('Invalid completed-action identities')
+        for p in trace['programs']:
+            actions=payload['actions'][p['id']]
+            if len(actions)!=len(p['turns']): raise ValueError('Completion count mismatch')
+            for i,a in enumerate(actions):
+                if set(a)!={'tool','terminal','evidence','assistant_sha256'} or type(a['terminal']) is not bool:
+                    raise ValueError('Invalid action fields')
+                if a['terminal'] and i+1<len(actions): raise ValueError('Program continues after explicit terminal action')
     return manifest, trace, visible
 
 def make_arrivals(bundle, jps, seed, output):
@@ -79,35 +99,38 @@ def validate_arrivals(manifest, arrival):
 async def replay(args, transport=None):
     import httpx
     manifest, trace, visible = load_bundle(args.bundle)
-    if args.method not in (*RUNTIME_ACTIVATION, "native", "lmcache", "static_ttl"):
+    if args.method not in (*RUNTIME_ACTIVATION, "native", "lmcache", "static_ttl", "zero_ttl"):
         raise ValueError("Unsupported method")
     arrival = read_json(args.arrivals)
-    planned = validate_arrivals(manifest, arrival)
+    mode = validate_workload(manifest, arrival)
+    planned = validate_arrivals(manifest, arrival) if mode == 'open' else {p: None for p in manifest['program_ids']}
     if args.request_timeout <= 0 or args.run_timeout <= 0:
         raise ValueError("Timeouts must be positive")
     out = Path(args.output)
     out.mkdir(parents=True, exist_ok=False)
     evidence = "CPU mock protocol test only" if args.mock else "Serving replay; hardware/engine identity requires C's run record"
     state = dict(status="starting", evidence=evidence, endpoint=args.endpoint, served_model=args.model,
-        method=args.method,
+        method=args.method, workload_mode=mode, generation_protocol='fixed-work-private-stop-v1',
         bundle_manifest_sha256=sha((Path(args.bundle)/"manifest.json").read_bytes()),
         trace_sha256=manifest["files"]["trace.json"], arrivals_sha256=sha(Path(args.arrivals).read_bytes()),
         expected_programs=manifest["programs"], expected_calls=manifest["calls"],
         tokenizer=trace["model"], tools_executed=False,
-        online_tool_label=None if args.method in ("native", "lmcache") else "unclassified-gap",
+        online_tool_label='unknown',
         future_tool_annotation_sent=False)
     write_json(out/"state.json", state)
     records, jobs = [], []
     start = time.monotonic()
+    state['clock_origin_monotonic_s']=start
     async with httpx.AsyncClient(timeout=httpx.Timeout(args.request_timeout, connect=min(10,args.request_timeout)),
             limits=httpx.Limits(max_connections=max(64, manifest["programs"])), transport=transport,
             trust_env=False) as client:
-        async def program(row):
+        async def program(row, refill_at=None):
             pid = row["id"]
             job_start = None
             completed = 0
             try:
-                await asyncio.sleep(max(0, planned[pid]-(time.monotonic()-start)))
+                if mode == 'open':
+                    await asyncio.sleep(max(0, planned[pid]-(time.monotonic()-start)))
                 job_start = time.monotonic()
                 prompt = []
                 for turn_id, part in enumerate(row["turns"]):
@@ -115,16 +138,13 @@ async def replay(args, transport=None):
                     # The current teacher output's tool class is not visible
                     # before generation. Keep it offline and use the protocol's
                     # pooled fallback for online decisions.
-                    meta = dict(cont_program_id=pid, cont_tool="unclassified-gap",
-                        cont_final=turn_id == len(row["turns"])-1, cont_oracle_gap=0,
-                        cont_experiment=RUNTIME_ACTIVATION.get(args.method, RUNTIME_ACTIVATION["continuum"])+"~heterogeneous",
-                        cont_visible_messages=json.dumps(visible[pid][turn_id], separators=(",",":")))
-                    payload = dict(model=args.model, prompt=prompt, max_tokens=part["output_tokens"],
+                    meta = replay_metadata(args.method, pid, turn_id, visible[pid][turn_id])
+                    payload = dict(model=args.model, prompt=prompt, max_tokens=trace['model']['max_sequence_tokens']-len(prompt),
                         ignore_eos=True, temperature=0, seed=1, stream=True, return_token_ids=True,
                         stream_options=dict(include_usage=True), cache_salt=row.get("cache_salt", pid),
                         vllm_xargs=meta)
-                    if args.method in ("native", "lmcache"):
-                        payload.pop("vllm_xargs")
+                    # All methods share a private stop adapter. Public max_tokens
+                    # is the context ceiling, never the recorded output label.
                     begin = time.monotonic()
                     output, chunks, usage, error, request_id = [], [], {}, None, None
                     try:
@@ -163,6 +183,7 @@ async def replay(args, transport=None):
                         stream_chunk_sizes=[n for _,n in chunks], prompt_tokens=len(prompt),
                         prompt_sha256=part["prompt_sha256"], output_tokens=len(output),
                         planned_output_tokens=part["output_tokens"], output_ids=output, usage=usage,
+                        public_max_tokens=payload['max_tokens'], replay_key=meta['cont_replay_key'],
                         gap_after_s=part["gap_after_s"],
                         cont_tool_sent=meta["cont_tool"] if "vllm_xargs" in payload else None,
                         error=error, success=error is None)
@@ -180,11 +201,29 @@ async def replay(args, transport=None):
                 if isinstance(exc, (KeyboardInterrupt, SystemExit)): raise
             finish = time.monotonic()
             job.update(planned_arrival_s=planned[pid], actual_arrival_s=job_start-start if job_start else None,
-                arrival_lag_s=job_start-start-planned[pid] if job_start else None,
+                arrival_lag_s=job_start-start-planned[pid] if job_start and mode == 'open' else None,
+                refill_delay_s=job_start-refill_at if job_start and refill_at is not None else None,
                 end_s=finish-start, jct_s=finish-job_start if job_start else None,
                 tool_dependency_s=sum(t["gap_after_s"] for t in row["turns"][:-1]))
             jobs.append(job)
-        tasks = [asyncio.create_task(program(row)) for row in trace["programs"]]
+            # Persist on every completion, including before a global timeout.
+            write_json(out/'jobs.json', jobs)
+        if mode == 'closed':
+            by_id = {p['id']: p for p in trace['programs']}
+            pending = iter(arrival['program_order'])
+            async def worker():
+                refill_at = time.monotonic()
+                while True:
+                    pid = next(pending, None)
+                    if pid is None:
+                        return
+                    await program(by_id[pid], refill_at)
+                    refill_at = time.monotonic()
+                    if asyncio.current_task().cancelling():
+                        return
+            tasks = [asyncio.create_task(worker()) for _ in range(arrival['active_programs'])]
+        else:
+            tasks = [asyncio.create_task(program(row)) for row in trace["programs"]]
         state["status"] = "replaying"
         write_json(out/"state.json", state)
         timed_out = False
@@ -201,7 +240,8 @@ async def replay(args, transport=None):
     observation = wall-first_actual if first_actual is not None else None
     summary = dict(status="complete" if strict else "failed", strict_complete=strict, evidence=evidence,
         gpu_validated=False, expected_programs=manifest["programs"], expected_calls=manifest["calls"],
-        completed_programs=len(good_jobs), failed_programs=len(jobs)-len(good_jobs),
+        completed_programs=len(good_jobs), failed_programs=sum(not j['success'] for j in jobs),
+        unattempted_programs=manifest['programs']-len(jobs), workload_mode=mode,
         completed_calls=len(successful), failed_calls=sum(not r["success"] for r in records),
         unattempted_calls=manifest["calls"]-len(records), timed_out=timed_out,
         wall_from_clock_zero_s=wall, observation_from_first_actual_arrival_s=observation,
@@ -215,6 +255,7 @@ async def replay(args, transport=None):
                       "No cache-hit/transfer metrics are inferred by the client; unavailable values remain absent",
                       "GPU validation requires independent model, engine and hardware evidence"])
     write_json(out/"jobs.json", sorted(jobs, key=lambda j:j["program_id"]))
+    write_json(out/'concurrency.json', concurrency(jobs, arrival.get('active_programs')))
     write_json(out/"summary.json", summary)
     state.update(status=summary["status"], summary=summary)
     write_json(out/"state.json", state)

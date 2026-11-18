@@ -1,0 +1,2 @@
+-r requirements-replay-client.txt
+matplotlib>=3.8,<4

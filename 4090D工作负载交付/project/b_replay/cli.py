@@ -21,12 +21,17 @@ def main():
     arrival.add_argument("--jps", type=float, required=True)
     arrival.add_argument("--seed", type=int, default=20261030)
     arrival.add_argument("--output", type=Path, required=True)
+    closed = sub.add_parser('closed-workload')
+    closed.add_argument('--bundle', type=Path, required=True)
+    closed.add_argument('--active-programs', type=int, required=True)
+    closed.add_argument('--seed', type=int, default=2026111801)
+    closed.add_argument('--output', type=Path, required=True)
     replay = sub.add_parser("replay")
     replay.add_argument("--bundle", type=Path, required=True)
     replay.add_argument("--arrivals", type=Path, required=True)
     replay.add_argument("--endpoint", required=True)
     replay.add_argument("--model", required=True, help="Exact model identity served by the running engine")
-    replay.add_argument("--method", choices=("kairos", "continuum"), required=True,
+    replay.add_argument("--method", choices=("kairos", "continuum", "zero_ttl", "static_ttl", "native", "lmcache"), required=True,
                         help="Must match the method configured in the already-running service")
     replay.add_argument("--output", type=Path, required=True)
     replay.add_argument("--request-timeout", type=float, default=120)
@@ -65,6 +70,9 @@ def main():
     elif args.command == "arrivals":
         from .client import make_arrivals
         make_arrivals(args.bundle, args.jps, args.seed, args.output)
+    elif args.command == 'closed-workload':
+        from .workload import make_closed
+        make_closed(args.bundle,args.active_programs,args.seed,args.output)
     elif args.command == "replay":
         import asyncio
         from .client import replay
@@ -77,7 +85,4 @@ def main():
         from .delivery import verify_release
         print(json.dumps(verify_release()))
     elif args.command in ("server-plan","server-run"):
-        import json
-        from .server import make_plan,run
-        if args.command=="server-plan":print(json.dumps(make_plan(args),ensure_ascii=False,indent=2))
-        else:run(args)
+        parser.error('Legacy server-plan/server-run are retired for the new private-stop runtime. Use python -m b_replay.comparison plan/run; see midterm/README.md.')

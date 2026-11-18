@@ -10,19 +10,23 @@ from .common import read_json, sha, stats, write_json
 from .comparison import COMMON_PROTOCOL, METHODS
 
 
-def inspect(run, bundle):
+def inspect(run, bundle, *, legacy=False):
     manifest, trace, _ = load_bundle(bundle)
     state = read_json(run / "state.json")
     plan = state["plan"]
-    if state.get("schema") != "comparison/1" or state.get("protocol") != COMMON_PROTOCOL:
+    expected_schema='comparison/1' if legacy else 'comparison/2'
+    expected_protocol='comparison-v1-cold-process' if legacy else COMMON_PROTOCOL
+    if state.get("schema") != expected_schema or state.get("protocol") != expected_protocol:
         raise ValueError("Legacy or mock result is outside this comparison protocol")
     if state["method"] not in METHODS or state["method"] != plan["method"]:
         raise ValueError("Method mismatch")
     if plan["bundle_manifest_sha256"] != sha((bundle / "manifest.json").read_bytes()):
         raise ValueError("Bundle identity mismatch")
-    from .client import validate_arrivals
-    validate_arrivals(manifest, plan["arrivals"])
-    row = dict(run=str(run), method=state["method"], jps=plan["arrivals"]["jps"],
+    from .workload import validate_workload, concurrency
+    mode = validate_workload(manifest, plan['arrivals'])
+    row = dict(run=str(run), method=state["method"], jps=plan["arrivals"].get('jps'),
+               workload_mode=mode, active_programs=plan['arrivals'].get('active_programs'),
+               seed=plan['arrivals']['seed'], dataset_id=manifest.get('dataset_id','unregistered'),
                status=state["status"], ttl_seconds=plan["ttl_seconds"], error=state.get("error"),
                completed_calls=None, completed_programs=None, speedup_eligible=False)
     summary_path = run / "b_replay/summary.json"
@@ -38,6 +42,7 @@ def inspect(run, bundle):
         raise ValueError("Missing model/ownership evidence")
     client = read_json(run / "b_replay/state.json")
     if (client["method"] != state["method"] or client["status"] != "complete"
+            or (not legacy and client.get('generation_protocol')!='fixed-work-private-stop-v1')
             or "mock" in client["evidence"].lower()
             or client["bundle_manifest_sha256"] != plan["bundle_manifest_sha256"]
             or client["trace_sha256"] != manifest["files"]["trace.json"]
@@ -50,7 +55,10 @@ def inspect(run, bundle):
         raise ValueError("Missing or duplicate requests")
     for key, request in actual.items():
         turn = expected[key]
+        from .client import replay_metadata
         if (not request["success"] or request["error"] is not None
+                or (not legacy and request.get('public_max_tokens') != trace['model']['max_sequence_tokens']-turn['prompt_tokens'])
+                or (not legacy and request.get('replay_key') != replay_metadata(state['method'],key[0],key[1],[])['cont_replay_key'])
                 or request["prompt_sha256"] != turn["prompt_sha256"]
                 or request["prompt_tokens"] != turn["prompt_tokens"]
                 or len(request["output_ids"]) != request["output_tokens"]
@@ -65,18 +73,25 @@ def inspect(run, bundle):
     if (len(jobs) != manifest["programs"] or {j["program_id"] for j in jobs} != set(manifest["program_ids"])
             or not all(j["success"] for j in jobs) or summary["strict_complete"] is not True):
         raise ValueError("Incomplete programs")
-    arrival_times = {a["program_id"]: a["arrival_s"] for a in plan["arrivals"]["arrivals"]}
+    arrival_times = {a["program_id"]: a["arrival_s"] for a in plan["arrivals"].get('arrivals',[])}
     for job in jobs:
-        if abs(job["planned_arrival_s"] - arrival_times[job["program_id"]]) > .000001:
+        if mode == 'open' and abs(job["planned_arrival_s"] - arrival_times[job["program_id"]]) > .000001:
             raise ValueError("Job used a different arrival schedule")
         first = actual[(job["program_id"], 0)]
         turns = [r for (pid, _), r in actual.items() if pid == job["program_id"]]
         if (not math.isfinite(job["actual_arrival_s"])
-                or job["actual_arrival_s"] + .002 < job["planned_arrival_s"]
+                or (mode == 'open' and job["actual_arrival_s"] + .002 < job["planned_arrival_s"])
                 or first["start_s"] + .002 < job["actual_arrival_s"]
                 or job["end_s"] + .002 < max(r["end_s"] for r in turns)):
             raise ValueError("Invalid job timing")
     jct = stats([j["end_s"]-j["actual_arrival_s"] for j in jobs])
+    concurrent = concurrency(jobs, plan['arrivals'].get('active_programs'))
+    if mode == 'closed':
+        if concurrent['peak'] > plan['arrivals']['active_programs']:
+            raise ValueError('Closed loop exceeded active program target')
+        observed = [j['program_id'] for j in sorted(jobs,key=lambda j:j['actual_arrival_s'])]
+        if observed != plan['arrivals']['program_order']:
+            raise ValueError('Closed loop activation order differs')
     if not math.isfinite(jct["mean"]) or jct["mean"] <= 0 or abs(jct["mean"] - summary["jct_s"]["mean"]) > 1e-6:
         raise ValueError("Summary does not match program durations")
     output_tokens = sum(r["output_tokens"] for r in records)
@@ -90,10 +105,14 @@ def inspect(run, bundle):
     minimum_window = max(j["end_s"] for j in jobs) - min(j["actual_arrival_s"] for j in jobs)
     if not math.isfinite(window) or window <= 0 or window + .002 < minimum_window:
         raise ValueError("Invalid throughput window")
-    row.update(speedup_eligible=verified, gpu_pid_policy=policy, jct_mean_s=jct["mean"], jct_p95_s=jct["p95"],
+    ttft = stats([r['ttft_s'] for r in records])
+    eligible = verified and not legacy and not plan.get('readiness_blockers') and not plan.get('exploratory',False)
+    row.update(speedup_eligible=eligible, gpu_pid_policy=policy, gpu_uuid=state['gpu'].get('uuid'), jct_mean_s=jct["mean"], jct_p95_s=jct["p95"],
                output_tokens=output_tokens,
                output_tokens_per_s=output_tokens/window,
-               ttft_p95_s=summary["request_ttft_s"]["p95"],
+               ttft_mean_s=ttft['mean'], ttft_p95_s=ttft['p95'],
+               programs_per_s=len(jobs)/window, observation_s=window,
+               active_mean=concurrent['mean'],active_peak=concurrent['peak'],
                sampled_gpu_peak_mib=max(int(s["gpu"]["used"]) for s in samples),
                sampled_cgroup_peak_bytes=max((c["current_bytes"] for s in samples
                                               for c in s["memory"].get("cgroups", [])), default=None))
@@ -104,7 +123,11 @@ def inspect(run, bundle):
                     gpu=state["gpu"], input=plan["bundle_manifest_sha256"],
                     arrivals=plan["arrivals_sha256"], code=plan["adapter_sha256"],
                     memory_limit=state["memory_before_start"]["effective_limit_bytes"],
-                    engine_cpus=command[2], limits=limits)
+                    engine_cpus=command[2], limits=limits,
+                    runtime=plan['runtime'], cpu_kv_gib=plan.get('cpu_kv_gib'),
+                    joint_release=plan.get('joint_release_sha256'),
+                    gpu_kv_bytes=plan.get('gpu_kv_bytes'), profile=plan.get('profile_sha256'),
+                    reload_profile=plan.get('reload_profile_sha256'))
     # Utilization/free memory fluctuate between runs; GPU identity is stable.
     identity["gpu"] = {k: state["gpu"].get(k) for k in ("uuid", "total", "index")}
     return row, json.dumps(identity, sort_keys=True)

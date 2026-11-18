@@ -26,7 +26,7 @@ def main():
             raise ValueError(f"Archive checksum mismatch: {filename}")
         with TemporaryDirectory() as temp, tarfile.open(archive, "r:gz") as tar:
             tar.extractall(temp, filter="data")
-            row, identity = inspect(Path(temp) / expected["run"], bundle)
+            row, identity = inspect(Path(temp) / expected["run"], bundle, legacy=True)
         for field in ("method", "status", "completed_programs", "completed_calls", "output_tokens",
                       "speedup_eligible", "jct_mean_s", "jct_p95_s", "output_tokens_per_s", "ttft_p95_s"):
             if row[field] != expected[field]:
