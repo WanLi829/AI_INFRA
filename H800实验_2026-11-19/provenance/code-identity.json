@@ -1,0 +1,40 @@
+{
+  "adapter_sha256": {
+    "__init__.py": "0ad2b92f2532d08ca8ae72c04bd51428aaf25d3cb25bc3ee033183cbdd043ebc",
+    "__main__.py": "cf7390a2508a0fcad4777a4a629fc5212ab655cb45845975995f835676a834e3",
+    "acquire.py": "231e569caf388b1f4068d6c4706208e86c80c16b7e0b8dd0e2f19f47ae8f26cb",
+    "cache_probe.py": "d54abd986534085cff87c48abf790f29cabe77221219f0369d9275c2d4bca249",
+    "calibration.py": "bbe13c23b9273836d51c200508ba0e665a300969afde0af031c8f1a3b1ab9cf4",
+    "cli.py": "fc0d5b8bf919bccfa5806ea7f78c0df35cc0982f8219d1c2e766f0776adba28e",
+    "client.py": "0ca0d70a9b4a0b396f7f3e69892e6b0b245ef7a8b60035eacddba67fb881ee74",
+    "common.py": "ad632112ec1ba01eb489b6a2ee93b53909a27511b855cb9cefd1dd7d0d7cc906",
+    "comparison.py": "fe4304bdc15a8957aad834dc5aeb9e8b893baeb266181937ab2aa23f8d627b1a",
+    "comparison_results.py": "ae7e9416a0d78d362e5446d2cb978f4a48eb23cb0fd44fa47fe3173d83baf73d",
+    "datasets.py": "8c13cbeb678d7ec8ffb71c822a2b2b5da8662dea7b771fe213b8803952be9ea7",
+    "delivery.py": "3cfa11459e50f4dc0e293b13cf483dd1628fe2515a5f2d41d0df91eee7b84cce",
+    "doctor.py": "3162f885f997fe6017699e6b6481e71c0bfd7ce7a7181c71cb0ada6750a0c53d",
+    "h800.py": "42cfa273ef2851030aa4bc919fb87d0e5c43d0b0c224eee680e3a3375a2ce4eb",
+    "h800_capacity.py": "fa6528a266afd041da7bd983f2cfcde565d0a36ecc74804849ff97cc26ce42b8",
+    "h800_inputs.py": "e608635d4806ea6e43a2e913462cf418e6b147081a0ce86da4c5b70ebabd3661",
+    "hardware.py": "ae4d641867a90ad98b8acb028abed086e52b9c223340b6081efe0fbad3050679",
+    "low_memory.py": "443b9a044d0b9a337544161383ef6411166276357ad5eb9e44fba3d5575f5262",
+    "metrics.py": "186a958576659518fb7105e35e5d16d094a32bc61cf0403abcd2351965ec54f8",
+    "native_scheduler.py": "fbaa43e3e4d245eb12f61479e4eabd67cea2301092d93d7b11411862d9f30b7b",
+    "observability.py": "afff990babd2e1ea1d55f0ef9367efe0ae67e964c1db757e2feb5177b6849689",
+    "observed_scheduler.py": "ba6d45e5df4a706d5628a47f1268d08f5f45a590c96cdbd1f566b7519770210c",
+    "pipeline.py": "edcc34b1a7e419cb4043995b0239eaa2d98f12f3178de3ce2b4cf128e7583862",
+    "report.py": "545d72167f821b892cb62090217233a35f1e543901536fb3d82e89ba91ed5033",
+    "resources.py": "4c49753a75c75899c9b809e4dd8f7e4c6540eee6e6fc581f0f2485a989029fae",
+    "scripts/gpu_python.py": "f84a287344c7cedb4ea1e0750707cfb3138b6145582bed1f2a9c6df3d8eabc36",
+    "server.py": "e16a586e674b4d3be68a87db538874eb53284055e84bf19146dde5215ed6bb35",
+    "static_scheduler.py": "59071c1db103ff20356263e3acbee5f6de47a2fc377c353806fa56391b201fba",
+    "suite.py": "f1a7c0d4fd47c4308d570b5356fd888b0a8c42d1bdbcd2295ac338848e06f4e7",
+    "verification.py": "cdc21c933f304e0c40e3866e48589b8c5e383a2fbdcd39363106682c8038f0da",
+    "workload.py": "6ee3d3c40ab0982e7c46abb016df691bb48d67da2c29254fbf1ec5d70414653f"
+  },
+  "runtime": {
+    "commit": "a3dbac12eac80d6444222ca3e2e9592fef029158",
+    "core_modified": false,
+    "files_verified": 340
+  }
+}

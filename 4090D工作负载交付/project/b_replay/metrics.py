@@ -55,8 +55,25 @@ def collect(run):
     helper_before=samples(run/'lmcache-metrics-before.txt');helper_after=samples(run/'lmcache-metrics-after.txt')
     helper_deltas={k:helper_after[k]-helper_before[k] if helper_after[k]>=helper_before[k] else None
                    for k in helper_before.keys() & helper_after.keys()}
+    queue_samples=[e for e in observed if e['event']=='sample']
+    transfers=[]
+    for name in ('transfers.jsonl','replicas.jsonl'):
+        if (run/name).is_file():
+            transfers.extend(dict(json.loads(s),source_log=name) for s in (run/name).read_text().splitlines() if s.strip())
+    rewind=[e['logical_frontier_loss_tokens'] for e in observed if e['event']=='computed_frontier_rewound']
     return dict(counter_or_gauge_deltas=deltas,cache_ratios=ratios,scheduler_event_counts=counts,
         helper_counter_or_gauge_deltas=helper_deltas,first_admit_wait_s=queue,
-        queue_kv_samples=[e for e in observed if e['event']=='sample'],
+        queue_kv_samples=queue_samples,
+        sampled_queue_size=stats([e['waiting'] for e in queue_samples]),
+        sampled_running_size=stats([e['running'] for e in queue_samples]),
+        sampled_pin_ratio=stats([e.get('unique_pin_ratio') for e in queue_samples]),
+        sampled_kv_used_ratio=stats([1-e['free_blocks']/e['total_blocks'] for e in queue_samples if e.get('total_blocks')]),
+        actual_kv_page_counts=sorted({e['total_blocks'] for e in queue_samples if e.get('total_blocks') is not None}),
+        sampled_schedule_cost_sum_s=sum(e.get('schedule_cost_sum_s',0) for e in queue_samples) if queue_samples else None,
+        sampled_controller_cost_sum_s=sum(e.get('controller_cost_sum_s',0) for e in queue_samples) if queue_samples else None,
+        logical_frontier_loss_tokens=sum(rewind) if observed else None,
+        actual_recomputed_tokens=None,
+        transfer_event_counts=dict(Counter(e.get('event','unknown') for e in transfers)),
+        transfer_events=transfers,
         scheduler_events_available=path.is_file(),
-        note='Raw deltas include gauges; only named counter ratios are interpreted. No inferred CPU hits or unique pin occupancy.')
+        note='Raw deltas include gauges. Pin occupancy is sampled and physical-ID deduplicated. Logical frontier loss is not actual recomputation. Controller costs are nested in scheduler costs; do not add. Transfer events do not prove wire bytes.')

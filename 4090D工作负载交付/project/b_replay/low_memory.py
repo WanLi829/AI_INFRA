@@ -23,10 +23,10 @@ from types import SimpleNamespace
 
 from .resources import GIB, memory_snapshot, require_memory
 
-PROFILE = dict(name="ram30", advertised_ram_bytes=30_000_000_000,
-               cpu_kv_gib=8, cpu_kv_initial_gib=1, max_num_seqs=8,
+PROFILE = dict(name="h800_27c230g", advertised_ram_bytes=230*1024**3,
+               cpu_kv_gib=64, cpu_kv_initial_gib=1, max_num_seqs=8,
                safetensors_load_strategy="lazy", cuda_graphs=True,
-               malloc_arena_max=2, startup_available_gib=3, runtime_available_gib=1,
+               malloc_arena_max=2, startup_available_gib=8, runtime_available_gib=4,
                performance_comparable_to_archive=False)
 
 
@@ -58,8 +58,16 @@ def prepare(upstream, args, out, control_socket):
 
 def guard(upstream, args, processes, gpu_uuid):
     gpu = next(g for g in upstream.harness.smi() if int(g["index"]) == args.gpu)
+    pid_policy = getattr(args, "gpu_pid_policy", "strict")
+    process_query_error = None
+    try:
+        apps=upstream.harness.compute_apps(gpu_uuid)
+    except subprocess.TimeoutExpired as error:
+        if pid_policy=='strict':raise
+        apps=[]
+        process_query_error=repr(error)
     own, foreign = upstream.harness.gpu_process_scope(
-        upstream.harness.compute_apps(gpu_uuid), [p.pid for p in processes])
+        apps, [p.pid for p in processes])
     rss = 0
     for pid in own:
         try:
@@ -68,12 +76,15 @@ def guard(upstream, args, processes, gpu_uuid):
         except FileNotFoundError:
             pass
     memory = memory_snapshot()
-    pid_policy = getattr(args, "gpu_pid_policy", "strict")
     row = dict(time=time.time(), gpu=gpu, foreign_gpu_pids=sorted(foreign),
                gpu_pid_policy=pid_policy, gpu_ownership_verified=pid_policy=="strict",
                owned_rss_bytes=rss, available_ram_bytes=memory["available_bytes"], memory=memory)
     if pid_policy == "record-only":
         row["unattributed_gpu_pids"] = row.pop("foreign_gpu_pids")
+        if process_query_error:
+            row['unattributed_gpu_pids']=None
+            row['process_query_available']=False
+            row['process_query_error']=process_query_error
     if ((foreign and pid_policy=="strict") or memory["available_bytes"] < PROFILE["runtime_available_gib"] * GIB
             or int(gpu["used"]) > int(gpu["total"])):
         raise RuntimeError("ram30 resource guard violated: " + json.dumps(row))

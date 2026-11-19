@@ -72,7 +72,13 @@ def concurrency(jobs, target=None):
             mean=sum(d*n for d,n in weights)/seconds if seconds else None,
             target_fraction=sum(d for d,n in weights if n == target)/seconds if seconds else None,
             below_s=sum(d for d,n in weights if n < target),
-            above_s=sum(d for d,n in weights if n > target))
+            above_s=sum(d for d,n in weights if n > target),
+            below_fraction=sum(d for d,n in weights if n < target)/seconds if seconds else None,
+            above_fraction=sum(d for d,n in weights if n > target)/seconds if seconds else None,
+            peak=max((n for d,n in weights if d > 0),default=None))
     return dict(peak=peak, mean=area/duration if duration else None, target=target,
-        start_s=points[0], end_s=points[-1], segments=segments, target_window=window,
+        start_s=points[0], end_s=points[-1], duration_s=duration, segments=segments, target_window=window,
+        initial_fill_s=sorted(a for a,_ in intervals)[target-1]-points[0] if target and len(intervals)>=target else None,
+        drain_s=points[-1]-max(a for a,_ in intervals),
+        target_window_note='From Kth activation to last candidate activation; empty if no refill; not an assumed steady state',
         refill_delay_s=stats([j.get('refill_delay_s') for j in jobs]))

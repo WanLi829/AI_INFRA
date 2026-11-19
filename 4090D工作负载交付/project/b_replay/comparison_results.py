@@ -116,6 +116,19 @@ def inspect(run, bundle, *, legacy=False):
                sampled_gpu_peak_mib=max(int(s["gpu"]["used"]) for s in samples),
                sampled_cgroup_peak_bytes=max((c["current_bytes"] for s in samples
                                               for c in s["memory"].get("cgroups", [])), default=None))
+    for prefix,values in (('jct',jct),('ttft',ttft),
+            ('request_e2e',stats([r['e2e_s'] for r in records])),
+            ('tpot',stats([r.get('tpot_s') for r in records])),
+            ('itl_single_token_chunk',stats([v for r in records for v in r.get('single_token_chunk_itl_s',[])]))):
+        for metric in ('mean','p50','p90','p95','p99'):
+            row[prefix+'_'+metric+'_s']=values[metric]
+    target=concurrent.get('target_window') or {}
+    row.update(active_target_mean=target.get('mean'),active_target_fraction=target.get('target_fraction'),
+        active_below_fraction=target.get('below_fraction'),active_above_fraction=target.get('above_fraction'),
+        target_window_s=target.get('duration_s'),initial_fill_s=concurrent.get('initial_fill_s'),drain_s=concurrent.get('drain_s'),
+        refill_delay_mean_s=concurrent['refill_delay_s']['mean'],refill_delay_p95_s=concurrent['refill_delay_s']['p95'],
+        jct_max_s=jct['max'],launch_replay_cleanup_s=state.get('timing',{}).get('total_launch_replay_cleanup_s'),
+        resource_group=plan.get('resource_group','pilot'))
     command = plan["engine_command"]
     limits = {flag: command[command.index(flag)+1] for flag in
               ("--max-model-len", "--max-num-seqs", "--max-num-batched-tokens", "--gpu-memory-utilization")}
@@ -128,6 +141,11 @@ def inspect(run, bundle, *, legacy=False):
                     joint_release=plan.get('joint_release_sha256'),
                     gpu_kv_bytes=plan.get('gpu_kv_bytes'), profile=plan.get('profile_sha256'),
                     reload_profile=plan.get('reload_profile_sha256'))
+    identity['resource_group']=plan.get('resource_group')
+    identity['helper_cpus']=plan['helper_command'][2] if plan.get('helper_command') else None
+    # Helper presence is a method implementation detail; the reserved helper CPU
+    # allocation itself is identical in the common resource declaration.
+    identity.pop('helper_cpus')
     # Utilization/free memory fluctuate between runs; GPU identity is stable.
     identity["gpu"] = {k: state["gpu"].get(k) for k in ("uuid", "total", "index")}
     return row, json.dumps(identity, sort_keys=True)

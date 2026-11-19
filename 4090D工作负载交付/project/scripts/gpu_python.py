@@ -21,7 +21,7 @@ def cuda_toolkit():
 
 def prepare_environment(base, cuda_home, inherited):
     base, cuda_home = Path(base).resolve(), Path(cuda_home).resolve()
-    if not cuda_home.is_relative_to(base / "env"):
+    if not cuda_home.is_relative_to((base / "env").resolve()):
         raise ValueError("CUDA must belong to this workspace's isolated environment")
     for path in (cuda_home / "bin/nvcc", cuda_home / "include/cuda_runtime.h"):
         if not path.is_file():

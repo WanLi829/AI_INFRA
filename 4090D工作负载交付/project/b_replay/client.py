@@ -9,6 +9,11 @@ import time
 from .common import read_json, write_json, sha, stats, json_bytes, RUNTIME_ACTIVATION
 from .workload import validate_workload, concurrency
 
+def cache_namespace(salt):
+    """Use both supported cache identities: vLLM/MP salt and LMCache tags."""
+    return dict(cache_salt=salt,
+                kv_transfer_params={'lmcache.tag.instance': salt})
+
 def replay_metadata(method, pid, turn_id, messages):
     experiment = RUNTIME_ACTIVATION.get(method, RUNTIME_ACTIVATION['continuum']) + '~heterogeneous'
     key = sha(json.dumps([experiment, pid, turn_id], separators=(',', ':')).encode())
@@ -120,6 +125,9 @@ async def replay(args, transport=None):
     write_json(out/"state.json", state)
     records, jobs = [], []
     start = time.monotonic()
+    def event(name, pid, **fields):
+        with (out/'program_events.jsonl').open('a',encoding='utf-8') as stream:
+            stream.write(json.dumps(dict(event=name,program_id=pid,time_s=time.monotonic()-start,**fields))+'\n')
     state['clock_origin_monotonic_s']=start
     async with httpx.AsyncClient(timeout=httpx.Timeout(args.request_timeout, connect=min(10,args.request_timeout)),
             limits=httpx.Limits(max_connections=max(64, manifest["programs"])), transport=transport,
@@ -132,6 +140,8 @@ async def replay(args, transport=None):
                 if mode == 'open':
                     await asyncio.sleep(max(0, planned[pid]-(time.monotonic()-start)))
                 job_start = time.monotonic()
+                event('external_arrival' if mode=='open' else 'activated',pid,
+                      source_id=row.get('source_id',pid),planned_s=planned[pid])
                 prompt = []
                 for turn_id, part in enumerate(row["turns"]):
                     prompt = prompt[:part["keep_prefix_tokens"]] + part["added_token_ids"]
@@ -141,7 +151,7 @@ async def replay(args, transport=None):
                     meta = replay_metadata(args.method, pid, turn_id, visible[pid][turn_id])
                     payload = dict(model=args.model, prompt=prompt, max_tokens=trace['model']['max_sequence_tokens']-len(prompt),
                         ignore_eos=True, temperature=0, seed=1, stream=True, return_token_ids=True,
-                        stream_options=dict(include_usage=True), cache_salt=row.get("cache_salt", pid),
+                        stream_options=dict(include_usage=True), **cache_namespace(row.get("cache_salt", pid)),
                         vllm_xargs=meta)
                     # All methods share a private stop adapter. Public max_tokens
                     # is the context ceiling, never the recorded output label.
@@ -172,13 +182,17 @@ async def replay(args, transport=None):
                             raise RuntimeError(f"Incomplete output: expected {part['output_tokens']}, got {len(output)}")
                         if usage.get("completion_tokens") not in (None, len(output)):
                             raise RuntimeError("Usage/token-ID count mismatch")
-                    except Exception as exc:
+                    except (Exception, asyncio.CancelledError) as exc:
                         error = f"{type(exc).__name__}: {exc}"
                     end = time.monotonic()
                     record = dict(program_id=pid, turn_id=turn_id, request_id=request_id,
                         planned_arrival_s=planned[pid] if turn_id == 0 else None,
                         start_s=begin-start, end_s=end-start, e2e_s=end-begin,
                         ttft_s=chunks[0][0]-(begin-start) if chunks else None,
+                        first_token_s=chunks[0][0] if chunks else None,
+                        last_token_s=chunks[-1][0] if chunks else None,
+                        stream_chunks=chunks,
+                        tpot_s=(chunks[-1][0]-chunks[0][0])/(len(output)-1) if chunks and len(output)>1 else None,
                         single_token_chunk_itl_s=[b[0]-a[0] for a,b in zip(chunks,chunks[1:]) if a[1]==b[1]==1],
                         stream_chunk_sizes=[n for _,n in chunks], prompt_tokens=len(prompt),
                         prompt_sha256=part["prompt_sha256"], output_tokens=len(output),
@@ -200,25 +214,31 @@ async def replay(args, transport=None):
                            error=f"{type(exc).__name__}: {exc}")
                 if isinstance(exc, (KeyboardInterrupt, SystemExit)): raise
             finish = time.monotonic()
+            if job_start is not None:
+                event('finished',pid,success=job['success'])
             job.update(planned_arrival_s=planned[pid], actual_arrival_s=job_start-start if job_start else None,
                 arrival_lag_s=job_start-start-planned[pid] if job_start and mode == 'open' else None,
                 refill_delay_s=job_start-refill_at if job_start and refill_at is not None else None,
                 end_s=finish-start, jct_s=finish-job_start if job_start else None,
                 tool_dependency_s=sum(t["gap_after_s"] for t in row["turns"][:-1]))
+            job['scheduled_arrival_jct_s'] = finish-start-planned[pid] if mode=='open' and job_start else None
+            job['source_id'] = row.get('source_id',pid)
+            job['request_e2e_sum_s'] = sum(r['e2e_s'] for r in records if r['program_id']==pid)
+            job['jct_minus_recorded_tool_wait_s'] = job['jct_s']-job['tool_dependency_s'] if job['success'] else None
             jobs.append(job)
             # Persist on every completion, including before a global timeout.
             write_json(out/'jobs.json', jobs)
+            return finish
         if mode == 'closed':
             by_id = {p['id']: p for p in trace['programs']}
             pending = iter(arrival['program_order'])
             async def worker():
-                refill_at = time.monotonic()
+                refill_at = None
                 while True:
                     pid = next(pending, None)
                     if pid is None:
                         return
-                    await program(by_id[pid], refill_at)
-                    refill_at = time.monotonic()
+                    refill_at = await program(by_id[pid], refill_at)
                     if asyncio.current_task().cancelling():
                         return
             tasks = [asyncio.create_task(worker()) for _ in range(arrival['active_programs'])]
@@ -240,13 +260,17 @@ async def replay(args, transport=None):
     observation = wall-first_actual if first_actual is not None else None
     summary = dict(status="complete" if strict else "failed", strict_complete=strict, evidence=evidence,
         gpu_validated=False, expected_programs=manifest["programs"], expected_calls=manifest["calls"],
-        completed_programs=len(good_jobs), failed_programs=sum(not j['success'] for j in jobs),
-        unattempted_programs=manifest['programs']-len(jobs), workload_mode=mode,
+        completed_programs=len(good_jobs), failed_programs=sum(not j['success'] and j['actual_arrival_s'] is not None for j in jobs),
+        unattempted_programs=manifest['programs']-sum(j['actual_arrival_s'] is not None for j in jobs), workload_mode=mode,
         completed_calls=len(successful), failed_calls=sum(not r["success"] for r in records),
         unattempted_calls=manifest["calls"]-len(records), timed_out=timed_out,
         wall_from_clock_zero_s=wall, observation_from_first_actual_arrival_s=observation,
         jct_s=stats([j["jct_s"] for j in good_jobs]), arrival_lag_s=stats([j["arrival_lag_s"] for j in jobs]),
         request_ttft_s=stats([r["ttft_s"] for r in successful]), request_e2e_s=stats([r["e2e_s"] for r in successful]),
+        request_tpot_s=stats([r['tpot_s'] for r in successful]),
+        single_token_chunk_itl_s=stats([x for r in successful for x in r['single_token_chunk_itl_s']]),
+        scheduled_arrival_jct_s=stats([j['scheduled_arrival_jct_s'] for j in good_jobs]),
+        jct_minus_recorded_tool_wait_s=stats([j['jct_minus_recorded_tool_wait_s'] for j in good_jobs]),
         programs_per_s=len(good_jobs)/observation if observation else None,
         output_tokens_per_s=sum(r["output_tokens"] for r in successful)/observation if observation else None,
         metric_notes=["Program JCT includes tool wait and queueing; starts at actual arrival",

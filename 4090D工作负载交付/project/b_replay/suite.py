@@ -11,8 +11,12 @@ from .client import load_bundle, make_arrivals
 from .common import ROOT, read_json, write_json, sha
 from .comparison import METHODS, arguments, build, run
 from .workload import make_closed
+from .hardware import deadline_guard
 
 MAIN_METHODS = ['lmcache', 'zero_ttl', 'static_ttl', 'continuum', 'kairos']
+METHOD_LABELS = dict(lmcache='vLLM + standard LMCache', zero_ttl='Continuum Zero TTL',
+    static_ttl='Continuum Static TTL (2 s)', continuum='Continuum Dynamic TTL', kairos='Full Kairos CG1',
+    native='Auxiliary native vLLM')
 
 
 def create(config_path, output):
@@ -48,6 +52,17 @@ def create(config_path, output):
         ids=[m.get('dataset_id') for _,_,m in validated]
         if None in ids or len(set(ids))!=len(ids):
             raise ValueError('Use registered distinct dataset_id values; subsets are not distinct datasets')
+        families=[m.get('source_family') for _,_,m in validated]
+        if None in families or len(set(families)) != len(families):
+            raise ValueError('Cross-dataset comparison requires distinct audited source families')
+        if config.get('dataset_protocol','observed-tool-time') == 'observed-tool-time':
+            if any(m.get('timing_kind') != 'observed_tool_feedback' for _,_,m in validated):
+                raise ValueError('Main cross-dataset results require observed gaps; use the explicit zero-wait sensitivity protocol separately')
+        elif config['dataset_protocol'] == 'explicit-zero-wait-sensitivity':
+            if any(m.get('timing_kind') != 'explicit_zero_wait_control' for _,_,m in validated):
+                raise ValueError('Both sensitivity sources must use the same explicit zero-wait protocol')
+        else:
+            raise ValueError('Unknown cross-dataset timing protocol')
     output.mkdir(parents=True)
     rows=[]
     frozen_code=None
@@ -67,8 +82,11 @@ def create(config_path, output):
                           '--model',config['model'],'--output',str(output/'runs'/run_id)]
                     mapping={'joint_assets':'--joint-assets','profile':'--profile','reload_profile':'--reload-profile',
                              'cpu_kv_gib':'--cpu-kv-gib','gpu_kv_bytes':'--gpu-kv-bytes','gpu':'--gpu',
+                             'gpu_pid_policy':'--gpu-pid-policy',
                              'engine_cpus':'--engine-cpus','helper_cpus':'--helper-cpus',
-                             'start_timeout':'--start-timeout','run_timeout':'--run-timeout','request_timeout':'--request-timeout'}
+                             'start_timeout':'--start-timeout','run_timeout':'--run-timeout','request_timeout':'--request-timeout',
+                             'resource_group':'--resource-group','calibration_evidence':'--calibration-evidence',
+                             'capacity_evidence':'--capacity-evidence','cache_isolation_evidence':'--cache-isolation-evidence'}
                     for key,flag in mapping.items():
                         if config.get(key) is not None:
                             argv += [flag,str(config[key])]
@@ -89,34 +107,46 @@ def create(config_path, output):
                         bundle_manifest_sha256=sha((bundle/'manifest.json').read_bytes()),
                         workload_sha256=sha(workload.read_bytes()), argv=argv,
                         plan=plan, result=str(output/'runs'/run_id)))
-    matrix=dict(schema='midterm-suite/1',config=config,config_sha256=sha(config_path.read_bytes()),
-        code_commit=subprocess.check_output(['git','rev-parse','HEAD'],cwd=ROOT,text=True).strip(),
+    provenance=ROOT.parent/'upstream-project-manifest.json'
+    matrix=dict(schema='h800-suite/1',config=config,config_sha256=sha(config_path.read_bytes()),
+        source_commit=read_json(provenance)['commit'] if provenance.is_file() else None,
+        method_labels=METHOD_LABELS,
         runs=rows, note='CPU plans are not H800 validation; execute explicit indices only')
     write_json(output/'matrix.json',matrix)
     print(json.dumps(dict(matrix=str(output/'matrix.json'),runs=len(rows),gpu_started=False)))
 
 
-def execute(matrix_path,index):
+def execute(matrix_path,index,deadline_epoch=None):
+    with deadline_guard(deadline_epoch):
+        return _execute(matrix_path,index)
+
+
+def _execute(matrix_path,index):
+    began_wall=time.time(); began=time.monotonic()
     matrix=read_json(matrix_path)
     if type(index) is not int or not 0<=index<len(matrix['runs']):
         raise ValueError('Run index out of range')
     row=matrix['runs'][index]
-    args=arguments(row['argv'])
-    plan,upstream,native,env=build(args)
-    if plan['adapter_sha256']!=row['plan']['adapter_sha256'] or plan['runtime']!=row['plan']['runtime']:
-        raise ValueError('Code changed after matrix freeze; create a new matrix')
-    # CPU affinity placeholders are resolved on Linux; all logical inputs stay fixed.
-    for key in ('bundle_manifest_sha256','arrivals_sha256','profile_sha256','reload_profile_sha256','cpu_kv_gib','gpu_kv_bytes'):
-        if plan[key]!=row['plan'][key]:
-            raise ValueError('Frozen plan changed: '+key)
+    attempt=Path(matrix_path).parent/'attempts'/(row['run_id']+'.json')
+    if attempt.exists():
+        raise FileExistsError('Preserve the previous attempt and create a continuation matrix: '+str(attempt))
     try:
+        args=arguments(row['argv'])
+        plan,upstream,native,env=build(args)
+        if plan['adapter_sha256']!=row['plan']['adapter_sha256'] or plan['runtime']!=row['plan']['runtime']:
+            raise ValueError('Code changed after matrix freeze; create a new matrix')
+        for key in ('bundle_manifest_sha256','arrivals_sha256','profile_sha256','reload_profile_sha256',
+                    'cpu_kv_gib','gpu_kv_bytes','resource_group','calibration_evidence','capacity_evidence','cache_isolation_evidence'):
+            if plan[key]!=row['plan'][key]:
+                raise ValueError('Frozen plan changed: '+key)
         run(args,plan,upstream,native,env)
     except BaseException as error:
         write_json(Path(matrix_path).parent/'attempts'/(row['run_id']+'.json'),
-            dict(status='failed',time=time.time(),error=repr(error),result=row['result']))
+            dict(status='failed',started_at=began_wall,time=time.time(),wall_s=time.monotonic()-began,
+                 error=repr(error),result=row['result']))
         raise
     write_json(Path(matrix_path).parent/'attempts'/(row['run_id']+'.json'),
-        dict(status='complete',time=time.time(),result=row['result']))
+        dict(status='complete',started_at=began_wall,time=time.time(),wall_s=time.monotonic()-began,result=row['result']))
 
 
 def main():

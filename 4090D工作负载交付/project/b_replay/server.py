@@ -6,6 +6,7 @@ import json
 import os
 from pathlib import Path
 import signal
+import subprocess
 import sys
 from types import SimpleNamespace
 from .common import ROOT, MODELS, sha, read_json, write_json
@@ -59,8 +60,8 @@ def cpu_sets(engine, helper, *, actual):
         if actual:raise RuntimeError("GPU startup requires Linux CPU affinity support")
         return "AUTO_ENGINE_ON_LINUX","AUTO_HELPER_ON_LINUX",True
     allowed=sorted(os.sched_getaffinity(0))
-    if len(allowed)<4:raise RuntimeError("Require at least four allowed CPU IDs for disjoint engine/helper sets")
-    return ",".join(map(str,allowed[:2])),",".join(map(str,allowed[2:4])),False
+    if len(allowed)<27:raise RuntimeError("The selected 27-core host needs 27 allowed CPU IDs; set explicit disjoint sets for a smaller pilot")
+    return ",".join(map(str,allowed[:23])),",".join(map(str,allowed[23:27])),False
 
 def native_args(args, *, actual):
     engine,helper,deferred=cpu_sets(args.engine_cpus,args.helper_cpus,actual=actual)
@@ -159,6 +160,9 @@ def require_idle_before_model_import(upstream,gpu_index):
     matches=[g for g in upstream.harness.smi() if int(g["index"])==gpu_index]
     if len(matches)!=1:raise RuntimeError("Requested GPU index is unavailable")
     gpu=matches[0]
+    identity=subprocess.check_output(['nvidia-smi','-i',gpu['uuid'],'--query-gpu=name,driver_version',
+        '--format=csv,noheader'],text=True,timeout=10).strip().rsplit(', ',1)
+    gpu.update(name=identity[0],driver_version=identity[1])
     if int(gpu["used"])>128 or int(gpu["util"])>5 or upstream.harness.compute_apps(gpu["uuid"]):
         raise RuntimeError("GPU is busy before model import; no service started: "+json.dumps(gpu))
     return gpu

@@ -1,16 +1,31 @@
 {
+  "allow_exploratory": true,
   "axis": "jps",
-  "datasets": [{"name": "mini-swe-verified", "bundle": "../runs/prepared/heldout-v2"}],
-  "model": "/data/models/models--Qwen--Qwen3-8B/snapshots/b968826d9c46dd6066d109eabc6255188de91218",
-  "joint_assets": "/data/kairos-joint",
-  "jps": [0.1, 0.5, 1, 2],
-  "seeds": [2026111801, 2026111802, 2026111803],
-  "static_ttl_seconds": 2,
-  "cpu_kv_gib": 8,
+  "cpu_kv_gib": 64,
+  "datasets": [
+    {
+      "bundle": "../inputs/prepared/heldout-v2",
+      "name": "mini-swe-verified"
+    }
+  ],
   "engine_cpus": "auto",
   "helper_cpus": "auto",
+  "joint_assets": "/data/kairos-joint",
+  "jps": [
+    0.1,
+    0.5,
+    1,
+    2
+  ],
+  "model": "/data/models/models--Qwen--Qwen3-8B/snapshots/b968826d9c46dd6066d109eabc6255188de91218",
+  "request_timeout": 600,
+  "resource_group": "pilot",
+  "run_timeout": 7200,
+  "seeds": [
+    2026111801,
+    2026111802,
+    2026111803
+  ],
   "start_timeout": 1200,
-  "request_timeout": 120,
-  "run_timeout": 3600,
-  "allow_exploratory": true
+  "static_ttl_seconds": 2
 }

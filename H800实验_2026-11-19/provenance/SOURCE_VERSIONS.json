@@ -1,0 +1,29 @@
+{
+  "observed_date": "2026-11-19",
+  "gpu_contacted": true,
+  "AI_INFRA": {
+    "repository": "WanLi829/AI_INFRA",
+    "commit": "ca3e687f6b0702136375013e49601b9d8d1b1d9f"
+  },
+  "Kairos": {
+    "repository": "MaxizYB/Kairos",
+    "commit": "a3dbac12eac80d6444222ca3e2e9592fef029158"
+  },
+  "Continuum": {
+    "repository": "Hanchenli/vllm-continuum",
+    "commit": "316a58794a6ff86b216e579b74fd56ed0c5a911f",
+    "readme_blob_sha": "02aa5969417fccefe1db3aff1e82cd1bc27a6ef2",
+    "readme_caveat": "without the estimation in the paper"
+  },
+  "LMCache": {
+    "serving_package_version": "0.5.5rc4",
+    "upstream_dev_observed_commit": "6c822b04c3517a4823d9efe9493ce3031990e73e",
+    "dev_is_not_serving_pin": true
+  },
+  "InferCept": {
+    "repository": "WukLab/InferCept",
+    "entrypoint_confirmed_only": true
+  },
+  "complete_main_runs": 85,
+  "actual_environment_lock": "success_metadata/SERVER_ENVIRONMENT.txt"
+}

@@ -12,7 +12,7 @@ from unittest.mock import patch
 import httpx
 
 from b_replay.client import load_bundle, make_arrivals, replay
-from b_replay.comparison import arguments, build, METHODS
+from b_replay.comparison import arguments, build, METHODS, COMMON_PROTOCOL
 from b_replay.comparison_results import aggregate, inspect
 from b_replay.common import ROOT, read_json, write_json, sha
 
@@ -62,6 +62,8 @@ class ComparisonTests(unittest.TestCase):
                 async def handler(request):
                     body = json.loads(request.content)
                     pid = salt_ids[body["cache_salt"]]
+                    self.assertEqual(body['kv_transfer_params'],
+                                     {'lmcache.tag.instance': body['cache_salt']})
                     i = cursor[pid]
                     turn = programs[pid]["turns"][i]
                     prompt = prompts[pid][:turn["keep_prefix_tokens"]] + turn["added_token_ids"]
@@ -156,7 +158,7 @@ class ComparisonTests(unittest.TestCase):
             plan, _, _, _ = build(args)
             shutil.copytree(ROOT/"verification/pilot_14", run)
             state = read_json(run/"state.json")
-            state.update(schema="comparison/2", protocol="comparison-v2-private-stop-cold-process",
+            state.update(schema="comparison/2", protocol=COMMON_PROTOCOL,
                          plan=plan, gpu_pid_policy="strict", gpu_ownership_verified=True)
             write_json(run/"state.json", state)
             client = dict(status="complete", method="kairos", evidence="Synthetic validation fixture",

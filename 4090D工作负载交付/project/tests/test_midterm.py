@@ -87,6 +87,7 @@ class MidtermTests(unittest.TestCase):
                 self.assertTrue(summary['timed_out'])
                 self.assertEqual(summary['unattempted_programs'],4)
                 self.assertEqual(summary['failed_programs'],2)
+                self.assertEqual(summary['failed_calls'],2)
         asyncio.run(exercise())
 
     def test_event_intervals_are_half_open_and_weighted(self):

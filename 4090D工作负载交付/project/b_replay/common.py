@@ -58,12 +58,12 @@ def write_csv(path, rows):
 def stats(values):
     values = sorted(v for v in values if v is not None and math.isfinite(v))
     if not values:
-        return {"n": 0, "mean": None, "min": None, "p50": None, "p95": None, "max": None}
+        return {"n": 0, "mean": None, "min": None, "p50": None, "p90": None, "p95": None, "p99": None, "max": None}
     def q(p):
         x = (len(values) - 1) * p
         return values[math.floor(x)] + (values[math.ceil(x)] - values[math.floor(x)]) * (x % 1)
     return dict(n=len(values), mean=statistics.fmean(values), min=values[0],
-                p50=q(.5), p95=q(.95), max=values[-1])
+                p50=q(.5), p90=q(.90), p95=q(.95), p99=q(.99), max=values[-1])
 
 def lcp(a, b):
     i = 0
